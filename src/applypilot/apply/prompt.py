@@ -151,34 +151,92 @@ def _build_profile_summary(profile: dict) -> str:
     return "\n".join(lines)
 
 
-def _build_location_check(profile: dict, search_config: dict) -> str:
+def _infer_job_track(job: dict | None) -> str:
+    """Infer search track: india | us_transfer | remote_35lpa."""
+    if not job:
+        return "india"
+    explicit = (job.get("track") or "").strip().lower()
+    if explicit in ("india", "us_transfer", "remote_35lpa"):
+        return explicit
+    loc = (job.get("location") or "").lower()
+    mode = (job.get("mode") or "").lower()
+    blob = f"{loc} {mode}"
+    india_markers = (
+        "india", "bangalore", "bengaluru", "delhi", "noida", "gurugram",
+        "gurgaon", "hyderabad", "pune", "chennai", "mumbai",
+    )
+    if job.get("india") is True or any(m in blob for m in india_markers):
+        return "india"
+    us_markers = (
+        "united states", "usa", " u.s", "san francisco", "seattle",
+        "new york", "bay area", "remote-us", "remote us", "us remote",
+    )
+    if any(m in blob for m in us_markers):
+        return "us_transfer"
+    if "remote" in blob or job.get("remote") is True:
+        return "remote_35lpa"
+    return "india"
+
+
+def _sponsorship_for_track(track: str) -> tuple[str, str]:
+    """Return (require_sponsorship Yes/No, guidance blurb) for a track."""
+    if track == "india":
+        return (
+            "No",
+            "This is an India / India-remote role. Answer sponsorship questions NO. "
+            "Authorized to work in India: YES.",
+        )
+    if track == "us_transfer":
+        return (
+            "Yes",
+            "This is a US / US-transfer track role. Answer sponsorship questions YES "
+            "(needs H-1B or equivalent). Do not claim US work authorization without sponsorship.",
+        )
+    # remote_35lpa — worldwide/India-friendly remote: No; US-only remote: Yes
+    return (
+        "auto",
+        "Fully remote high-comp track. If the role is India-eligible, worldwide, "
+        "or work-from-anywhere including India -> sponsorship NO. "
+        "If the role is US-only remote or requires US work auth -> sponsorship YES.",
+    )
+
+
+def _build_location_check(profile: dict, search_config: dict, job: dict | None = None) -> str:
     """Build the location eligibility check section of the prompt.
 
-    Uses the accept_patterns from search config to determine which cities
-    are acceptable for hybrid/onsite roles.
+    Uses the accept_patterns from search config. Candidate is India-based and
+    eligible for India onsite/hybrid, India-remote, US-remote (with sponsorship),
+    and worldwide remote — NOT EU/UK-only onsite.
     """
     personal = profile["personal"]
     location_cfg = search_config.get("location", {})
     accept_patterns = location_cfg.get("accept_patterns", [])
-    primary_city = personal.get("city", location_cfg.get("primary", "your city"))
+    reject_patterns = location_cfg.get("reject_patterns", [])
+    primary_city = personal.get("city", location_cfg.get("primary", "Delhi"))
+    track = _infer_job_track(job)
+    _, track_note = _sponsorship_for_track(track)
 
-    # Build the list of acceptable cities for hybrid/onsite
     if accept_patterns:
         city_list = ", ".join(accept_patterns)
     else:
         city_list = primary_city
+    reject_list = ", ".join(reject_patterns) if reject_patterns else "EU only, UK only, Germany only"
 
     return f"""== LOCATION CHECK (do this FIRST before any form) ==
+Candidate lives in {primary_city}, India. Track for this job: {track}.
+{track_note}
+
 Read the job page. Determine the work arrangement. Then decide:
-- "Remote" in the US or "work from anywhere" -> ELIGIBLE. Apply.
-- "Remote" but restricted to a non-US country (e.g. "remote - Germany", "remote - EU only") -> NOT ELIGIBLE. Output RESULT:FAILED:not_eligible_location
-- "Hybrid" or "onsite" in {city_list} -> ELIGIBLE. Apply.
-- "Hybrid" or "onsite" in another US city BUT the posting also says "remote OK" or "remote option available" -> ELIGIBLE. Apply.
-- "Onsite only" or "hybrid only" in any city outside the list above with NO remote option -> NOT ELIGIBLE. Stop immediately. Output RESULT:FAILED:not_eligible_location
-- Job is in a non-US country (Germany, India, UK, Philippines, anywhere in Europe/Asia/etc.) -> NOT ELIGIBLE unless it explicitly says "US remote OK". Output RESULT:FAILED:not_eligible_location
+- India onsite/hybrid (Bangalore, Delhi, Hyderabad, Gurugram, Pune, Mumbai, Chennai, etc.) -> ELIGIBLE. Apply.
+- India-remote / Remote India / Remote (India) -> ELIGIBLE. Apply.
+- Fully remote / work from anywhere / worldwide / global remote -> ELIGIBLE. Apply.
+- US remote or US hybrid/onsite with remote option -> ELIGIBLE. Apply (sponsorship YES).
+- Hybrid/onsite in an accepted pattern city ({city_list}) -> ELIGIBLE. Apply.
+- Remote restricted to EU-only, UK-only, Germany-only, Canada-only, Australia-only (see reject: {reject_list}) with NO India/worldwide option -> NOT ELIGIBLE. Output RESULT:FAILED:not_eligible_location
+- Onsite-only in a city outside accept patterns with NO remote/India option -> NOT ELIGIBLE. Output RESULT:FAILED:not_eligible_location
 - Job requires fluency in a language the candidate doesn't speak (see Languages in profile) -> NOT ELIGIBLE. Output RESULT:FAILED:not_eligible_location
-- Cannot determine location -> Continue applying. If a screening question reveals it's non-local onsite, answer honestly and let the system reject if needed.
-Do NOT fill out forms for jobs that are clearly onsite in a non-acceptable location. Check EARLY, save time."""
+- Cannot determine location -> Continue applying. If a screening question reveals a hard geographic block, answer honestly and stop with RESULT:FAILED:not_eligible_location if needed.
+Do NOT fill out forms for jobs that are clearly ineligible. Check EARLY, save time."""
 
 
 def _build_salary_section(profile: dict) -> str:
@@ -211,43 +269,75 @@ def _build_salary_section(profile: dict) -> str:
     else:
         convert_line = "Posting is in a different currency? -> Target midpoint of their range. Convert if needed."
 
+    inr = profile["compensation"].get("salary_expectation_inr_lpa", "35")
+    inr_min = profile["compensation"].get("salary_range_min_inr_lpa", "30")
+    inr_max = profile["compensation"].get("salary_range_max_inr_lpa", "45")
+
     return f"""== SALARY (think, don't just copy) ==
-${floor} {currency} is the FLOOR. Never go below it. But don't always use it either.
+${floor} {currency} (~{inr} LPA INR) is the FLOOR for global/US remote. Never go below $40k / 30 LPA. Prefer ≥35 LPA / ${floor} when possible.
 
 Decision tree:
-1. Job posting shows a range (e.g. "$120K-$160K")? -> Answer with the MIDPOINT ($140K).
-2. Title says Senior, Staff, Lead, Principal, Architect, or level II/III/IV? -> Minimum $110K {currency}. Use midpoint of posted range if higher.
-3. {convert_line}
-4. No salary info anywhere? -> Use ${floor} {currency}.
-5. Asked for a range? -> Give posted midpoint minus 10% to midpoint plus 10%. No posted range? -> "${range_min}-${range_max} {currency}".
-6. Hourly rate? -> Divide your annual answer by 2080. ({hourly_line})"""
+1. Job posting shows a range? -> Answer with the MIDPOINT (in the posting's currency).
+2. India-based role asking INR/LPA? -> Use {inr} LPA as default; range {inr_min}-{inr_max} LPA. Never below {inr_min} LPA.
+3. Title says Senior, Staff, Lead, Principal, Architect, or level II/III/IV AND US-comp? -> Prefer midpoint of posted range; if none, use upper half of ${range_min}-${range_max}.
+4. {convert_line}
+5. No salary info anywhere? -> India job: {inr} LPA. Otherwise ${floor} {currency}.
+6. Asked for a range? -> Give posted midpoint ±10%. No posted range? -> India: "{inr_min}-{inr_max} LPA"; else "${range_min}-${range_max} {currency}".
+7. Hourly rate? -> Divide your annual USD answer by 2080. ({hourly_line})"""
 
 
-def _build_screening_section(profile: dict) -> str:
+def _build_screening_section(profile: dict, job: dict | None = None) -> str:
     """Build the screening questions guidance section."""
     personal = profile["personal"]
     exp = profile.get("experience", {})
-    city = personal.get("city", "their city")
-    years = exp.get("years_of_experience_total", "multiple")
+    avail = profile.get("availability", {})
+    comp = profile.get("compensation", {})
+    skills = profile.get("skills_boundary", {})
+    city = personal.get("city", "Delhi")
+    years = exp.get("years_of_experience_total", "3")
     target_role = exp.get("target_role", personal.get("current_job_title", "software engineer"))
     work_auth = profile["work_authorization"]
+    track = _infer_job_track(job)
+    sponsorship, track_note = _sponsorship_for_track(track)
+    relocate = "Yes" if work_auth.get("willing_to_relocate", True) else "No"
+    notice = avail.get("earliest_start_date", "Immediately")
+    salary_usd = comp.get("salary_expectation", "42000")
+    salary_inr = comp.get("salary_expectation_inr_lpa", "35")
+    lang_list = ", ".join(skills.get("languages", []) or personal.get("languages", []) or [])
+    stack = ", ".join(
+        (skills.get("languages") or [])
+        + (skills.get("devops") or [])
+        + (skills.get("databases") or [])[:4]
+    )
 
     return f"""== SCREENING QUESTIONS (be strategic) ==
-Hard facts -> answer truthfully from the profile. No guessing. This includes:
-  - Location/relocation: lives in {city}, cannot relocate
-  - Work authorization: {work_auth.get('legally_authorized_to_work', 'see profile')}
+Job track: {track}. Sponsorship for THIS job: {sponsorship}.
+{track_note}
+
+Hard facts -> answer truthfully from the profile. No guessing. Defaults for this candidate:
+  - Location: lives in {city}, India
+  - Willing to relocate: {relocate} (anywhere)
+  - Work mode: Any (Remote / Hybrid / Onsite all OK)
+  - Notice / start: {notice} (0-day notice)
+  - Years of experience: {years} (skip roles requiring 8+ or 10+ years unless clearly mid-level)
+  - Salary: India roles ~{salary_inr}+ LPA INR TC; US/global remote ~${salary_usd}+ USD. Use posted midpoint when available. Never below 30 LPA / $40k.
+  - Work authorization India: YES without sponsorship
+  - US/EU sponsorship: YES when the role requires US/EU work auth (track={track})
   - Citizenship, clearance, licenses, certifications: answer from profile only
   - Criminal/background: answer from profile only
-  - Languages: ONLY claim proficiency in languages listed in the APPLICANT PROFILE above. If asked about ANY other language (German, Mandarin, Japanese, etc.), answer NO / Not proficient. Never fabricate language skills.
+  - Languages (human): ONLY {", ".join(personal.get("languages") or ["English", "Hindi"])}. Never claim other human languages.
+  - Tech stack confidence: {stack or lang_list}
 
-Skills and tools -> be confident about TECHNICAL skills. This candidate is a {target_role} with {years} years experience. If the question asks "Do you have experience with [tool]?" and it's in the same domain (DevOps, backend, ML, cloud, automation), answer YES. Software engineers learn tools fast. Don't sell short. But NEVER claim fluency in human languages not listed in the profile.
+Skills and tools -> be confident about TECHNICAL skills. This candidate is a {target_role} with {years} years experience. If the question asks "Do you have experience with [tool]?" and it's in the same domain (DevOps, backend, ML, cloud, automation, Go, Python, K8s, Kafka, AWS, RAG/LLM), answer YES. Software engineers learn tools fast. Don't sell short. But NEVER claim fluency in human languages not listed in the profile. NEVER invent employers, degrees, or metrics not in the resume.
 
-Open-ended questions ("Why do you want this role?", "Tell us about yourself", "What interests you?") -> Write 2-3 sentences. Be specific to THIS job. Reference something from the job description. Connect it to a real achievement from the resume. No generic fluff. No "I am passionate about..." -- sound like a real person.
+Open-ended questions ("Why do you want this role?", "Tell us about yourself", "What interests you?") -> Write 2-3 sentences. Be specific to THIS job. Reference something from the job description. Connect it to a real achievement from the resume. No generic fluff. No "I am passionate about..." -- sound like a real person. No em-dashes.
 
-EEO/demographics -> Use the values from APPLICANT PROFILE above (gender, race, veteran, disability). These are the candidate's actual preferences for disclosure."""
+EEO/demographics -> Use the values from APPLICANT PROFILE above (gender, race, veteran, disability). These are the candidate's actual preferences for disclosure.
+
+If a required question cannot be answered from the profile/KNOWN SCREENING ANSWERS and has no skip option -> SCREENING_Q + RESULT:NEEDS_HUMAN:screening_questions:{{url}}."""
 
 
-def _build_hard_rules(profile: dict) -> str:
+def _build_hard_rules(profile: dict, job: dict | None = None) -> str:
     """Build the hard rules section with work auth and name from profile."""
     personal = profile["personal"]
     work_auth = profile["work_authorization"]
@@ -257,13 +347,15 @@ def _build_hard_rules(profile: dict) -> str:
     preferred_last = full_name.split()[-1] if " " in full_name else ""
     display_name = f"{preferred_name} {preferred_last}".strip() if preferred_last else preferred_name
 
-    # Build work auth rule dynamically
-    sponsorship = work_auth.get("require_sponsorship", "")
+    track = _infer_job_track(job)
+    sponsorship, track_note = _sponsorship_for_track(track)
     permit_type = work_auth.get("work_permit_type", "")
 
-    work_auth_rule = "Work auth: Answer truthfully from profile."
+    work_auth_rule = (
+        f"Work auth for THIS job (track={track}): sponsorship={sponsorship}. {track_note}"
+    )
     if permit_type:
-        work_auth_rule = f"Work auth: {permit_type}. Sponsorship needed: {sponsorship}."
+        work_auth_rule += f" Profile note: {permit_type}"
 
     name_rule = f'Name: Legal name = {full_name}.'
     if preferred_name and preferred_name != full_name.split()[0]:
@@ -272,7 +364,8 @@ def _build_hard_rules(profile: dict) -> str:
     return f"""== HARD RULES (never break these) ==
 1. Never lie about: citizenship, work authorization, criminal history, education credentials, security clearance, licenses.
 2. {work_auth_rule}
-3. {name_rule}"""
+3. {name_rule}
+4. Never fabricate employers, metrics, degrees, or tools not supported by the resume / resume_facts."""
 
 
 def _build_site_credentials_section(site_credentials: dict) -> str:
@@ -307,7 +400,8 @@ def _build_captcha_section() -> str:
     capsolver_key = os.environ.get("CAPSOLVER_API_KEY", "")
 
     return f"""== CAPTCHA ==
-You solve CAPTCHAs via the CapSolver REST API. No browser extension. You control the entire flow.
+You solve CAPTCHAs via the CapSolver REST API (browser_evaluate fetch). No browser extension.
+ApplyPilot also ships applypilot.apply.captcha_solver (solve_recaptcha + inject JS) — prefer the in-page CapSolver REST flow below; it is the same API.
 API key: {capsolver_key or 'NOT CONFIGURED — skip to MANUAL FALLBACK for all CAPTCHAs'}
 API base: https://api.capsolver.com
 
@@ -609,10 +703,10 @@ def build_prompt(job: dict, tailored_resume: str,
 
     # --- Build all prompt sections ---
     profile_summary = _build_profile_summary(profile)
-    location_check = _build_location_check(profile, search_config)
+    location_check = _build_location_check(profile, search_config, job=job)
     salary_section = _build_salary_section(profile)
-    screening_section = _build_screening_section(profile)
-    hard_rules = _build_hard_rules(profile)
+    screening_section = _build_screening_section(profile, job=job)
+    hard_rules = _build_hard_rules(profile, job=job)
     captcha_section = _build_captcha_section()
     qa_section = _build_qa_section(doc_format=doc_format)
 

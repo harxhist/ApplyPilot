@@ -1,0 +1,182 @@
+- generic [ref=e2]:
+  - list [ref=e4]:
+    - listitem [ref=e5]:
+      - link "Perplexity" [ref=e6] [cursor=pointer]:
+        - /url: https://www.perplexity.ai/
+        - img "Perplexity" [ref=e7]
+    - listitem [ref=e8]:
+      - link "Back to Perplexity’s Job Listings" [ref=e9] [cursor=pointer]:
+        - /url: /Perplexity
+        - img [ref=e10]
+    - listitem
+  - generic [ref=e12]:
+    - heading "Member of Technical Staff (Software Engineer, Applied AI)" [level=1] [ref=e14]
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - heading "Location" [level=2] [ref=e18]
+          - paragraph [ref=e19]: San Francisco; New York City; Palo Alto
+        - generic [ref=e20]:
+          - heading "Employment Type" [level=2] [ref=e21]
+          - paragraph [ref=e22]: Full time
+        - generic [ref=e23]:
+          - heading "Department" [level=2] [ref=e24]
+          - paragraph [ref=e25]: AI Research & Systems
+        - generic [ref=e26]:
+          - heading "Compensation" [level=2] [ref=e27]
+          - list [ref=e28]:
+            - listitem [ref=e29]:
+              - generic [ref=e30]: $220K – $405K • Offers Equity
+          - generic [ref=e31]:
+            - paragraph [ref=e32]:
+              - strong [ref=e33]: U.S. Benefits
+            - paragraph [ref=e34]: Full-time U.S. employees enjoy a comprehensive benefits program including equity, health, dental, vision, retirement, fitness, commuter and dependent care accounts, and more.
+            - paragraph [ref=e35]
+            - paragraph [ref=e36]:
+              - strong [ref=e37]: International Benefits
+            - paragraph [ref=e38]: Full-time employees outside the U.S. enjoy a comprehensive benefits program tailored to their region of residence.
+            - paragraph [ref=e39]
+            - paragraph [ref=e40]: USD salary ranges apply only to U.S.-based positions. International salaries are set based on the local market. Final offer amounts are determined by multiple factors, including experience and expertise, and may vary from the amounts listed above.
+      - generic [ref=e41]:
+        - tablist [ref=e42]:
+          - tab "Overview" [ref=e43] [cursor=pointer]
+          - tab "Application" [selected] [ref=e44] [cursor=pointer]
+        - tabpanel "Application" [ref=e112]:
+          - generic [ref=e113]:
+            - button "Choose File" [ref=e114]
+            - generic [ref=e115]:
+              - generic [ref=e116]:
+                - generic [ref=e117]:
+                  - img [ref=e119]
+                  - heading "Autofill from resume" [level=3] [ref=e121]
+                - paragraph [ref=e122]: Upload your resume here to autofill key application fields.
+                - button "Upload file" [ref=e124] [cursor=pointer]
+              - generic [ref=e219]:
+                - heading "Autofill completed!" [level=2] [ref=e220]
+                - paragraph [ref=e221]: Please review the information we filled in for you below.
+          - generic [ref=e222]:
+            - generic [ref=e223]:
+              - generic [ref=e224]:
+                - generic [ref=e225]: Name*
+                - textbox "Name*" [ref=e227] [cursor=pointer]:
+                  - /placeholder: Type here...
+                  - text: Harsh Rajput
+              - generic [ref=e228]:
+                - generic [ref=e229]: Email*
+                - textbox "Email*" [ref=e231] [cursor=pointer]:
+                  - /placeholder: hello@example.com...
+                  - text: harxhist@gmail.com
+              - generic [ref=e232]:
+                - generic [ref=e233]: Phone Number*
+                - textbox "Phone Number*" [ref=e234] [cursor=pointer]:
+                  - /placeholder: 1-415-555-1234...
+                  - text: "+917217016717"
+              - generic [ref=e235]:
+                - generic [ref=e236]: Resume*
+                - button "Resume*" [ref=e237]
+                - generic [ref=e238]:
+                  - paragraph [ref=e239]:
+                    - img [ref=e240]
+                    - text: Harsh_Rajput_Resume.docx
+                  - button "Delete file" [ref=e242] [cursor=pointer]:
+                    - img [ref=e243]
+                - generic [ref=e245]:
+                  - button "Replace" [ref=e246] [cursor=pointer]:
+                    - generic [ref=e247]: Replace
+                  - paragraph [ref=e248]: or drag and drop here
+              - generic [ref=e249]:
+                - generic [ref=e250]: Location*
+                - generic [ref=e251]:
+                  - combobox "Start typing..." [ref=e252] [cursor=pointer]
+                  - button [ref=e253] [cursor=pointer]:
+                    - img [ref=e254]
+              - generic [ref=e256]:
+                - generic [ref=e257]: Will you now or in the future require sponsorship for employment visa status in the United States?*
+                - generic [ref=e258]:
+                  - button "Yes" [active] [ref=e259] [cursor=pointer]
+                  - button "No" [ref=e260] [cursor=pointer]
+              - generic [ref=e261]:
+                - generic [ref=e262]: Are you able to come into the office four days per week?*
+                - generic [ref=e263]:
+                  - button "Yes" [ref=e264] [cursor=pointer]
+                  - button "No" [ref=e265] [cursor=pointer]
+            - generic [ref=e266]:
+              - generic [ref=e267]:
+                - heading "[Optional] More about yourself" [level=2] [ref=e268]
+                - paragraph [ref=e270]:
+                  - text: The questions below are meant to help us get to know you a bit better. They are
+                  - strong [ref=e271]: 100% optional
+                  - text: . If you do choose to respond, please do so in
+                  - strong [ref=e272]: your own original writing
+                  - text: .
+              - generic [ref=e273]:
+                - generic [ref=e274]: What are the most interesting aspects of Perplexity that you're excited to work on?
+                - textbox "What are the most interesting aspects of Perplexity that you're excited to work on?" [ref=e275] [cursor=pointer]:
+                  - /placeholder: Type here...
+                  - text: "The applied AI problem at Perplexity is grounding answers under real query load across SF, NYC, and Palo Alto traffic without trading away latency. I have already shipped that shape of work: AI Mind as incremental RAG over a 2.5GB corpus with Pinecone and cited answers, Causix in Go for call-type inference at 10K+ CPM, and a UIDAI fraud path that ran model scoring at 1,500+ entries per minute on Kafka. I want to harden ranking, retrieval, and citation paths so every answer stays correct when concurrent users spike."
+              - generic [ref=e276]:
+                - generic [ref=e277]: How do you use AI in your day-to-day work? What are some of the underappreciated benefits and/or pain points of your favorite AI tools?
+                - textbox "How do you use AI in your day-to-day work? What are some of the underappreciated benefits and/or pain points of your favorite AI tools?" [ref=e278] [cursor=pointer]:
+                  - /placeholder: Type here...
+                  - text: "Day to day I use LLM APIs for summarization and retrieval debugging, and I keep a Pinecone-backed vault (AI Mind) as a cited Q&A layer over my notes so answers stay grounded. The underappreciated benefit is second-scale re-index with Git hooks so the corpus stays fresh without overnight jobs. The pain point is still citation honesty under load: models sound confident when retrieval is thin, so I lean on grounding, latency tracking in Postgres, and stress testing the hot path the way I did with Causix and the UIDAI fraud service."
+            - generic [ref=e279]:
+              - generic [ref=e280]:
+                - heading "Perplexity Exercise" [level=2] [ref=e281]
+                - generic [ref=e282]:
+                  - paragraph [ref=e283]: Before the interview process, we ask candidates to familiarize themselves with Perplexity's products. This exercise helps you get a head start, while also helping us learn a bit more about you.
+                  - paragraph [ref=e284]: Please choose either Option 1 or Option 2 below. We expect this exercise to take 2 minutes or less, although you're welcome to spend longer if you so desire. You may use any Perplexity product features you'd like, including but not limited to file uploads, model selection, Research, Comet Assistant, Computer, and more.
+                  - paragraph [ref=e285]
+                  - paragraph [ref=e286]:
+                    - strong [ref=e287]: "Option 1: teach us about your favorite topic!"
+                  - paragraph [ref=e288]:
+                    - text: Perplexity feeds the world's curiosity, and we're curious to learn more about your passions. Please choose a topic that you're particularly excited to share with us (it need not be technical or AI-related). Then, create a
+                    - link "Perplexity" [ref=e289] [cursor=pointer]:
+                      - /url: https://www.perplexity.ai/
+                    - text: thread that teaches us about your chosen topic.
+                  - paragraph [ref=e290]: Once you're happy with the thread, click the "Share" button and paste the URL below.
+                  - paragraph [ref=e291]
+                  - paragraph [ref=e292]:
+                    - strong [ref=e293]: "Option 2: enlist Perplexity as your champion!"
+                  - paragraph [ref=e294]:
+                    - text: We invite you to enlist Perplexity to advocate for your Perplexity job application! Please create a
+                    - link "Perplexity" [ref=e295] [cursor=pointer]:
+                      - /url: https://www.perplexity.ai/
+                    - text: thread that explains why you're a strong candidate for this role.
+                    - link "Here" [ref=e296] [cursor=pointer]:
+                      - /url: https://www.perplexity.ai/search/explain-why-grace-hopper-would-vBVSJMaRSxacql0MB11BWg#0
+                    - text: "'s a very basic example; feel free to keep it simple, or to have some more fun with your queries."
+                  - paragraph [ref=e297]: Once you're happy with the thread, click the "Share" button and paste the URL below.
+              - generic [ref=e298]:
+                - generic [ref=e299]: Exercise Submission (Shared URL)*
+                - textbox "Exercise Submission (Shared URL)*" [ref=e301] [cursor=pointer]:
+                  - /placeholder: https://example.com...
+          - group [ref=e204]:
+            - generic [ref=e205]:
+              - paragraph [ref=e206]: Do you agree to allow Perplexity to contact you about job opportunities for up to 2 years?
+              - paragraph [ref=e207]:
+                - link "Recruiting Privacy Policy" [ref=e208] [cursor=pointer]:
+                  - /url: https://www.perplexity.ai/hub/legal/privacy-policy
+            - generic [ref=e209]:
+              - generic [ref=e210] [cursor=pointer]:
+                - img [ref=e211]
+                - checkbox "I agree" [ref=e213]
+              - generic [ref=e214]: I agree
+          - generic [ref=e215]:
+            - generic:
+              - link "Recruiting Privacy Policy":
+                - /url: https://www.perplexity.ai/hub/legal/privacy-policy
+          - button "Submit Application" [ref=e216] [cursor=pointer]:
+            - text: Submit Application
+            - img [ref=e217]
+  - contentinfo [ref=e99]:
+    - link "Learn more about Ashby" [ref=e100] [cursor=pointer]:
+      - /url: https://www.ashbyhq.com
+      - generic [ref=e101]: Powered by
+      - img "Ashby" [ref=e102]
+    - paragraph [ref=e108]:
+      - link "Privacy Policy" [ref=e109] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/privacy
+      - link "Security" [ref=e110] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/security
+      - link "Vulnerability Disclosure" [ref=e111] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/disclosure

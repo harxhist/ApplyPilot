@@ -189,7 +189,7 @@ def load_base_urls() -> dict[str, str | None]:
 # ---------------------------------------------------------------------------
 
 DEFAULTS = {
-    "min_score": 8,                           # was 7; per 2026-04-23 funnel spec
+    "min_score": 8,                           # Harsh: backend/AI/fullstack mid-level gate
     "max_job_age_days": 14,                   # stale-job cutoff (discovered_at)
     "max_in_flight_per_company": 3,           # hard cap per company (apply-time)
     "in_flight_window_days": 30,              # window for in-flight count
@@ -233,11 +233,14 @@ def get_tier() -> int:
 
     Tier 1 (Discovery):            Python + pip
     Tier 2 (AI Scoring & Tailoring): + LLM API key
-    Tier 3 (Full Auto-Apply):       + Claude Code CLI + Chrome
+    Tier 3 (Full Auto-Apply):       + Cursor API key (or Claude Code CLI) + Chrome
     """
     load_env()
 
-    has_llm = any(os.environ.get(k) for k in ("GEMINI_API_KEY", "OPENAI_API_KEY", "LLM_URL"))
+    has_cursor = bool(os.environ.get("CURSOR_API_KEY", "").strip())
+    has_llm = has_cursor or any(
+        os.environ.get(k) for k in ("GEMINI_API_KEY", "OPENAI_API_KEY", "LLM_URL")
+    )
     if not has_llm:
         return 1
 
@@ -248,7 +251,7 @@ def get_tier() -> int:
     except FileNotFoundError:
         has_chrome = False
 
-    if has_claude and has_chrome:
+    if has_chrome and (has_cursor or has_claude):
         return 3
 
     return 2
@@ -269,11 +272,22 @@ def check_tier(required: int, feature: str) -> None:
     _console = Console(stderr=True)
 
     missing: list[str] = []
-    if required >= 2 and not any(os.environ.get(k) for k in ("GEMINI_API_KEY", "OPENAI_API_KEY", "LLM_URL")):
-        missing.append("LLM API key — run [bold]applypilot init[/bold] or set GEMINI_API_KEY")
+    if required >= 2 and not (
+        os.environ.get("CURSOR_API_KEY", "").strip()
+        or any(os.environ.get(k) for k in ("GEMINI_API_KEY", "OPENAI_API_KEY", "LLM_URL"))
+    ):
+        missing.append(
+            "LLM API key — set CURSOR_API_KEY (preferred) or GEMINI_API_KEY "
+            "in ~/.applypilot/.env"
+        )
     if required >= 3:
-        if not shutil.which("claude"):
-            missing.append("Claude Code CLI — install from [bold]https://claude.ai/code[/bold]")
+        has_cursor = bool(os.environ.get("CURSOR_API_KEY", "").strip())
+        has_claude = shutil.which("claude") is not None
+        if not has_cursor and not has_claude:
+            missing.append(
+                "CURSOR_API_KEY in ~/.applypilot/.env "
+                "(or Claude Code CLI from https://claude.ai/code)"
+            )
         try:
             get_chrome_path()
         except FileNotFoundError:

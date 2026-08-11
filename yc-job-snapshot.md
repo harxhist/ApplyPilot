@@ -1,0 +1,421 @@
+- generic [ref=e2]:
+  - banner [ref=e5]:
+    - navigation [ref=e6]:
+      - link "Y Combinator" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img "Y Combinator" [ref=e8]
+      - button "Open menu" [ref=e9] [cursor=pointer]:
+        - generic [ref=e10]: Open menu
+        - img [ref=e11]
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - link [ref=e18] [cursor=pointer]:
+          - /url: ""
+        - generic [ref=e19]:
+          - heading "Raven" [level=2] [ref=e20]:
+            - link "Raven" [ref=e21] [cursor=pointer]:
+              - /url: /companies/raven
+          - paragraph [ref=e22]: AI Assistants for Manufacturing Operations
+      - generic [ref=e23]:
+        - heading "Software Engineer (Backend/AI)" [level=1] [ref=e24]
+        - generic [ref=e25]:
+          - generic [ref=e26]: ₹2M - ₹4.5M INR
+          - generic [ref=e27]: •
+          - generic [ref=e28]: 0.10% - 1.00%
+          - generic [ref=e29]: •
+          - generic [ref=e30]: Bengaluru, KA, IN / Bengaluru, Karnataka, IN
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - strong [ref=e34]: Job type
+            - text: Full-time
+          - generic [ref=e35]:
+            - strong [ref=e37]: Role
+            - text: Engineering, Backend
+          - generic [ref=e38]:
+            - strong [ref=e40]: Experience
+            - text: 3+ years
+          - generic [ref=e41]:
+            - strong [ref=e43]: Visa
+            - text: US citizenship/visa not required
+          - generic [ref=e44]:
+            - strong [ref=e46]: Skills
+            - text: Go, Python, Natural Language Processing
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: Connect directly with founders of the best YC-funded startups.
+            - link "Apply to role ›" [ref=e51] [cursor=pointer]:
+              - /url: https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D80521&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=26783
+          - generic [ref=e53]:
+            - img "Sriyansh Srivastava" [ref=e55]
+            - generic [ref=e56]:
+              - generic [ref=e58]: Sriyansh Srivastava
+              - generic [ref=e59]: Founder
+      - heading "About the role" [level=2] [ref=e60]
+      - generic [ref=e62]:
+        - heading "About Us" [level=3] [ref=e63]
+        - paragraph [ref=e64]:
+          - text: Raven is a YC-backed startup building AI for heavy industries. We’re building
+          - strong [ref=e65]: Cursor for industrial work
+          - text: — data infrastructure for process plants and AI agents that work on top of this data.
+        - paragraph [ref=e66]: We work with manufacturing, chemicals, oil & gas, and other industrial teams to help engineers access, understand, and act on complex plant information faster.
+        - paragraph [ref=e67]: We’re a small, focused team based in Bangalore, building for teams that work in some of the toughest operational environments.
+        - heading "What You’ll Work On" [level=3] [ref=e68]
+        - paragraph [ref=e69]: This is a core technical role focused on building data infrastructure and AI-native applications for heavy industries.
+        - paragraph [ref=e70]: "You’ll work on:"
+        - list [ref=e71]:
+          - listitem [ref=e72]:
+            - text: Building the
+            - strong [ref=e73]: plant data/model layer
+            - text: that brings together P&IDs, SOPs, datasheets, historian data, maintenance records, logs, and other plant context.
+          - listitem [ref=e74]: Building pipelines to extract structured, reliable data from industrial documents and systems.
+          - listitem [ref=e75]: Making plant data usable by AI agents with grounding, traceability, and review workflows.
+          - listitem [ref=e76]: Building Python/Go backend services for data ingestion, search, orchestration, and agent workflows.
+          - listitem [ref=e77]: Working on knowledge graphs, entity resolution, event timelines, and plant topology.
+          - listitem [ref=e78]: Building agents that work on top of this data to help engineers answer questions, investigate issues, and execute operational workflows.
+          - listitem [ref=e79]: Working directly with customers to understand real plant workflows and turn them into shipped product.
+        - heading "Who We’re Looking For" [level=3] [ref=e80]
+        - list [ref=e81]:
+          - listitem [ref=e82]: 2–4+ years of experience building production backend systems.
+          - listitem [ref=e83]: Strong Python and/or Go skills.
+          - listitem [ref=e84]: Experience building APIs, services, data pipelines, or backend infrastructure.
+          - listitem [ref=e85]: Ability to own technical problems end-to-end and ship working systems.
+          - listitem [ref=e86]: Comfortable working in ambiguity, iterating fast, and solving real customer problems.
+        - heading "Good to Have" [level=3] [ref=e87]
+        - list [ref=e88]:
+          - listitem [ref=e89]: Experience with AI systems, document extraction, search/retrieval, workflow automation, or evaluation pipelines.
+          - listitem [ref=e90]: Interest in industrial data like P&IDs, SOPs, datasheets, historian data, and maintenance records.
+          - listitem [ref=e91]: Interest in knowledge graphs, entity resolution, traceability, and grounded AI outputs.
+          - listitem [ref=e92]: Startup experience or experience working in small, high-ownership teams.
+          - listitem [ref=e93]: Comfortable working directly with customers and wearing multiple hats.
+        - heading "Why Join Us" [level=3] [ref=e94]
+        - paragraph [ref=e95]: We’re building core infrastructure for how industrial teams work with plant data and AI agents.
+        - paragraph [ref=e96]: You’ll be one of the early engineers shaping the product, architecture, culture, and engineering direction.
+        - paragraph [ref=e97]: "We offer:"
+        - paragraph [ref=e98]:
+          - strong [ref=e99]: "Impact:"
+          - text: Work on real-world industrial problems where better systems can improve safety, reliability, and efficiency.
+        - paragraph [ref=e100]:
+          - strong [ref=e101]: "Ownership:"
+          - text: 0.1–1% equity because this should feel like your company too.
+        - paragraph [ref=e102]:
+          - strong [ref=e103]: "Depth:"
+          - text: Work across backend systems, data pipelines, document intelligence, plant data, and AI agents.
+        - paragraph [ref=e104]: We believe in working together in person, especially at this stage. Fast iteration and collaboration matter, and being in the room together makes a difference.
+      - heading "About the interview" [level=2] [ref=e105]
+      - list [ref=e108]:
+        - listitem [ref=e109]: 15 min initial round with founder (cto)
+        - listitem [ref=e110]: Take-home assignment
+        - listitem [ref=e111]: 2 Problem Solving/Technical interviews
+        - listitem [ref=e112]: Discussion with founders
+      - heading "About Raven" [level=2] [ref=e113]
+      - generic [ref=e114]:
+        - paragraph [ref=e115]: At Raven, we are building AI assistants for manufacturing plants which can offer intelligent assistance for day-to-day operations—like training, job planning, troubleshooting, reporting and also helps with real-time analytics. We’re taking decades of manufacturing expertise and combining it with AI to solve real operational problems. We’re a small, focused team working to make industrial operations safer, smarter, and more efficient.
+        - paragraph [ref=e116]:
+          - text: We’re based in
+          - strong [ref=e117]: Bangalore
+          - text: ", building for teams that work in some of the toughest environments."
+    - generic [ref=e118]:
+      - generic [ref=e119]:
+        - link "Raven" [ref=e121] [cursor=pointer]:
+          - /url: /companies/raven
+          - img "Raven" [ref=e122]
+        - link "Raven" [ref=e125] [cursor=pointer]:
+          - /url: /companies/raven
+        - generic [ref=e126]:
+          - generic [ref=e127]:
+            - generic [ref=e128]: "Founded:"
+            - generic [ref=e129]: "2021"
+          - generic [ref=e130]:
+            - generic [ref=e131]: "Batch:"
+            - generic [ref=e132]: S22
+          - generic [ref=e133]:
+            - generic [ref=e134]: "Team Size:"
+            - generic [ref=e135]: "4"
+          - generic [ref=e136]:
+            - generic [ref=e137]: "Status:"
+            - generic [ref=e138]: Active
+          - generic [ref=e140]:
+            - generic [ref=e141]: "Location:"
+            - generic [ref=e142]: Bengaluru, India
+          - generic [ref=e143]:
+            - link "Company website" [ref=e144] [cursor=pointer]:
+              - /url: https://startraven.com
+              - img [ref=e145]
+            - link "LinkedIn profile" [ref=e147] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/raven-ai-labs
+      - generic [ref=e149]: Founders
+      - generic [ref=e150]:
+        - generic [ref=e152]:
+          - img "Priyansh Srivastava" [ref=e154]
+          - generic [ref=e155]:
+            - generic [ref=e156]:
+              - generic [ref=e157]: Priyansh Srivastava
+              - generic [ref=e158]:
+                - link "Twitter account" [ref=e159] [cursor=pointer]:
+                  - /url: https://twitter.com/proy31
+                  - img "Twitter account" [ref=e160]
+                - link "LinkedIn profile" [ref=e161] [cursor=pointer]:
+                  - /url: https://linkedin.com/in/priyanshs
+            - generic [ref=e163]: Founder
+        - generic [ref=e165]:
+          - img "Sriyansh Srivastava" [ref=e167]
+          - generic [ref=e168]:
+            - generic [ref=e169]:
+              - generic [ref=e170]: Sriyansh Srivastava
+              - generic [ref=e171]:
+                - link "Twitter account" [ref=e172] [cursor=pointer]:
+                  - /url: https://twitter.com/sriyansh_s
+                  - img "Twitter account" [ref=e173]
+                - link "LinkedIn profile" [ref=e174] [cursor=pointer]:
+                  - /url: https://linkedin.com/in/sriyansh7
+            - generic [ref=e176]: Founder
+      - generic [ref=e177]:
+        - generic [ref=e178]: Similar Jobs
+        - generic [ref=e179]:
+          - generic [ref=e180]:
+            - img "Lambda Robotics" [ref=e182]
+            - generic [ref=e183]:
+              - link "Lambda Robotics" [ref=e184] [cursor=pointer]:
+                - /url: /companies/lambda-robotics
+              - link "Founding Software Engineer, Robotics Infrastructure" [ref=e186] [cursor=pointer]:
+                - /url: /companies/lambda-robotics/jobs/0oIw1pj-founding-software-engineer-robotics-infrastructure
+          - generic [ref=e187]:
+            - img "Lab0" [ref=e189]
+            - generic [ref=e190]:
+              - link "Lab0" [ref=e191] [cursor=pointer]:
+                - /url: /companies/lab0
+              - link "Founding Engineer" [ref=e193] [cursor=pointer]:
+                - /url: /companies/lab0/jobs/hlPvGkT-founding-engineer
+          - generic [ref=e194]:
+            - img "CTGT" [ref=e196]
+            - generic [ref=e197]:
+              - link "CTGT" [ref=e198] [cursor=pointer]:
+                - /url: /companies/ctgt
+              - link "Software Engineering Intern (Summer 2027)" [ref=e200] [cursor=pointer]:
+                - /url: /companies/ctgt/jobs/b3hTkK4-software-engineering-intern-summer-2027
+          - generic [ref=e201]:
+            - img "Ardent" [ref=e203]
+            - generic [ref=e204]:
+              - link "Ardent" [ref=e205] [cursor=pointer]:
+                - /url: /companies/ardent
+              - link "Founding Engineer - Infrastructure (Staff)" [ref=e207] [cursor=pointer]:
+                - /url: /companies/ardent/jobs/pGoWrzd-founding-engineer-infrastructure-staff
+          - generic [ref=e208]:
+            - img "MindFort" [ref=e210]
+            - generic [ref=e211]:
+              - link "MindFort" [ref=e212] [cursor=pointer]:
+                - /url: /companies/mindfort
+              - link "AI Researcher" [ref=e214] [cursor=pointer]:
+                - /url: /companies/mindfort/jobs/HV2EzUk-ai-researcher
+          - generic [ref=e215]:
+            - img "GoGoGrandparent" [ref=e217]
+            - generic [ref=e218]:
+              - link "GoGoGrandparent" [ref=e219] [cursor=pointer]:
+                - /url: /companies/gogograndparent
+              - link "Backend Engineer" [ref=e221] [cursor=pointer]:
+                - /url: /companies/gogograndparent/jobs/2vbzAw8-backend-engineer
+          - generic [ref=e222]:
+            - img "AiPrise" [ref=e224]
+            - generic [ref=e225]:
+              - link "AiPrise" [ref=e226] [cursor=pointer]:
+                - /url: /companies/aiprise
+              - link "Staff Software Engineer" [ref=e228] [cursor=pointer]:
+                - /url: /companies/aiprise/jobs/Uz2e9zi-staff-software-engineer
+          - generic [ref=e229]:
+            - img "Terminal" [ref=e231]
+            - generic [ref=e232]:
+              - link "Terminal" [ref=e233] [cursor=pointer]:
+                - /url: /companies/terminal
+              - link "Software Engineer, Data Platform" [ref=e235] [cursor=pointer]:
+                - /url: /companies/terminal/jobs/ESIucQf-software-engineer-data-platform
+          - generic [ref=e236]:
+            - img "Kabilah" [ref=e238]
+            - generic [ref=e239]:
+              - link "Kabilah" [ref=e240] [cursor=pointer]:
+                - /url: /companies/kabilah
+              - link "Founding Engineer (AI)" [ref=e242] [cursor=pointer]:
+                - /url: /companies/kabilah/jobs/5galYSK-founding-engineer-ai
+          - generic [ref=e243]:
+            - img "GIMO" [ref=e245]
+            - generic [ref=e246]:
+              - link "GIMO" [ref=e247] [cursor=pointer]:
+                - /url: /companies/gimo
+              - link "Senior Java Engineer" [ref=e249] [cursor=pointer]:
+                - /url: /companies/gimo/jobs/PnG2yGW-senior-java-engineer
+          - generic [ref=e250]:
+            - img "Oneleet" [ref=e252]
+            - generic [ref=e253]:
+              - link "Oneleet" [ref=e254] [cursor=pointer]:
+                - /url: /companies/oneleet
+              - link "Senior Software Engineer (Backend)" [ref=e256] [cursor=pointer]:
+                - /url: /companies/oneleet/jobs/6WRWYIs-senior-software-engineer-backend
+          - generic [ref=e257]:
+            - img "Knowtex" [ref=e259]
+            - generic [ref=e260]:
+              - link "Knowtex" [ref=e261] [cursor=pointer]:
+                - /url: /companies/knowtex
+              - link "Software Engineer (Applications Engineering)" [ref=e263] [cursor=pointer]:
+                - /url: /companies/knowtex/jobs/ZYtj8QS-software-engineer-applications-engineering
+          - generic [ref=e264]:
+            - img "Numeral" [ref=e266]
+            - generic [ref=e267]:
+              - link "Numeral" [ref=e268] [cursor=pointer]:
+                - /url: /companies/numeral
+              - link "Forward Deployed Engineer" [ref=e270] [cursor=pointer]:
+                - /url: /companies/numeral/jobs/drO1dy8-forward-deployed-engineer
+          - generic [ref=e271]:
+            - img "Windmill" [ref=e273]
+            - generic [ref=e274]:
+              - link "Windmill" [ref=e275] [cursor=pointer]:
+                - /url: /companies/windmill
+              - link "Distributed Systems Engineer" [ref=e277] [cursor=pointer]:
+                - /url: /companies/windmill/jobs/HVVT6HN-distributed-systems-engineer
+          - generic [ref=e278]:
+            - img "Agave" [ref=e280]
+            - generic [ref=e281]:
+              - link "Agave" [ref=e282] [cursor=pointer]:
+                - /url: /companies/agave
+              - link "Full-Stack Software Engineer" [ref=e284] [cursor=pointer]:
+                - /url: /companies/agave/jobs/uNmv0Mv-full-stack-software-engineer
+          - generic [ref=e285]:
+            - img "Dime" [ref=e287]
+            - generic [ref=e288]:
+              - link "Dime" [ref=e289] [cursor=pointer]:
+                - /url: /companies/dime-2
+              - link "Forward Deployed Engineering Intern" [ref=e291] [cursor=pointer]:
+                - /url: /companies/dime-2/jobs/Gk8Z0s5-forward-deployed-engineering-intern
+          - generic [ref=e292]:
+            - img "Axle" [ref=e294]
+            - generic [ref=e295]:
+              - link "Axle" [ref=e296] [cursor=pointer]:
+                - /url: /companies/axle
+              - link "Staff Engineer" [ref=e298] [cursor=pointer]:
+                - /url: /companies/axle/jobs/fsGXBTC-staff-engineer
+          - generic [ref=e299]:
+            - img "Camber" [ref=e301]
+            - generic [ref=e302]:
+              - link "Camber" [ref=e303] [cursor=pointer]:
+                - /url: /companies/camber-2
+              - link "Senior Data Engineer" [ref=e305] [cursor=pointer]:
+                - /url: /companies/camber-2/jobs/hS3soqw-senior-data-engineer
+          - generic [ref=e306]:
+            - img "Closure" [ref=e308]
+            - generic [ref=e309]:
+              - link "Closure" [ref=e310] [cursor=pointer]:
+                - /url: /companies/closure
+              - link "Member of Technical Staff" [ref=e312] [cursor=pointer]:
+                - /url: /companies/closure/jobs/xUmCr0b-member-of-technical-staff
+          - generic [ref=e313]:
+            - img "CollectWise" [ref=e315]
+            - generic [ref=e316]:
+              - link "CollectWise" [ref=e317] [cursor=pointer]:
+                - /url: /companies/collectwise
+              - link "AI Agent Engineer" [ref=e319] [cursor=pointer]:
+                - /url: /companies/collectwise/jobs/oEAfzBS-ai-agent-engineer
+  - contentinfo "Footer" [ref=e320]:
+    - heading "Footer" [level=2] [ref=e321]
+    - generic [ref=e322]:
+      - generic [ref=e323]:
+        - generic [ref=e325]:
+          - link "Y Combinator Y Combinator" [ref=e326] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e327]: Y Combinator
+            - img "Y Combinator" [ref=e328]
+          - heading "Make something people want." [level=3] [ref=e329]
+        - generic [ref=e330]:
+          - generic [ref=e331]:
+            - heading "Programs" [level=3] [ref=e332]
+            - list [ref=e333]:
+              - listitem [ref=e334]:
+                - link "YC Program" [ref=e335] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e336]:
+                - link "Startup School" [ref=e337] [cursor=pointer]:
+                  - /url: https://startupschool.org
+              - listitem [ref=e338]:
+                - link "Work at a Startup" [ref=e339] [cursor=pointer]:
+                  - /url: /jobs
+              - listitem [ref=e340]:
+                - link "Co-Founder Matching" [ref=e341] [cursor=pointer]:
+                  - /url: /cofounder-matching
+          - generic [ref=e342]:
+            - heading "Resources" [level=3] [ref=e343]
+            - list [ref=e344]:
+              - listitem [ref=e345]:
+                - link "Startup Directory" [ref=e346] [cursor=pointer]:
+                  - /url: /companies
+              - listitem [ref=e347]:
+                - link "Startup Library" [ref=e348] [cursor=pointer]:
+                  - /url: /library
+              - listitem [ref=e349]:
+                - link "Investors" [ref=e350] [cursor=pointer]:
+                  - /url: /investors
+              - listitem [ref=e351]:
+                - link "Demo Day" [ref=e352] [cursor=pointer]:
+                  - /url: /demoday
+              - listitem [ref=e353]:
+                - link "Safe" [ref=e354] [cursor=pointer]:
+                  - /url: /documents
+              - listitem [ref=e355]:
+                - link "Hacker News" [ref=e356] [cursor=pointer]:
+                  - /url: https://news.ycombinator.com/
+              - listitem [ref=e357]:
+                - link "Launch YC" [ref=e358] [cursor=pointer]:
+                  - /url: /launches
+              - listitem [ref=e359]:
+                - link "YC Deals" [ref=e360] [cursor=pointer]:
+                  - /url: https://deals.ycombinator.com
+          - generic [ref=e361]:
+            - heading "Company" [level=3] [ref=e362]
+            - list [ref=e363]:
+              - listitem [ref=e364]:
+                - link "YC Blog" [ref=e365] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e366]:
+                - link "Contact" [ref=e367] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e368]:
+                - link "Press" [ref=e369] [cursor=pointer]:
+                  - /url: /press
+              - listitem [ref=e370]:
+                - link "People" [ref=e371] [cursor=pointer]:
+                  - /url: /people
+              - listitem [ref=e372]:
+                - link "Careers" [ref=e373] [cursor=pointer]:
+                  - /url: /software
+              - listitem [ref=e374]:
+                - link "Privacy Policy" [ref=e375] [cursor=pointer]:
+                  - /url: /legal#privacy
+              - listitem [ref=e376]:
+                - link "Notice at Collection" [ref=e377] [cursor=pointer]:
+                  - /url: /legal#notice-at-collection
+              - listitem [ref=e378]:
+                - link "Security" [ref=e379] [cursor=pointer]:
+                  - /url: /security
+              - listitem [ref=e380]:
+                - link "Terms of Use" [ref=e381] [cursor=pointer]:
+                  - /url: /legal#tou
+      - generic [ref=e382]:
+        - generic [ref=e383]:
+          - link "Twitter" [ref=e384] [cursor=pointer]:
+            - /url: https://twitter.com/ycombinator
+            - generic [ref=e385]: Twitter
+            - img [ref=e386]
+          - link "Facebook" [ref=e388] [cursor=pointer]:
+            - /url: https://www.facebook.com/YCombinator/
+            - generic [ref=e389]: Facebook
+            - img [ref=e390]
+          - link "Instagram" [ref=e392] [cursor=pointer]:
+            - /url: https://www.instagram.com/ycombinator
+            - generic [ref=e393]: Instagram
+            - img [ref=e394]
+          - link "LinkedIn" [ref=e396] [cursor=pointer]:
+            - /url: https://www.linkedin.com/school/y-combinator/
+            - generic [ref=e397]: LinkedIn
+            - img [ref=e398]
+          - link "Youtube" [ref=e400] [cursor=pointer]:
+            - /url: https://www.youtube.com/c/ycombinator
+            - generic [ref=e401]: Youtube
+            - img [ref=e402]
+        - paragraph [ref=e404]: © 2026 Y Combinator

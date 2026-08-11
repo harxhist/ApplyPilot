@@ -1,0 +1,179 @@
+# Harsh Rajput — three-track search config
+# Tracks: india | us_transfer | remote_35lpa (≥35 LPA / ~$42k USD fully remote)
+
+tracks:
+  - id: india
+    description: India office, India-remote, or hybrid India roles
+    sponsorship: "No"
+  - id: us_transfer
+    description: US remote or US-transfer-friendly employers (sponsorship Yes)
+    sponsorship: "Yes"
+  - id: remote_35lpa
+    description: Fully remote global/Indian roles targeting ≥35 LPA TC (~$42k USD)
+    sponsorship: auto
+    min_tc_usd: 42000
+    min_tc_inr_lpa: 35
+
+queries:
+  # Track: india / applied AI + backend
+  - query: "software engineer"
+    tier: 1
+    track: india
+  - query: "backend engineer"
+    tier: 1
+    track: india
+  - query: "site reliability engineer"
+    tier: 2
+    track: india
+  - query: "platform engineer"
+    tier: 2
+    track: india
+  - query: "AI engineer"
+    tier: 1
+    track: india
+  - query: "machine learning engineer"
+    tier: 1
+    track: india
+  - query: "applied AI engineer"
+    tier: 1
+    track: india
+  - query: "GenAI engineer"
+    tier: 2
+    track: india
+
+  # Track: us_transfer
+  - query: "software engineer remote"
+    tier: 1
+    track: us_transfer
+  - query: "backend engineer remote"
+    tier: 1
+    track: us_transfer
+  - query: "AI engineer remote"
+    tier: 1
+    track: us_transfer
+  - query: "machine learning engineer remote"
+    tier: 2
+    track: us_transfer
+  - query: "software engineer"
+    tier: 2
+    track: us_transfer
+
+  # Track: remote_35lpa — high-comp remote
+  - query: "software engineer remote"
+    tier: 1
+    track: remote_35lpa
+  - query: "backend engineer remote Go"
+    tier: 1
+    track: remote_35lpa
+  - query: "full stack engineer remote"
+    tier: 2
+    track: remote_35lpa
+  - query: "platform engineer remote"
+    tier: 2
+    track: remote_35lpa
+  - query: "infrastructure engineer remote"
+    tier: 2
+    track: remote_35lpa
+  - query: "DevOps engineer remote"
+    tier: 3
+    track: remote_35lpa
+
+locations:
+  - location: "Bangalore, India"
+    remote: false
+    track: india
+  - location: "Delhi, India"
+    remote: false
+    track: india
+  - location: "Hyderabad, India"
+    remote: false
+    track: india
+  - location: "Gurugram, India"
+    remote: false
+    track: india
+  - location: "India"
+    remote: true
+    track: india
+  - location: "Remote"
+    remote: true
+    track: remote_35lpa
+  - location: "San Francisco, CA"
+    remote: false
+    track: us_transfer
+  - location: "Remote"
+    remote: true
+    track: us_transfer
+  - location: "United States"
+    remote: true
+    track: us_transfer
+
+location:
+  primary: "Delhi"
+  accept_patterns:
+    - "India"
+    - "Bangalore"
+    - "Bengaluru"
+    - "Delhi"
+    - "New Delhi"
+    - "Noida"
+    - "Gurugram"
+    - "Gurgaon"
+    - "Hyderabad"
+    - "Pune"
+    - "Chennai"
+    - "Mumbai"
+    - "Remote"
+    - "Anywhere"
+    - "Worldwide"
+    - "Global"
+    - "Work from anywhere"
+    - "United States"
+    - "US"
+    - "USA"
+    - "San Francisco"
+    - "Bay Area"
+    - "Seattle"
+    - "New York"
+    - "Austin"
+    - "Remote - India"
+    - "India Remote"
+  reject_patterns:
+    - "EU only"
+    - "Europe only"
+    - "UK only"
+    - "Germany only"
+    - "Canada only"
+    - "Australia only"
+    - "must be based in UK"
+    - "must be based in EU"
+    - "onsite only Seattle"
+    - "onsite only New York"
+  linkedin_type_chars: 3
+
+country: "India"
+
+boards:
+  - indeed
+  - linkedin
+  - glassdoor
+  - zip_recruiter
+  - google
+
+defaults:
+  results_per_site: 25
+  hours_old: 168
+  min_score: 7
+  max_job_age_days: 14
+
+exclude_titles:
+  - "Principal"
+  - "Staff"
+  - "Director"
+  - "VP"
+  - "Vice President"
+  - "Manager"
+  - "Intern"
+  - "Internship"
+  - "Co-op"
+  - "Distinguished"
+  - "Fellow"

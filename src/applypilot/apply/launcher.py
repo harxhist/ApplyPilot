@@ -177,60 +177,61 @@ _handback_events: dict[int, threading.Event] = {}
 _mini_procs: dict[int, subprocess.Popen] = {}
 
 
-def _run_mini_task(worker_id: int, cdp_port: int, instructions: str) -> subprocess.Popen:
-    """Spawn a mini Claude Code session to execute user instructions in Chrome.
+def _run_mini_task(worker_id: int, cdp_port: int, instructions: str):
+    """Spawn a mini Cursor Agent session to execute user instructions in Chrome.
 
-    The mini Claude has Playwright MCP access to the worker's Chrome window.
-    It should complete the task and output TASK:COMPLETE when done.
-
-    Args:
-        worker_id: Worker whose Chrome window to use.
-        cdp_port: CDP debug port for the worker's Chrome.
-        instructions: What the user wants Claude to do.
-
-    Returns:
-        Running subprocess.Popen handle (stdout is readable).
+    Returns a lightweight handle with .stdout (iterable of lines) and .poll()/.kill()
+    compatible enough for the Take Over / Run Task HTTP handlers.
     """
-    prompt = (
-        f"You have browser access via Playwright MCP (CDP port {cdp_port}).\n"
-        f"The user needs you to do the following task:\n\n"
-        f"{instructions}\n\n"
-        f"Use the browser tools to complete this task. When finished, output TASK:COMPLETE.\n"
-        f"Do NOT submit any job applications — only do what the user explicitly asked."
-    )
+    from applypilot.apply.cursor_runtime import run_cursor_mini_task
 
-    mcp_config_path = config.APP_DIR / f".mcp-apply-{worker_id}.json"
+    class _MiniHandle:
+        def __init__(self):
+            self._lines: list[str] = []
+            self._done = threading.Event()
+            self._returncode: int | None = None
+            # Fake pid so callers never _kill_process_tree the applypilot process
+            self.pid = None
 
-    env = os.environ.copy()
-    env.pop("ANTHROPIC_API_KEY", None)
-    env.pop("CLAUDECODE", None)
-    env.pop("CLAUDE_CODE_ENTRYPOINT", None)
+        @property
+        def stdout(self):
+            # Blocking generator that yields after the run finishes
+            self._done.wait(timeout=600)
+            for line in self._lines:
+                yield line + "\n"
 
-    proc = subprocess.Popen(
-        [
-            "claude",
-            "--model", "sonnet",
-            "-p",
-            "--mcp-config", str(mcp_config_path),
-            "--strict-mcp-config",
-            "--permission-mode", "bypassPermissions",
-            "--no-session-persistence",
-            "--output-format", "stream-json",
-            "--verbose", "-",
-        ],
-        stdin=subprocess.PIPE,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-        env=env,
-        cwd=str(config.APP_DIR),
-        start_new_session=True,
-    )
-    proc.stdin.write(prompt)
-    proc.stdin.close()
-    return proc
+        def poll(self):
+            return self._returncode if self._done.is_set() else None
+
+        def wait(self, timeout=None):
+            self._done.wait(timeout=timeout)
+            return self._returncode
+
+        def kill(self):
+            self._returncode = -9
+            self._done.set()
+
+    handle = _MiniHandle()
+    worker_dir = config.APPLY_WORKER_DIR / f"worker-{worker_id}"
+
+    def _run():
+        try:
+            result = run_cursor_mini_task(
+                instructions,
+                cdp_port=cdp_port,
+                worker_dir=worker_dir,
+                worker_id=worker_id,
+            )
+            handle._lines = (result.output or "").splitlines()
+            handle._returncode = 0 if result.status == "finished" else 1
+        except Exception as e:
+            handle._lines = [f"ERROR: {e}"]
+            handle._returncode = 1
+        finally:
+            handle._done.set()
+
+    threading.Thread(target=_run, daemon=True, name=f"mini-cursor-w{worker_id}").start()
+    return handle
 
 
 # ---------------------------------------------------------------------------
@@ -582,8 +583,14 @@ def _start_worker_listener(worker_id: int, no_hitl: bool = False) -> int:
                 return
             # Kill any previous mini proc
             old = state.get("mini_proc")
-            if old and old.poll() is None:
-                _kill_process_tree(old.pid)
+            if old:
+                if hasattr(old, "kill"):
+                    old.kill()
+                elif hasattr(old, "poll") and old.poll() is None and getattr(old, "pid", None):
+                    try:
+                        _kill_process_tree(old.pid)
+                    except Exception:
+                        pass
             proc = _run_mini_task(worker_id, cdp_port, instructions)
             state["mini_proc"] = proc
             _mini_procs[worker_id] = proc
@@ -609,7 +616,7 @@ def _start_worker_listener(worker_id: int, no_hitl: bool = False) -> int:
                     line = line.strip()
                     if not line:
                         continue
-                    # Extract text from stream-json format
+                    # Cursor runtime yields plain text; Claude used stream-json
                     try:
                         msg = json.loads(line)
                         if msg.get("type") == "assistant":
@@ -618,11 +625,16 @@ def _start_worker_listener(worker_id: int, no_hitl: bool = False) -> int:
                                     text = block["text"].replace("\n", "\\n")
                                     self.wfile.write(f"data: {text}\n\n".encode())
                                     self.wfile.flush()
+                        else:
+                            safe = line.replace("\n", "\\n")
+                            self.wfile.write(f"data: {safe}\n\n".encode())
+                            self.wfile.flush()
                     except json.JSONDecodeError:
                         safe = line.replace("\n", "\\n")
                         self.wfile.write(f"data: {safe}\n\n".encode())
                         self.wfile.flush()
-                proc.wait()
+                if hasattr(proc, "wait"):
+                    proc.wait()
                 self.wfile.write(b"data: [DONE]\n\n")
                 self.wfile.flush()
             except (BrokenPipeError, ConnectionResetError):
@@ -1631,13 +1643,22 @@ def acquire_job(target_url: str | None = None,
                 ),
             )
 
-            # Pick first candidate whose company is under cap AND ATS lane is free.
+            # Pick first candidate whose company is under cap AND ATS lane is free
+            # AND passes Harsh relevance (skip tailored-but-irrelevant packs).
+            from applypilot.scoring.relevance import evaluate_relevance
             row = None
             for cand in candidates:
                 if over_cap(dict(cand)):
                     continue
                 ats = detect_ats(cand["application_url"] or cand["url"] or "")
                 if ats is not None and ats in active_ats:
+                    continue
+                rel = evaluate_relevance(dict(cand))
+                if not rel.ok:
+                    logger.info(
+                        "acquire_job: skip irrelevant %s — %s",
+                        (cand["title"] or "")[:50], rel.reason[:80],
+                    )
                     continue
                 row = cand
                 break
@@ -1968,16 +1989,17 @@ def _activate_agent_tab(port: int, timeout: float = 20.0) -> None:
 
 
 def run_job(job: dict, port: int, worker_id: int = 0,
-            model: str = "sonnet", dry_run: bool = False,
+            model: str | None = None, dry_run: bool = False,
             skip_tab_reset: bool = False,
             extra_context: str | None = None) -> tuple[str, int, list[dict]]:
-    """Spawn a Claude Code session for one job application.
+    """Spawn a Cursor Agent session for one job application.
 
     Args:
         job: Job dict from the database.
         port: CDP port for the worker's Chrome.
         worker_id: Numeric worker identifier.
-        model: Claude model name.
+        model: Cursor model id (default / auto / composer-2.5, …).
+            Falls back to APPLY_MODEL, LLM_MODEL, then ``default``.
         dry_run: If True, don't click Submit.
         skip_tab_reset: If True, don't close leftover tabs (used after HITL/takeover).
         extra_context: Optional instructions from a previous human takeover, prepended
@@ -1987,6 +2009,8 @@ def run_job(job: dict, port: int, worker_id: int = 0,
         Tuple of (status_string, duration_ms, screening_questions).
         screening_questions is a list of dicts with keys: question, field_type, options.
     """
+    from applypilot.apply.cursor_runtime import resolve_apply_model
+    model = resolve_apply_model(model)
     # Close leftover tabs from previous job so agent starts on a blank page
     if not skip_tab_reset:
         _reset_browser_tabs(port)
@@ -2054,48 +2078,12 @@ def run_job(job: dict, port: int, worker_id: int = 0,
             f"{agent_prompt}"
         )
 
-    # Refresh Gmail token before writing MCP config (the MCP server doesn't auto-refresh)
+    # Refresh Gmail token (legacy MCP path; Cursor runtime uses Playwright only)
     _refresh_gmail_token()
 
-    # Write per-worker MCP config
+    # Keep a per-worker MCP config on disk for debugging / gen_prompt
     mcp_config_path = config.APP_DIR / f".mcp-apply-{worker_id}.json"
     mcp_config_path.write_text(json.dumps(_make_mcp_config(port, worker_id=worker_id)), encoding="utf-8")
-
-    # Build claude command
-    cmd = [
-        "claude",
-        "--model", model,
-        "-p",
-        "--mcp-config", str(mcp_config_path),
-        "--strict-mcp-config",
-        "--permission-mode", "bypassPermissions",
-        "--no-session-persistence",
-        "--disallowedTools", ",".join([
-            # browser_install restarts the browser in CDP mode, breaking the session
-            "mcp__playwright__browser_install",
-            # Block Gmail write tools (read-only access for email verification)
-            "mcp__gmail__draft_email", "mcp__gmail__modify_email",
-            "mcp__gmail__delete_email", "mcp__gmail__download_attachment",
-            "mcp__gmail__batch_modify_emails", "mcp__gmail__batch_delete_emails",
-            "mcp__gmail__create_label", "mcp__gmail__update_label",
-            "mcp__gmail__delete_label", "mcp__gmail__get_or_create_label",
-            "mcp__gmail__list_email_labels", "mcp__gmail__create_filter",
-            "mcp__gmail__list_filters", "mcp__gmail__get_filter",
-            "mcp__gmail__delete_filter",
-        ]),
-        "--output-format", "stream-json",
-        "--verbose", "-",
-    ]
-
-    env = os.environ.copy()
-    env.pop("CLAUDECODE", None)
-    env.pop("CLAUDE_CODE_ENTRYPOINT", None)
-    # Remove ANTHROPIC_API_KEY so the subprocess uses the user's Max plan
-    # login instead of API billing. The key is loaded by config.load_env()
-    # for the Gemini/OpenAI LLM fallback chain but must NOT leak into the
-    # Claude Code subprocess — it would override interactive auth and hit
-    # "credit balance is too low" on an unfunded API account.
-    env.pop("ANTHROPIC_API_KEY", None)
 
     # worker_dir was wiped+recreated above, before build_prompt populated it.
     worker_dir = config.APPLY_WORKER_DIR / f"worker-{worker_id}"
@@ -2103,7 +2091,7 @@ def run_job(job: dict, port: int, worker_id: int = 0,
     update_state(worker_id, status="applying", job_title=job["title"],
                  company=job.get("site", ""), score=job.get("fit_score", 0),
                  start_time=time.time(), actions=0, last_action="starting")
-    add_event(f"[W{worker_id}] Starting: {(job.get('title') or '')[:40]} @ {job.get('site', '')}")
+    add_event(f"[W{worker_id}] Starting (Cursor): {(job.get('title') or '')[:40]} @ {job.get('site', '')}")
 
     worker_log = config.LOG_DIR / f"worker-{worker_id}.log"
     ts_header = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -2112,35 +2100,17 @@ def run_job(job: dict, port: int, worker_id: int = 0,
         f"[{ts_header}] {job['title']} @ {job.get('site', '')}\n"
         f"URL: {job.get('application_url') or job['url']}\n"
         f"Score: {job.get('fit_score', 'N/A')}/10\n"
+        f"Runtime: Cursor Agent SDK\n"
         f"{'=' * 60}\n"
     )
 
     start = time.time()
     stats: dict = {}
-    proc = None
 
     try:
-        proc = subprocess.Popen(
-            cmd,
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT,
-            text=True,
-            encoding="utf-8",
-            errors="replace",
-            env=env,
-            cwd=str(worker_dir),
-            start_new_session=True,
-        )
-        with _claude_lock:
-            _claude_procs[worker_id] = proc
-
-        proc.stdin.write(agent_prompt)
-        proc.stdin.close()
+        from applypilot.apply.cursor_runtime import run_cursor_job
 
         # Background thread: activate the agent's tab as soon as it navigates.
-        # Playwright MCP creates a new tab rather than reusing the existing blank tab,
-        # so without this the user's visible Chrome tab stays on about:blank.
         threading.Thread(
             target=_activate_agent_tab,
             args=(port,),
@@ -2148,158 +2118,70 @@ def run_job(job: dict, port: int, worker_id: int = 0,
             name=f"tab-activator-w{worker_id}",
         ).start()
 
-        text_parts: list[str] = []
-        screening_qs: list[dict] = []
-        # Maps Claude Code tool_use_id → fully-qualified MCP tool name. Used
-        # below to label tool_result blocks (which only carry the id) so we
-        # can selectively log gmail results and any errors.
-        tool_use_names: dict[str, str] = {}
-        # Per-job ordered list of tool calls — captured for the per-ATS
-        # success-path memo (apply/successful_paths.py). Populated as
-        # tool_use blocks stream in; persisted on RESULT:APPLIED.
-        tool_calls: list[dict] = []
-        # buffering=1 → line-buffered. Without this Python defaults to
-        # 8KB block buffering for text-mode files, which means short
-        # tool-call entries (~30 bytes each) accumulate invisibly until
-        # 250+ have happened or run_job exits. Flushing per-line keeps
-        # `tail -f worker-0.log` actually live during long apply runs.
+        def _should_stop() -> bool:
+            tev = _takeover_events.get(worker_id)
+            return bool(tev and tev.is_set()) or _stop_event.is_set()
+
+        def _on_action(desc: str) -> None:
+            ws = get_state(worker_id)
+            cur_actions = ws.actions if ws else 0
+            update_state(worker_id, actions=cur_actions + 1, last_action=desc[:35])
+
         with open(worker_log, "a", encoding="utf-8", buffering=1) as lf:
             lf.write(log_header)
+            cursor_result = run_cursor_job(
+                agent_prompt,
+                cdp_port=port,
+                worker_dir=worker_dir,
+                worker_id=worker_id,
+                model=model,
+                log_file=lf,
+                should_stop=_should_stop,
+                on_action=_on_action,
+            )
 
-            for line in proc.stdout:
-                line = line.strip()
-                if not line:
-                    continue
-                # Check for user takeover between output lines
-                tev = _takeover_events.get(worker_id)
-                if tev and tev.is_set():
-                    break
-                try:
-                    msg = json.loads(line)
-                    msg_type = msg.get("type")
-                    if msg_type == "assistant":
-                        for block in msg.get("message", {}).get("content", []):
-                            bt = block.get("type")
-                            if bt == "text":
-                                text_parts.append(block["text"])
-                                lf.write(block["text"] + "\n")
-                                # Parse SCREENING_Q lines from text
-                                for tl in block["text"].split("\n"):
-                                    tl = tl.strip()
-                                    if tl.startswith("SCREENING_Q:"):
-                                        payload = tl[len("SCREENING_Q:"):].strip()
-                                        parts = payload.split("|")
-                                        if len(parts) >= 2:
-                                            screening_qs.append({
-                                                "question": parts[0].strip(),
-                                                "field_type": parts[1].strip(),
-                                                "options": parts[2].strip() if len(parts) > 2 else "",
-                                            })
-                            elif bt == "tool_use":
-                                full_name = block.get("name", "")
-                                # Remember tool_use_id → name so we can label results below.
-                                tu_id = block.get("id")
-                                if tu_id:
-                                    tool_use_names[tu_id] = full_name
-                                name = (
-                                    full_name
-                                    .replace("mcp__playwright__", "")
-                                    .replace("mcp__gmail__", "gmail:")
-                                )
-                                inp = block.get("input", {})
-                                if "url" in inp:
-                                    desc = f"{name} {inp['url'][:60]}"
-                                elif "ref" in inp:
-                                    desc = f"{name} {inp.get('element', inp.get('text', ''))}"[:50]
-                                elif "fields" in inp:
-                                    desc = f"{name} ({len(inp['fields'])} fields)"
-                                elif "paths" in inp:
-                                    desc = f"{name} upload"
-                                else:
-                                    desc = name
+        screening_qs = list(cursor_result.screening_qs)
+        tool_calls = list(cursor_result.tool_calls)
 
-                                lf.write(f"  >> {desc}\n")
-                                tool_calls.append({"tool": name, "summary": desc})
-                                ws = get_state(worker_id)
-                                cur_actions = ws.actions if ws else 0
-                                update_state(worker_id,
-                                             actions=cur_actions + 1,
-                                             last_action=desc[:35])
-                    elif msg_type == "user":
-                        # Tool results return as user messages. We don't log
-                        # browser_snapshot etc. — the dumps would dwarf the log.
-                        # We DO log gmail results (so we know whether the agent
-                        # actually read an email) and any tool errors.
-                        for block in msg.get("message", {}).get("content", []):
-                            if block.get("type") != "tool_result":
-                                continue
-                            tu_id = block.get("tool_use_id", "")
-                            full_name = tool_use_names.get(tu_id, "")
-                            is_error = bool(block.get("is_error", False))
-                            log_this = is_error or "gmail" in full_name
-                            if not log_this:
-                                continue
-                            content = block.get("content", "")
-                            if isinstance(content, list):
-                                content = "\n".join(
-                                    (c.get("text", "") if isinstance(c, dict) else str(c))
-                                    for c in content
-                                )
-                            preview = str(content).replace("\n", " ")[:500]
-                            short_name = (
-                                full_name
-                                .replace("mcp__playwright__", "")
-                                .replace("mcp__gmail__", "gmail:")
-                            ) or "?"
-                            marker = " [ERROR]" if is_error else ""
-                            lf.write(f"  << {short_name}{marker}: {preview}\n")
-                    elif msg_type == "result":
-                        stats = {
-                            "input_tokens": msg.get("usage", {}).get("input_tokens", 0),
-                            "output_tokens": msg.get("usage", {}).get("output_tokens", 0),
-                            "cache_read": msg.get("usage", {}).get("cache_read_input_tokens", 0),
-                            "cache_create": msg.get("usage", {}).get("cache_creation_input_tokens", 0),
-                            "cost_usd": msg.get("total_cost_usd", 0),
-                            "turns": msg.get("num_turns", 0),
-                        }
-                        text_parts.append(msg.get("result", ""))
-                except json.JSONDecodeError:
-                    text_parts.append(line)
-                    lf.write(line + "\n")
-
-        proc.wait(timeout=300)
-        returncode = proc.returncode
-        proc = None
-
-        # Check if a user takeover killed the proc
+        # Check if a user takeover cancelled the run
         tev = _takeover_events.get(worker_id)
-        if tev and tev.is_set():
+        if (tev and tev.is_set()) or cursor_result.cancelled:
             return "takeover", int((time.time() - start) * 1000), []
 
-        if returncode and returncode < 0:
-            return "skipped", int((time.time() - start) * 1000), []
+        output = cursor_result.output or ""
+        if cursor_result.error and not output.strip():
+            output = f"RESULT:FAILED:cursor_runtime:{cursor_result.error}"
 
-        output = "\n".join(text_parts)
         elapsed = int(time.time() - start)
         duration_ms = int((time.time() - start) * 1000)
 
         ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-        job_log = config.LOG_DIR / f"claude_{ts}_w{worker_id}_{job.get('site', 'unknown')[:20]}.txt"
+        job_log = config.LOG_DIR / f"cursor_{ts}_w{worker_id}_{job.get('site', 'unknown')[:20]}.txt"
         job_log.write_text(output, encoding="utf-8")
 
-        if stats:
-            cost = stats.get("cost_usd", 0)
-            ws = get_state(worker_id)
-            prev_cost = ws.total_cost if ws else 0.0
-            update_state(worker_id, total_cost=prev_cost + cost)
-
-        # Detect Claude Code credit exhaustion — stop the entire worker
-        if "credit balance is too low" in output.lower() or "insufficient credits" in output.lower():
-            add_event(f"[W{worker_id}] CREDIT EXHAUSTED — Claude Code credits depleted")
+        # Detect Cursor / API credit / usage issues — stop the whole pool
+        err_blob = f"{cursor_result.error or ''}\n{output}".lower()
+        usage_exhausted = any(
+            tok in err_blob
+            for tok in (
+                "out of usage",
+                "increase limits",
+                "you're out of usage",
+                "you are out of usage",
+                "credit balance is too low",
+                "insufficient credits",
+                "cursor_api_key missing",
+            )
+        ) or ("401" in err_blob and "cursor" in err_blob)
+        if usage_exhausted:
+            add_event(f"[W{worker_id}] CURSOR USAGE/CREDITS EXHAUSTED — stopping pool")
             update_state(worker_id, status="credits_exhausted",
-                         last_action="NO CREDITS")
-            logger.error("Claude Code credits exhausted. Cannot auto-apply. "
-                         "Top up at https://console.anthropic.com/settings/billing")
+                         last_action="NO CURSOR USAGE")
+            logger.error(
+                "Cursor Agent usage/credits exhausted: %s",
+                (cursor_result.error or output)[:240],
+            )
+            _stop_event.set()
             return "failed:credits_exhausted", duration_ms, []
 
         # Parse ACCOUNT_CREATED lines and save to DB
@@ -2423,8 +2305,6 @@ def run_job(job: dict, port: int, worker_id: int = 0,
     finally:
         with _claude_lock:
             _claude_procs.pop(worker_id, None)
-        if proc is not None and proc.poll() is None:
-            _kill_process_tree(proc.pid)
 
 
 # ---------------------------------------------------------------------------

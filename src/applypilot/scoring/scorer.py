@@ -20,51 +20,45 @@ log = logging.getLogger(__name__)
 
 # ── Scoring Prompt ────────────────────────────────────────────────────────
 
-SCORE_PROMPT_TEMPLATE = """You are a job fit evaluator. Given a candidate's resume and a job description, score how well the candidate fits the role.
+SCORE_PROMPT_TEMPLATE = """You are a job fit evaluator for Harsh Rajput.
 
 THE CANDIDATE: {candidate_summary}
 
-⚠️ GEOGRAPHY CHECK — DO THIS FIRST, BEFORE ANYTHING ELSE:
-The candidate is US-based (Seattle, WA). Any role restricted to non-US geography is INELIGIBLE.
-Read the FULL description for buried sentences like "This role will be remote and based in the UK"
-or "Remote — Ontario, BC or Alberta". A perfect tech stack on a non-US role is still INELIGIBLE.
+PROFILE CONSTRAINTS (hard):
+- ~3 years of experience (mid-level IC). NOT Staff/Principal/Director.
+- Target domains ONLY: Backend/API, Applied AI / LLM / RAG / Agents, Full-stack React/Next.js + backend.
+- Compensation floor when stated: ≥30 LPA INR TC (~$40k USD). Below floor → low score.
+- Geography: India-based; open to India office/remote, global remote, and US-transfer roles that accept sponsorship. EU/UK-only / Canada-only roles are INELIGIBLE (non_us_only is the tag used historically — treat as ineligible geo).
 
-Output ELIGIBILITY: non_us_only when the role's hiring location is restricted to a non-US country
-even if the role is remote. Output ELIGIBILITY: eligible when the role is open to US workers
-(US-only, US-remote, global-remote, or no restriction).
+GEOGRAPHY CHECK — DO THIS FIRST:
+Output ELIGIBILITY: non_us_only when the role is restricted to EU-only, UK-only, Canada-only, Germany-only, Australia-only with NO India/worldwide/US option.
+Output ELIGIBILITY: eligible for India, India-remote, global remote, US remote/transfer, or unrestricted.
 
-Common signals for non_us_only:
-- "based in (UK|Canada|Ireland|Germany|...)"
-- "Remote — (UK|Canada|Europe|EMEA|APAC)"
-- "(m/f/d)" / "(m/w/d)" German title suffix
-- UK/Canada right-to-work questions in the form
-- CET / GMT+N / IST timezone requirement
+SCORING CRITERIA (Harsh-specific):
+- 10: Excellent mid-level match. Backend/API or Applied AI/Agents or Full-stack React/Next+backend; stack overlap (Go/Python/TS, FastAPI, React/Next, RAG/LLM); YOE ~2-5; comp ≥30 LPA when stated.
+- 8-9: Strong match. Allowed domain, good stack overlap, seniority OK (Senior only if JD YOE overlaps 2-5). Minor gaps OK.
+- 6-7: Partial match. Allowed domain but weak stack overlap, OR generic Software Engineer with thin AI/backend signal.
+- 3-5: Weak. Pure SRE / Infra / Storage / Observability / DevOps without AI/backend/fullstack focus; OR Senior with YOE requiring 6+; OR primary language Rust/C++/Ruby with no transfer path; OR frontend-only with no backend.
+- 1-2: Poor / wrong career track. Non-engineering, Staff+/Director, Intern, or geo-ineligible.
 
-If non_us_only, you MAY still produce a SCORE based on tech-stack fit (for audit), but the
-eligibility tag is what determines whether the application proceeds.
-
-SCORING CRITERIA:
-- 10: Near-perfect IC engineering match. The role is a software/platform/infrastructure engineer position requiring the candidate's exact stack (Go/Kotlin/Python/Java, distributed systems, K8s). Seniority aligns (Senior/Staff/Principal). The candidate would be a top-tier applicant with minimal gaps.
-- 9: Excellent engineering match. Strong alignment on tech stack and seniority, with 1-2 gaps in secondary skills or slightly different domain.
-- 7-8: Good engineering match. Candidate has most required technical skills. Minor gaps in specific frameworks or domain experience, easily bridged.
-- 5-6: Moderate match. The role is engineering but uses a different primary stack, or there's a seniority mismatch (e.g., junior role or executive-only role with no IC component).
-- 3-4: Weak match. Engineering role but wrong specialization (frontend-only, mobile, ML research, data science), or a non-engineering role with some technical overlap.
-- 1-2: Poor match. Non-engineering role (recruiting, design, marketing, product management, sales), completely different field, OR non-US geographic restriction.
+HARD CAPS:
+- Pure infra/SRE/storage/observability roles → SCORE ≤ 3
+- Roles requiring 6+ YOE (or Staff/Principal) → SCORE ≤ 4
+- Comp explicitly below 30 LPA / $40k → SCORE ≤ 3
+- Frontend-only (no backend) → SCORE ≤ 4
+- Allowed backend/AI/fullstack mid-level → prefer 8–10
 
 ADDITIONAL RULES:
-- Non-engineering roles (recruiters, designers, PMs, marketing, sales, executive search) score 1-2 MAX regardless of seniority or domain.
-- Roles requiring a specific language the candidate doesn't know (Rust, C++, Ruby, Scala, Clojure) as the PRIMARY requirement score 4-6 max depending on transferability.
-- "CTO" or "VP Engineering" roles that are purely management with no IC engineering component score 5-6 max.
-- LOCATION is N/A: check the description for any office/city requirement. If the description implies onsite in a specific US city outside Seattle/Bellevue/Kirkland/Redmond, cap at 7.
-- Distinguish REQUIRED skills from NICE-TO-HAVE. Only penalize for missing required skills.
-- Value transferable experience: workflow orchestration, distributed systems, microservices, developer platforms transfer across domains.
+- Distinguish REQUIRED vs NICE-TO-HAVE skills.
+- Value transferable: APIs, distributed systems, LLM apps, RAG, React/Next fullstack.
+- LOCATION N/A: prefer India / remote / US-transfer; do not over-penalize missing city.
 
 You MUST include all four lines below. Do not skip REASONING.
 
 ELIGIBILITY: [eligible|non_us_only]
 SCORE: [1-10]
-KEYWORDS: [comma-separated ATS keywords from the job description that match or could match the candidate]
-REASONING: [2-3 sentences explaining the score, what matched well, and any gaps. If non_us_only, name the country/region.]"""
+KEYWORDS: [comma-separated ATS keywords from the job that match the candidate]
+REASONING: [2-3 sentences: domain fit, YOE fit, stack gaps, comp if stated.]"""
 
 
 # ── Rule-based pre-filter (catches obvious ineligible before LLM call) ─────
@@ -127,55 +121,51 @@ _INELIGIBLE_TITLE_PATTERNS = re.compile(
 )
 
 # Patterns checked against the location field specifically.
-# Location field explicitly lists a non-US country name → ineligible.
+# Harsh is India-based: India / Bangalore / remote-IN are eligible.
+# Mark EU/UK/Canada/ANZ/LATAM/MEA (and non-India Asia) as geo-ineligible.
 _INELIGIBLE_LOCATION_PATTERNS = re.compile(
-    # Regions
+    # Regions (APAC alone is ambiguous for India — keep as soft signal via title)
     r'\bEMEA\b'
-    r'|\bAPAC\b'
     r'|\bEurope\b'
-    # Europe
+    # Europe / UK / Ireland
     r'|\bGermany\b|\bNetherlands\b|\bFrance\b|\bSpain\b|\bItaly\b'
     r'|\bPoland\b|\bUkraine\b|\bCzech\b|\bPortugal\b|\bIreland\b'
     r'|\bDenmark\b|\bSweden\b|\bNorway\b|\bFinland\b|\bBelgium\b'
     r'|\bSwitzerland\b|\bAustria\b|\bRomania\b|\bHungary\b|\bCroatia\b'
     r'|\bGreece\b|\bBulgaria\b|\bSerbia\b|\bSlovakia\b|\bSlovenia\b'
     r'|\bEstonia\b|\bLatvia\b|\bLithuania\b'
-    # Asia
-    r'|\bIndia\b|\bSingapore\b|\bJapan\b|\bVietnam\b|\bThailand\b'
+    r'|\bUnited\s+Kingdom\b|\bEngland\b|\bScotland\b|\bWales\b'
+    r'|\bLondon\b|\bBerlin\b|\bAmsterdam\b|\bDublin\b|\bParis\b'
+    # Non-India Asia
+    r'|\bSingapore\b|\bJapan\b|\bVietnam\b|\bThailand\b'
     r'|\bPhilippines\b|\bIndonesia\b|\bKorea\b|\bTaiwan\b|\bHong Kong\b'
     r'|\bChina\b|\bPakistan\b|\bBangladesh\b|\bMalaysia\b'
     # Latin America
     r'|\bBrazil\b|\bBrasil\b|\bMexico\b|\bMéxico\b|\bArgentina\b'
     r'|\bChile\b|\bColombia\b|\bPeru\b|\bUruguay\b'
-    # Middle East / Africa
+    # Middle East / Africa / Canada
     r'|\bEgypt\b|\bNigeria\b|\bKenya\b|\bSouth Africa\b|\bIsrael\b'
     r'|\bTurkey\b|\bTürkiye\b|\bUAE\b|\bSaudi Arabia\b'
+    r'|\bCanada\b|\bToronto\b|\bVancouver\b|\bMontreal\b'
     # Oceania
-    r'|\bAustralia\b|\bNew Zealand\b',
+    r'|\bAustralia\b|\bNew Zealand\b|\bSydney\b|\bMelbourne\b',
     re.IGNORECASE,
 )
 
-# Description-level non-US patterns. Scans the full description (capped at
-# 6000 chars by the caller). Patterns intentionally narrow — must explicitly
-# RESTRICT to a non-US country, not merely mention global offices.
-# Tightened 2026-04-30 after Twilio UK/Canada slipped through the 800-char head.
+# Description-level geo restrictions. India-based / IST / Bangalore OK for Harsh.
+# Only flag when JD explicitly restricts to EU/UK/Canada/ANZ (no India/US/world option).
 _INELIGIBLE_DESC_PATTERNS = re.compile(
-    r'Remote\s*[\(\-—–]\s*(EMEA|Europe|EU|UK|United\s+Kingdom|Germany|India|Canada|Ireland|Netherlands|Brazil|Mexico|Argentina|Colombia|Australia|New\s+Zealand)'
+    r'Remote\s*[\(\-—–]\s*(EMEA|Europe|EU|UK|United\s+Kingdom|Germany|Canada|Ireland|Netherlands|Brazil|Mexico|Argentina|Colombia|Australia|New\s+Zealand)'
     r'|EMEA\s*(only|region|remote|based)'
     r'|(Europe|European)\s*(only|Time\s*Zone|timezone|based|remote)'
-    # Belt-and-suspenders: catches "based in (the) UK", "based in Europe", etc.
-    r'|based\s+in\s+(the\s+)?(Europe|EU|UK|United\s+Kingdom|Germany|India|Netherlands|Canada|Ireland|France|Spain|Italy|Brazil|Mexico|Australia|New\s+Zealand|Singapore|Japan|Israel|South\s+Africa|Portugal|Poland|Romania)'
-    r'|will\s+be\s+remote\s+and\s+based\s+in\s+(the\s+)?(UK|United\s+Kingdom|Canada|Ireland|Germany|Europe|EMEA|India)'
-    # Canadian-province patterns (Twilio L3 example)
+    r'|based\s+in\s+(the\s+)?(Europe|EU|UK|United\s+Kingdom|Germany|Netherlands|Canada|Ireland|France|Spain|Italy|Brazil|Mexico|Australia|New\s+Zealand|Singapore|Japan|Israel|South\s+Africa|Portugal|Poland|Romania)'
+    r'|will\s+be\s+remote\s+and\s+based\s+in\s+(the\s+)?(UK|United\s+Kingdom|Canada|Ireland|Germany|Europe|EMEA)'
     r'|Remote\s+(in|from|—|-)\s*(Ontario|British\s+Columbia|Alberta|Quebec|Manitoba|Nova\s+Scotia|Saskatchewan)'
     r'|Ontario,\s*British\s+Columbia'
-    # UK/Canada right-to-work questions on the form (often mirrored in JD)
     r"|right\s+to\s+work\s+in\s+(the\s+)?(UK|United\s+Kingdom|Canada|Ireland|EU|European\s+Union)"
     r"|requires?\s+(the\s+)?right\s+to\s+work\s+in\s+(the\s+)?(UK|United\s+Kingdom|Canada|Ireland|EU)"
-    # Timezone restrictions
     r'|CET\s+timezone'
-    r'|GMT[+\-]\d+\s+timezone'
-    r'|IST\s+timezone',
+    r'|GMT[+\-]\d+\s+timezone',
     re.IGNORECASE,
 )
 
@@ -186,11 +176,11 @@ _DESC_SCAN_CHARS = 6000
 
 
 def _check_ineligible(job: dict) -> str | None:
-    """Return an ineligibility reason if the job is obviously non-US, else None.
+    """Return an ineligibility reason if the job is geo/title-ineligible for Harsh.
 
-    Checked before the LLM call to save tokens and ensure consistency.
-    Scans title, location field, and the first ``_DESC_SCAN_CHARS`` of the
-    description.
+    India / Bangalore / IST / global remote / US-transfer are eligible.
+    EU/UK/Canada/ANZ-only (and similar) are ineligible. Checked before the
+    LLM call to save tokens. Scans title, location, and description head.
     """
     title = job.get("title") or ""
     location = job.get("location") or ""
@@ -251,17 +241,32 @@ def _build_candidate_summary(profile: dict) -> str:
     """Build a candidate summary string from profile for the scoring prompt."""
     exp = profile.get("experience", {})
     boundary = profile.get("skills_boundary", {})
-    years = exp.get("years_of_experience_total", "several")
+    comp = profile.get("compensation", {})
+    years = exp.get("years_of_experience_total", "3")
     current_title = exp.get("current_job_title", "Software Engineer")
-    target = exp.get("target_role", "Software Engineer")
+    target = exp.get(
+        "target_role",
+        "backend engineer / applied AI engineer / fullstack React+Next engineer",
+    )
     languages = boundary.get("languages", [])
+    frameworks = boundary.get("frameworks", [])
+    tools = boundary.get("tools", [])
     platforms = boundary.get("platforms", [])
-    parts = [f"{current_title} with {years} years experience."]
+    min_lpa = comp.get("salary_range_min_inr_lpa") or "30"
+    parts = [
+        f"{current_title} with {years} years experience (mid-level IC, not Staff/Principal).",
+        "Domains: Backend/API, Applied AI/LLM/RAG/Agents, Full-stack React/Next.js + backend.",
+    ]
     if languages:
-        parts.append(f"Primary stack: {', '.join(languages[:8])}.")
+        parts.append(f"Languages: {', '.join(languages[:8])}.")
+    if frameworks:
+        parts.append(f"Frameworks: {', '.join(frameworks[:8])}.")
+    if tools:
+        parts.append(f"AI/tools: {', '.join(tools[:6])}.")
     if platforms:
         parts.append(f"Platforms: {', '.join(platforms[:6])}.")
     parts.append(f"Targets: {target}.")
+    parts.append(f"Comp floor: ≥{min_lpa} LPA INR (~$40k USD) when stated.")
     return " ".join(parts)
 
 
@@ -277,6 +282,21 @@ def score_job(resume_text: str, job: dict, profile: dict | None = None) -> dict:
     """
     if profile is None:
         profile = load_profile()
+
+    # Harsh relevance pre-filter (role family / Senior YOE / comp floor)
+    from applypilot.scoring.relevance import evaluate_relevance
+    rel = evaluate_relevance(job)
+    if not rel.ok:
+        log.info(
+            "Pre-filter IRRELEVANT: %s — %s",
+            (job.get("title") or "?")[:60], rel.reason,
+        )
+        return {
+            "score": 2,
+            "keywords": "",
+            "reasoning": f"Irrelevant for target profile: {rel.reason}",
+            "eligibility": "eligible",  # geo-ok but low_score path
+        }
 
     # Rule-based pre-filter: catch obvious non-US ineligible jobs before LLM call.
     # Tags eligibility=non_us_only so downstream stages skip the job; the score

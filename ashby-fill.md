@@ -1,0 +1,53 @@
+- generic [ref=e2]:
+  - list [ref=e7]:
+    - listitem [ref=e8]:
+      - link "OpenAI" [ref=e9] [cursor=pointer]:
+        - /url: https://openai.com/
+        - img "OpenAI" [ref=e10]
+    - link "Back to OpenAI’s Job Listings" [ref=e11] [cursor=pointer]:
+      - /url: https://openai.com/careers/search/
+      - img [ref=e12]
+    - listitem
+  - generic [ref=e14]:
+    - heading "Backend Software Engineer, Applied Foundations" [level=1] [ref=e16]
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - heading "Location" [level=2] [ref=e20]
+          - paragraph [ref=e21]: San Francisco; Mountain View
+        - generic [ref=e22]:
+          - heading "Employment Type" [level=2] [ref=e23]
+          - paragraph [ref=e24]: Full time
+        - generic [ref=e25]:
+          - heading "Location Type" [level=2] [ref=e26]
+          - paragraph [ref=e27]: Hybrid
+        - generic [ref=e28]:
+          - heading "Department" [level=2] [ref=e29]
+          - paragraph [ref=e30]: Applied AI
+        - generic [ref=e31]:
+          - heading "Compensation" [level=2] [ref=e32]
+          - list [ref=e33]
+          - generic [ref=e36]
+      - generic [ref=e65]:
+        - tablist [ref=e66]:
+          - tab "Overview" [ref=e67] [cursor=pointer]
+          - tab "Application" [selected] [ref=e68] [cursor=pointer]
+        - tabpanel "Application" [ref=e70]:
+          - generic [ref=e71]
+          - generic [ref=e84]
+          - generic [ref=e419]
+          - generic [ref=e182]
+          - button "Submit Application" [ref=e398] [cursor=pointer]
+          - paragraph [ref=e401]
+  - contentinfo [ref=e403]:
+    - link "Learn more about Ashby" [ref=e404] [cursor=pointer]:
+      - /url: https://www.ashbyhq.com
+      - generic [ref=e405]: Powered by
+      - img "Ashby" [ref=e406]
+    - paragraph [ref=e412]:
+      - link "Privacy Policy" [ref=e413] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/privacy
+      - link "Security" [ref=e414] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/security
+      - link "Vulnerability Disclosure" [ref=e415] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/disclosure

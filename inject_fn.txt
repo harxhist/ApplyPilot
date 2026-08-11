@@ -1,0 +1,19 @@
+() => {
+  const token = "0cAFcWeA6Y3G3ME5HRv-rqyILQ9g3Wcxrw5fAp4rkau2-Nxkj9zslubJhl44mc59VVQA4WVaGmqlWfqW2T4F8ukawfMOUkq71Yy3JmMX6hrAiZh45fLrdEoB5Yt6XgANbwmkF03w6xpN0yfC5WrsJtQldX7J1GKpy6TA0FzjO55ulJF98b80K9vQZTsRYYfw3QvZACtuIH_NU9TmVDxU4-FUKC61D41tYbJImRcirRf6PD4tUMg-ocZLLLcG5TrgEUXPpUHAk-5vlLA6Fy15qKQ-34M-L2K9FSkAm_P1Wep8RXWQZuo2NixrWdZiCEHjgAzkl7iCColLG03lnTECr_Z-nrT8FVSby_hUd3bOaebsvg2zZonhixsGeiGI5m17vSFJZ7py81TS_DjrJ-EhU7q0_mSxWvkKNbnNKKYkk_9k6uSTVuVRYxPOwPn_75tbAp3CJfbs1PfMbmY60ndLO43_0FteVm1LIz-Wl9mlTd8Y59uXk8Q8rhm1xnOAPN7zMjd1bL0SuKyuJWlzPpSeguwq93PTDVRLFI41pFbg5_YU2Zkfr4o9XgG44gAGDxUI9eTbmUvJDjbQOsRuQtg5XAZskzFnMfWq_YS49gEmE5wIc8RXJ4QtKbceyoM45dpoV5WkQA8LGfdhMJSXIUaoKD420lGYmJ8Q3-g3YDMuX3GeirSyTHdbJGlOltv2xyHsLVv0ZOOGIoxwHTzX6MtssqMxV5hw9unX8QFwxEWqhnFo4jcDSZN7wIjBWVEuUyVI-vqNjMzOoTFDNDMEq-GXdsaBVOHHWIbMfkydbK9IAGC-Qqf2K3BXf7Ps5_IylDLweAna8mv_I-aT79y2QKyF-sdmlXLOJegY8vxGuijUsi7n1-cMjopqLJZlrIiPgllvPo79kE0ZZ6bENm8LVuTMmhZ1ou23XEHjVFti1ZDNOazuLO55YdmK4mApd_c87GAGDUtCxg-Vzc4f5lHbOlk3e-6SUPovdl5nwDGPWnWMVBHk5WAldR5kETOuFJ0QjdR2wlOyBQ_dYv2MWt5QblVomPbHYBmEFKlogXzDgBI0je_LFJGgmVYEfMxr41Ly5YAcvplZkW4owr1ub_1K-oH8YS1wmPNaAjuyqW-JNzqR344y_8bCAvNcum6fe-UvSo3NeqDb1HUWUOKPG7WIg9cwMy2VGfxbFMPaQpVBIIgjmGKg_x0hyXDYz4fFqzsjX5aMRLfRheYGDzM3u0cJKzU8kWxApKD8KIELfQJBDKcicRdZE4S6e8vLt3aBR5OnXQHBRIKv4me8_hnZR0lRHXT-BSuz2EEUvf1la5UblPLad6cGJwTxnkkoUx5V_9hS4HcYjtVMhb1PicZ1KTy_4_Sl5lQAq6PSr3GZyo-NGvLKrS025LIQU9hIFsuleeiSt_4IpWD2yGzdqA2Hxjku-SBZYKq7TJql63FXoaf3EhshV6jwaY3VIDuW9vwZvwtXwfsmMq1sUWifJBnEKH4al_mvQFVJMIHHaQhCWhYZSVe3apDwie78rijHHNt1X85ygsleEdWeRIqdhXrBLY64fJqcnXxS3ZOVk52ccw4aUyqWiRqxiU8jUMVrtUzSaCDLyrTAtUET_iNC_Etibus_3W2DVlcn7F1xtXVD3XLsE2BrHVxChONTF7drFgbiB9kXhb3kctQzZAXIWYmZ-t7Fuf4kQyWkS50KXHCk2QwzQCQtlo2f-ws8evAZZoPfpzGcSchwyb352a-aINm8pJ-xnarRyMzzZ6aASX1jRmqYxVpgWuYz5f1wspSu5Slmgsbu603WVRFwDWQDb5gq9x2bQqUY-d_lMIlLf72mQEwxmLu_hZWaKgrWUpzygBIMpIMODstEKa55XxyX5eRKh1Iqyc8Amm-xlWCZVrPVk0GFKaK9PLPMHNytyFMsHQff3m2ADG8wXmpLB9JnoHBYj8z-1cut-ew2tEmGGmCETziTv2BjRaBqWVnU2f30NC8deF0yVIk_d607hMTLcC6RIlMGmVgg48Bj8ym4Ic65bUUEpdnkhZo58dTBL8mo74ijAW1mcRoWB-l7Q9MHp2dqtG3knFu224BkVxTxswBcCziakrj_tCyfAbIhiQ5Z_WJ8fr17waiWSvtVlfVLK3xub7trFMkJd5l8Fa9_qFqzyFv3UUNvcTaZ3ZSw7QlJKpPKM4jDWMeUU3Ca5qSoxJSf7YyKxLL7PUciYPaAOYLpZ3DV4Tp71_T2havJsRhNE1xTVivnw-tdqnZ4XXO6RFxE0w4xUm5WS5EdvxY6X9tQ9_I3XYYYh0uKA3oFScInEGHoV7fCUMzdLIXobdfdQCzMsD4XpIJDGZEgAMC9QweWea10lTUEyreHZxm6W5rvXty8B9tBIbKPwbc4fSTmVL0Tg-8LVuRBdf8OlxM4ZM4iej7ByadzWHDPMC8nTF034S5bw4ut3mHD-rTPTuuFJn4D2rwGRDn8H7qKNkHGyss1fkIhRyyH0tX01H_7lIN0LDzhY";
+  document.querySelectorAll('[name="g-recaptcha-response"]').forEach(el => { el.value = token; el.style.display = "block"; });
+  if (window.___grecaptcha_cfg) {
+    const clients = window.___grecaptcha_cfg.clients;
+    for (const key in clients) {
+      const walk = (obj, d) => {
+        if (d > 4 || !obj) return;
+        for (const k in obj) {
+          if (typeof obj[k] === "function" && k.length < 3) try { obj[k](token); } catch(e) {}
+          else if (typeof obj[k] === "object") walk(obj[k], d+1);
+        }
+      };
+      walk(clients[key], 0);
+    }
+  }
+  const el = document.querySelector('[name="g-recaptcha-response"]');
+  return { injected: true, len: el?.value?.length || 0 };
+}

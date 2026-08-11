@@ -1,0 +1,58 @@
+# Seed Q&A knowledge base for Harsh Rajput.
+# Import: applypilot qa import ApplyPilot/config/harsh/qa_seed.yaml
+# Format: YAML list (required by applypilot qa import)
+
+- question: "Do you require visa sponsorship?"
+  answer: "For India-based or India-remote roles: No. For US/EU roles: Yes."
+  source: profile
+- question: "Will you now or in the future require sponsorship for employment visa status?"
+  answer: "India roles: No. US/EU roles: Yes."
+  source: profile
+- question: "Are you legally authorized to work in the country of employment?"
+  answer: "Yes for India. For the US/EU, I will need employer sponsorship."
+  source: profile
+- question: "Are you authorized to work in India?"
+  answer: "Yes"
+  source: profile
+- question: "Are you willing to relocate?"
+  answer: "Yes — willing to relocate anywhere."
+  source: profile
+- question: "What is your notice period / earliest start date?"
+  answer: "Immediate joinee / available from 2026-08-06."
+  source: profile
+- question: "How many years of experience do you have?"
+  answer: "Approximately 3 years of professional software engineering experience."
+  source: profile
+- question: "Expected salary / compensation?"
+  answer: "India: 30–35+ LPA INR TC (floor ~35 LPA). Global/US remote: $40k–$55k USD. Prefer midpoint of posted range when available."
+  source: profile
+- question: "What is your current / last CTC?"
+  answer: "Last CTC approximately 20 LPA INR (~$25k USD)."
+  source: profile
+- question: "LinkedIn profile URL?"
+  answer: "https://linkedin.com/in/harxhist"
+  source: profile
+- question: "GitHub / portfolio URL?"
+  answer: "https://github.com/harxhist | https://har.sh10.in"
+  source: profile
+- question: "Gender (EEO voluntary)"
+  answer: "Male"
+  source: profile
+- question: "Veteran status (EEO voluntary)"
+  answer: "I am not a protected veteran"
+  source: profile
+- question: "Disability status (EEO voluntary)"
+  answer: "No, I do not have a disability and have not had one in the past"
+  source: profile
+- question: "Hispanic or Latino?"
+  answer: "No"
+  source: profile
+- question: "Do you have experience with Go / Python / Kubernetes / AWS / Kafka?"
+  answer: "Yes — production experience with Go, Python, Kubernetes, AWS, and Kafka."
+  source: profile
+- question: "Are you open to remote / hybrid / onsite?"
+  answer: "Yes — any work mode is fine."
+  source: profile
+- question: "Education"
+  answer: "B.Tech, IIT Kanpur (Biological Sciences & Bioengineering), 2018–2023."
+  source: profile

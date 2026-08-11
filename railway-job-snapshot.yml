@@ -1,0 +1,224 @@
+- generic [ref=e2]:
+  - list [ref=e4]:
+    - listitem [ref=e5]:
+      - link "Railway" [ref=e6] [cursor=pointer]:
+        - /url: https://railway.app/
+        - img "Railway" [ref=e7]
+    - listitem [ref=e8]:
+      - link "Back to Railway’s Job Listings" [ref=e9] [cursor=pointer]:
+        - /url: /railway
+        - img [ref=e10]
+    - listitem
+  - generic [ref=e12]:
+    - 'heading "Senior Platform Engineer: Storage" [level=1] [ref=e14]'
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - heading "Location" [level=2] [ref=e18]
+          - paragraph [ref=e19]: Global
+        - generic [ref=e20]:
+          - heading "Employment Type" [level=2] [ref=e21]
+          - paragraph [ref=e22]: Full time
+        - generic [ref=e23]:
+          - heading "Location Type" [level=2] [ref=e24]
+          - paragraph [ref=e25]: Remote
+        - generic [ref=e26]:
+          - heading "Department" [level=2] [ref=e27]
+          - paragraph [ref=e28]:
+            - generic [ref=e29]: Platform ›
+            - generic [ref=e30]: Engineering
+      - generic [ref=e31]:
+        - tablist [ref=e32]:
+          - tab "Overview" [selected] [ref=e33] [cursor=pointer]
+          - tab "Application" [ref=e34] [cursor=pointer]
+        - tabpanel "Overview" [ref=e36]:
+          - generic [ref=e37]:
+            - paragraph [ref=e38]:
+              - strong [ref=e39]: Job description
+            - paragraph [ref=e40]: Our core mission at Railway is to let developers create, ship and operate software with minimal friction. Fundamental to that mission is an array of rock-solid and composable primitives, principal among these - storage.
+            - paragraph [ref=e41]: As a Storage Engineer you will build, evolve and operate the systems that allow Railway to host stateful workloads. Railway operates across multiple colocation datacenters and large fleets of cloud VMs. This demands we build high-availability primitives that “work anywhere” and that can migrate between different environments with minimal (ideally zero) downtime. Moving storage is the hardest challenge in this task, and it has required us to invest in building custom systems from first-principles.
+            - paragraph [ref=e42]: You will principally be working on our new log structured block-storage system that is designed for performance, high-density and high-availability across cloud and baremetal environments.
+            - paragraph [ref=e43]:
+              - text: Want to learn about our work culture? Here is a three-part blog series that will help you see the unique ways our team works (Parts
+              - link "1" [ref=e44] [cursor=pointer]:
+                - /url: https://blog.railway.app/p/how-we-work
+              - text: ","
+              - link "2" [ref=e45] [cursor=pointer]:
+                - /url: https://blog.railway.app/p/how-we-work-volume-ii
+              - text: ","
+              - link "3" [ref=e46] [cursor=pointer]:
+                - /url: https://blog.railway.app/p/how-we-work-volume-iii
+              - text: ", and"
+              - link "4" [ref=e47] [cursor=pointer]:
+                - /url: https://blog.railway.com/p/how-we-work-volume-iv
+              - text: ).
+            - paragraph [ref=e48]:
+              - text: "Curious? Here are 3 blog posts that dive into exciting projects this team has worked on:"
+              - link "1" [ref=e49] [cursor=pointer]:
+                - /url: https://blog.railway.com/p/launch-week-01-scale-to-zero
+              - text: ","
+              - link "2" [ref=e50] [cursor=pointer]:
+                - /url: https://blog.railway.com/p/data-center-build-part-one
+              - text: ","
+              - link "3" [ref=e51] [cursor=pointer]:
+                - /url: https://blog.railway.com/p/data-center-build-part-two
+            - paragraph [ref=e52]
+            - heading "About The Role" [level=2] [ref=e53]
+            - paragraph [ref=e54]: "For this role, you will:"
+            - list [ref=e55]:
+              - listitem [ref=e56]:
+                - paragraph [ref=e57]: Lead the development of Railway's block storage systems
+              - listitem [ref=e58]:
+                - paragraph [ref=e59]: Support the operation of storage systems and participate in on-call rotations
+              - listitem [ref=e60]:
+                - paragraph [ref=e61]: Drive the specification of storage server hardware
+              - listitem [ref=e62]:
+                - paragraph [ref=e63]: Build systems to support capacity planning
+              - listitem [ref=e64]:
+                - paragraph [ref=e65]: Design and build interfaces with orchestration services to support coordinated workflows such as on-line backups and zero-downtime/live workload migration
+              - listitem [ref=e66]:
+                - paragraph [ref=e67]: Write Engineering Requirement Documents to take something from idea, to defined tasks, to implementation, to monitoring its success
+              - listitem [ref=e68]:
+                - paragraph [ref=e69]: Set the longer-term architectural direction to scale the platform
+            - paragraph [ref=e70]: This is a high impact, high agency role with direct effect on company culture, trajectory, and outcome.
+            - paragraph [ref=e71]
+            - heading "About You" [level=2] [ref=e72]
+            - paragraph [ref=e73]: "You should meet one or more of the following requirements:"
+            - list [ref=e74]:
+              - listitem [ref=e75]:
+                - paragraph [ref=e76]: You've built and operated distributed storage systems and have a strong grasp of first-principles.
+              - listitem [ref=e77]:
+                - paragraph [ref=e78]: "You have strong systems engineering experience in one or more of: filesystems, block devices, kernel I/O paths, SPDK, io_uring, vhost-user-blk, ublk or virtualization"
+              - listitem [ref=e79]:
+                - paragraph [ref=e80]: You have a deep understanding of the algorithms and techniques behind building fast, performant and reliable storage systems.
+              - listitem [ref=e81]:
+                - paragraph [ref=e82]: You have experience building large distributed systems where consistency and availability was critical.
+              - listitem [ref=e83]:
+                - paragraph [ref=e84]: You have a strong background in performance engineering at the I/O layer on Linux.
+              - listitem [ref=e85]:
+                - paragraph [ref=e86]: You have strong foundation in systems programming with Rust.
+              - listitem [ref=e87]:
+                - paragraph [ref=e88]: You're comfortable owning a problem alone at a small company.
+              - listitem [ref=e89]:
+                - paragraph [ref=e90]: You have a solid intuition about how long your solutions will last. All systems age. In startups, we can hope for 2-3 orders of magnitude, or 12-18 months.
+              - listitem [ref=e91]:
+                - paragraph [ref=e92]: You have the grit to dive into a problem, implement a solution, scale that solution, and replace it when needed.
+              - listitem [ref=e93]:
+                - paragraph [ref=e94]: You communicate well enough to get your point across, your solution implemented, and documented for when you're not around.
+            - paragraph [ref=e95]: If your background is in adjacent infrastructure (hypervisor I/O, kernel development, distributed systems, persistent memory) and you want to apply that depth to storage, we want to hear from you.
+            - paragraph [ref=e96]:
+              - strong [ref=e97]: We value and love to work with diverse persons from all backgrounds
+            - paragraph [ref=e98]:
+              - strong [ref=e99]: Things to know
+            - paragraph [ref=e100]: For better or worse, we're a startup; our team dynamics are different from companies of different sizes and stages.
+            - list [ref=e101]:
+              - listitem [ref=e102]:
+                - paragraph [ref=e103]: We're distributed ALL across the globe, and that's only going to be more and more distributed. As a result, stuff is ALWAYS happening.
+              - listitem [ref=e104]:
+                - paragraph [ref=e105]: We do NOT expect you to work all the time, but you'll have to be diligent about your boundaries because the end of your day may overlap with the start of someone else's.
+              - listitem [ref=e106]:
+                - paragraph [ref=e107]: We're a small team, with high ownership, who are not only passionate about what we do, but seek to be exceptional as well. At the time of writing we're 21, serving hundreds of thousands of users. There's a lot of stuff going on, and a lot of ambiguity.
+              - listitem [ref=e108]:
+                - paragraph [ref=e109]: We want you to own it. We believe that ownership is a key to growth, and part of that growth is not only being able to make the choices, but owning the success, or failure, that comes with those choices.
+            - paragraph [ref=e110]:
+              - strong [ref=e111]: Benefits and perks
+            - paragraph [ref=e112]:
+              - text: At Railway, we provide best in class benefits. Great salary, full health benefits including dependents, strong equity grants, equipment stipend, and much more. For more details, check back on the main
+              - link "careers page" [ref=e113] [cursor=pointer]:
+                - /url: https://railway.app/careers/full-stack
+              - text: .
+            - paragraph [ref=e114]: "Beyond compensation, there are a few things that we believe that make working at Railway truly unique:"
+            - list [ref=e115]:
+              - listitem [ref=e116]:
+                - paragraph [ref=e117]:
+                  - strong [ref=e118]: Autonomy
+                  - text: ": We have very few meetings. Just a Monday and a Friday to go over the Company Board. We think your time is sacred, whether it's at work, or outside of work."
+              - listitem [ref=e119]:
+                - paragraph [ref=e120]:
+                  - strong [ref=e121]: Ownership
+                  - text: ": We're a company with a high ownership, high autonomy culture. We hope that you'll come in, help us, and over the course of many years do the best work of your life. When we bring you onboard, we expect you to change the company."
+              - listitem [ref=e122]:
+                - paragraph [ref=e123]:
+                  - strong [ref=e124]: Novel problems/solutions
+                  - text: ": We're a startup that's well funded, with cool problems, which lets us implement novel solutions! We abhor “busywork” and think, whether it's community, engineering, operations, etc there's always opportunity for creative and high leverage solutions."
+              - listitem [ref=e125]:
+                - paragraph [ref=e126]:
+                  - strong [ref=e127]: Growth
+                  - text: ": We want you to grow with us, but we know that talent is loaned, so when you figure out what area you want to grow in next, whether it's at Railway or outside, we'll make sure you land there."
+            - paragraph [ref=e128]:
+              - strong [ref=e129]: How we hire
+            - paragraph [ref=e130]: "No tricks. No surprises. Here's the entire process:"
+            - list [ref=e131]:
+              - listitem [ref=e132]:
+                - paragraph [ref=e133]:
+                  - strong [ref=e134]: Talk with us about the role
+                - list [ref=e135]:
+                  - listitem [ref=e136]:
+                    - paragraph [ref=e137]: This is completely open ended and we're just trying to see who you are, what you want to do, and where you wanna go.
+              - listitem [ref=e138]:
+                - paragraph [ref=e139]:
+                  - strong [ref=e140]: Work on a small project to discuss in the interview
+                - list [ref=e141]:
+                  - listitem [ref=e142]:
+                    - paragraph [ref=e143]: "Asynchronously implement the following:"
+                  - listitem [ref=e144]:
+                    - paragraph [ref=e145]: "Pre-interview: Design a Storage Engine to power something like Railway's Volume"
+                  - listitem [ref=e146]:
+                    - paragraph [ref=e147]:
+                      - strong [ref=e148]: You can, and SHOULD!
+                      - text: ask us questions ahead of time.
+              - listitem [ref=e149]:
+                - paragraph [ref=e150]:
+                  - strong [ref=e151]: Review your solution with the Team
+                - list [ref=e152]:
+                  - listitem [ref=e153]:
+                    - paragraph [ref=e154]: You'll sit down with someone on the team and go over the above. We'll poke into your solution, as well as get you acquainted with two more members of the team.
+                    - list [ref=e155]:
+                      - listitem [ref=e156]:
+                        - paragraph [ref=e157]:
+                          - strong [ref=e158]: "Looking for:"
+                          - text: Learn about your problem solving skills. How you break down a problem and how you present a solution.
+                  - listitem [ref=e159]:
+                    - paragraph [ref=e160]: "Interview Structure (60 Minutes):"
+                    - list [ref=e161]:
+                      - listitem [ref=e162]:
+                        - paragraph [ref=e163]: "Prework (submitted before your interview): Complete your solution"
+                      - listitem [ref=e164]:
+                        - paragraph [ref=e165]: "0-5m: introduction"
+                      - listitem [ref=e166]:
+                        - paragraph [ref=e167]: "5-50m: Building (or expanding) your solution"
+                      - listitem [ref=e168]:
+                        - paragraph [ref=e169]: "50-60m: Questions on Railway/Tech/etc"
+              - listitem [ref=e170]:
+                - paragraph [ref=e171]:
+                  - strong [ref=e172]: Meet the Team
+                - list [ref=e173]:
+                  - listitem [ref=e174]:
+                    - paragraph [ref=e175]: You'll meet the Team, which will be comprised of 4 people from vastly different sections of the company.
+                    - list [ref=e176]:
+                      - listitem [ref=e177]:
+                        - paragraph [ref=e178]:
+                          - strong [ref=e179]: "Looking for:"
+                          - text: How you work with the rest of the team and communicate.
+              - listitem [ref=e180]:
+                - paragraph [ref=e181]:
+                  - strong [ref=e182]: Offer and Details Chat with CEO
+                - list [ref=e183]:
+                  - listitem [ref=e184]:
+                    - paragraph [ref=e185]: Finally, we will go over the process, the role, and hammer out the details about your position, onboarding, and all the deets.
+            - paragraph [ref=e186]: "#Global"
+          - link "Apply for this Job" [ref=e187] [cursor=pointer]:
+            - /url: /railway/25d8444a-47dc-4084-ae56-29a0f0b19b74/application
+            - button "Apply for this Job" [ref=e188]
+  - contentinfo [ref=e189]:
+    - link "Learn more about Ashby" [ref=e190] [cursor=pointer]:
+      - /url: https://www.ashbyhq.com
+      - generic [ref=e191]: Powered by
+      - img "Ashby" [ref=e192]
+    - paragraph [ref=e198]:
+      - link "Privacy Policy" [ref=e199] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/privacy
+      - link "Security" [ref=e200] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/security
+      - link "Vulnerability Disclosure" [ref=e201] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/disclosure

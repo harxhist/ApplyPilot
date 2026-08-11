@@ -1,0 +1,275 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - img "Glean Logo" [ref=e5]
+      - generic [ref=e6]:
+        - link "Back to jobs" [ref=e7] [cursor=pointer]:
+          - /url: https://job-boards.greenhouse.io/gleanwork
+          - img [ref=e8]
+          - text: Back to jobs
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - heading "Software Engineer, Backend" [level=1] [ref=e13]
+            - generic [ref=e14]:
+              - img [ref=e15]
+              - generic [ref=e17]: Bangalore, India
+          - button "Apply" [ref=e18] [cursor=pointer]
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - strong [ref=e23]: "About Glean:"
+            - generic [ref=e25]: Glean is the Work AI platform that helps everyone work smarter with AI. What began as the industry’s most advanced enterprise search has evolved into a full-scale Work AI ecosystem, powering intelligent Search, an AI Assistant, and scalable AI agents on one secure, open platform. With over 100 enterprise SaaS connectors, flexible LLM choice, and robust APIs, Glean gives organizations the infrastructure to govern, scale, and customize AI across their entire business - without vendor lock-in or costly implementation cycles.
+            - generic [ref=e27]: "At its core, Glean is redefining how enterprises find, use, and act on knowledge. Its Enterprise Graph and Personal Knowledge Graph map the relationships between people, content, and activity, delivering deeply personalized, context-aware responses for every employee. This foundation powers Glean’s agentic capabilities - AI agents that automate real work across teams by accessing the industry’s broadest range of data: enterprise and world, structured and unstructured, historical and real-time. The result: measurable business impact through faster onboarding, hours of productivity gained each week, and smarter, safer decisions at every level."
+            - generic [ref=e29]: Recognized by Fast Company as one of the World’s Most Innovative Companies (Top 10, 2025), by CNBC’s Disruptor 50, Bloomberg’s AI Startups to Watch (2026), Forbes AI 50, and Gartner’s Tech Innovators in Agentic AI, Glean continues to accelerate its global impact. With customers across 50+ industries and 1,000+ employees in more than 25 countries, we’re helping the world’s largest organizations make every employee AI-fluent, and turning the superintelligent enterprise from concept into reality.
+            - generic [ref=e31]: If you’re excited to shape how the world works, you’ll help build systems used daily across Microsoft Teams, Zoom, ServiceNow, Zendesk, GitHub, and many more - deeply embedded where people get things done. You’ll ship agentic capabilities on an open, extensible stack, with the craft and care required for enterprise trust, as we bring Work AI to every employee, in every company.
+          - generic [ref=e32]:
+            - strong [ref=e36]: "About the Role:"
+            - paragraph [ref=e37]: Glean is looking for Backend/Infrastructure engineers to build a highly performant, scalable, secure, permissions-aware system that makes all the relevant enterprise knowledge readily available to employees in all contexts of their work. The role provides ample opportunities to work on various aspects of building a modern cloud-native application stack using the latest best practices - examples of some technical challenges you can work on are building a scalable, reliable distributed system and underlying storage, a unified application framework and data model that makes it easy to index diverse sources of information, end-to-end aspects of security - application layer, platform layer as well as IT security, laser focus on making the experience feel instant, while at the same time balancing the system cost implications, and tooling for comprehensive monitoring and deployment of the system in multiple cloud environments.
+            - paragraph [ref=e38]:
+              - strong [ref=e40]: "You will:"
+            - list [ref=e41]:
+              - listitem [ref=e42]: Own impactful infrastructure problems from inception and architecture to production launch
+              - listitem [ref=e43]: Write well thought out design documents and robust, high-quality and well-tested code
+              - listitem [ref=e44]: Work collaboratively with a strong team to identify the most impactful projects we should be prioritizing in our roadmap
+              - listitem [ref=e45]: Mentor more junior engineers or learn from battle tested ones
+            - paragraph [ref=e46]:
+              - strong [ref=e48]: "About you:"
+            - list [ref=e49]:
+              - listitem [ref=e50]: BA/BS in computer science, or related degree
+              - listitem [ref=e51]: Minimum 6+ years of experience working on infrastructure for distributed systems or cloud-native applications
+              - listitem [ref=e52]: Thrive in a customer-focused, tight-nit and cross-functional environment - being a team player and willing to take on whatever is most impactful for the company is a must
+              - listitem [ref=e53]: A proactive and positive attitude to lead, learn, troubleshoot and take ownership of both small tasks and large features
+              - listitem [ref=e54]: Strong coding skills (for example in Go/Python/Java/C++ etc) with an emphasis on designing for reliability and scale, and writing well-tested components
+              - listitem [ref=e55]: Familiarity with cloud native development practices in GCP/AWS/Azure is a plus
+            - paragraph [ref=e56]:
+              - strong [ref=e58]: "Location:"
+            - list [ref=e59]:
+              - listitem [ref=e60]: This role is in person in Bangalore, India
+            - paragraph [ref=e61]:
+              - strong [ref=e63]: "Compensation & Benefits:"
+            - paragraph [ref=e64]: Compensation offered will be determined by factors such as location, level, job-related knowledge, skills, and experience. Certain roles may be eligible for variable compensation, equity, and benefits.
+            - paragraph [ref=e65]: We are a diverse bunch of people and we want to continue to attract and retain a diverse range of people into our organization. We're committed to an inclusive and diverse company. We do not discriminate based on gender, ethnicity, sexual orientation, religion, civil or family status, age, disability, or race.
+          - generic [ref=e66]:
+            - strong [ref=e70]: "AI-First Mindset at Glean:"
+            - generic [ref=e73]:
+              - text: At Glean, AI fluency is core to how we work and we're committed to ensuring every new hire feels confident integrating AI into their everyday work.
+              - strong [ref=e74]: As part of the interview process, you'll complete a brief AI-focused exercise or discussion so we can understand how you think about, design, and use AI to drive impact in your role.
+              - text: Feel free to reference any tools, platforms, or workflows you use today — prior Glean experience isn't required.
+            - strong [ref=e78]: "Global Data Privacy Notice for Job Candidates and Applicants:"
+            - generic [ref=e81]:
+              - text: Depending on your location, the General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), or other privacy laws may regulate the way we manage the data of job applicants. Our full notice outlining how data will be processed as part of the application procedure for applicable locations is available in our
+              - link "Privacy Policy" [ref=e82] [cursor=pointer]:
+                - /url: https://www.glean.com/privacy
+                - strong [ref=e83]: Privacy Policy
+              - text: . By submitting your application, you are agreeing to our use and processing of your data as required. US applicants and their applications are subject to arbitration of disputes as outlined in our
+              - link "Applicant Arbitration Agreement" [ref=e84] [cursor=pointer]:
+                - /url: https://www.glean.com/arbitrationagreement
+                - strong [ref=e85]: Applicant Arbitration Agreement
+              - text: .
+            - generic [ref=e87]:
+              - text: By clicking “Submit Application,” I confirm that I have read the Global Data Privacy Notice and the
+              - link "Applicant Arbitration Agreement" [ref=e88] [cursor=pointer]:
+                - /url: https://www.glean.com/arbitrationagreement
+                - strong [ref=e89]: Applicant Arbitration Agreement
+              - text: ", and I agree to the terms."
+        - generic [ref=e90]:
+          - img [ref=e91]
+          - generic [ref=e93]:
+            - paragraph [ref=e94]: Create a Job Alert
+            - paragraph [ref=e95]: Interested in building your career at Glean? Get future opportunities sent straight to your email.
+            - link "Create alert" [ref=e96] [cursor=pointer]:
+              - /url: https://my.greenhouse.io/users/sign_in?job_board=gleanwork&source=job_alert_post
+      - separator [ref=e97]
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - generic [ref=e100]:
+            - heading "Apply for this job" [level=2] [ref=e102]
+            - generic [ref=e103]:
+              - paragraph [ref=e105]: "*"
+              - paragraph [ref=e106]: indicates a required field
+          - button "Quick Apply with MyGreenhouse" [ref=e109] [cursor=pointer]
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - generic [ref=e114]:
+              - generic [ref=e115]: First Name*
+              - textbox "First Name" [ref=e116]
+            - generic [ref=e119]:
+              - generic [ref=e120]: Last Name*
+              - textbox "Last Name" [ref=e121]
+            - generic [ref=e124]:
+              - generic [ref=e125]: Email*
+              - textbox "Email" [ref=e126]
+            - group "Phone" [ref=e128]:
+              - generic [ref=e129]: Phone
+              - generic [ref=e132]:
+                - generic [ref=e133]: Country
+                - generic [ref=e134]:
+                  - log [ref=e136]
+                  - generic [ref=e138]:
+                    - combobox "Country" [ref=e141]
+                    - button "Toggle flyout" [ref=e143] [cursor=pointer]:
+                      - img [ref=e144]
+              - generic [ref=e148]:
+                - generic [ref=e149]: Phone
+                - textbox "Phone" [ref=e151]
+            - group "Resume/CV*" [ref=e153]:
+              - generic [ref=e154]: Resume/CV*
+              - generic [ref=e156]:
+                - generic [ref=e158]:
+                  - button "Attach" [ref=e159] [cursor=pointer]
+                  - generic [ref=e160]: Attach
+                  - button "Attach" [ref=e161]
+                - button "Dropbox" [ref=e163] [cursor=pointer]
+                - button "Google Drive" [ref=e165] [cursor=pointer]
+                - generic [ref=e167]:
+                  - button "Enter manually" [ref=e168] [cursor=pointer]
+                  - generic [ref=e169]: Enter manually
+                - paragraph [ref=e170]: "Accepted file types: pdf, doc, docx, txt, rtf"
+            - group "Cover Letter" [ref=e172]:
+              - generic [ref=e173]: Cover Letter
+              - generic [ref=e175]:
+                - generic [ref=e177]:
+                  - button "Attach" [ref=e178] [cursor=pointer]
+                  - generic [ref=e179]: Attach
+                  - button "Attach" [ref=e180]
+                - button "Dropbox" [ref=e182] [cursor=pointer]
+                - button "Google Drive" [ref=e184] [cursor=pointer]
+                - generic [ref=e186]:
+                  - button "Enter manually" [ref=e187] [cursor=pointer]
+                  - generic [ref=e188]: Enter manually
+                - paragraph [ref=e189]: "Accepted file types: pdf, doc, docx, txt, rtf"
+          - generic [ref=e190]:
+            - separator [ref=e191]
+            - generic [ref=e194]:
+              - generic [ref=e195]: LinkedIn Profile*
+              - textbox "LinkedIn Profile" [ref=e196]
+            - generic [ref=e199]:
+              - generic [ref=e200]: Website
+              - textbox "Website" [ref=e201]
+            - generic [ref=e204]:
+              - generic [ref=e205]: How did you hear about Glean?*
+              - generic [ref=e206]:
+                - log [ref=e208]
+                - generic [ref=e210]:
+                  - generic [ref=e211]:
+                    - generic [ref=e212]: Select...
+                    - combobox "How did you hear about Glean?" [ref=e214]
+                  - button "Toggle flyout" [ref=e216] [cursor=pointer]:
+                    - img [ref=e217]
+                - textbox
+            - generic [ref=e221]:
+              - generic [ref=e222]: Please input the total years of experience you have that are relevant for this role.*
+              - textbox "Please input the total years of experience you have that are relevant for this role." [ref=e223]
+            - generic [ref=e226]:
+              - generic [ref=e227]: What AI tools are you currently using today and how are you using them?*
+              - textbox "What AI tools are you currently using today and how are you using them?" [ref=e228]
+          - generic [ref=e229]:
+            - separator [ref=e230]
+            - generic [ref=e231]:
+              - heading "Voluntary Self-Identification" [level=2] [ref=e232]
+              - paragraph [ref=e233]: For government reporting purposes, we ask candidates to respond to the below self-identification survey. Completion of the form is entirely voluntary. Whatever your decision, it will not be considered in the hiring process or thereafter. Any information that you do provide will be recorded and maintained in a confidential file.
+              - paragraph [ref=e234]: As set forth in Glean’s Equal Employment Opportunity policy, we do not discriminate on the basis of any protected group status under any applicable law.
+            - generic [ref=e237]:
+              - generic [ref=e238]: Gender
+              - generic [ref=e239]:
+                - log [ref=e241]
+                - generic [ref=e243]:
+                  - generic [ref=e244]:
+                    - generic [ref=e245]: Select...
+                    - combobox "Gender" [ref=e247]
+                  - button "Toggle flyout" [ref=e249] [cursor=pointer]:
+                    - img [ref=e250]
+            - generic [ref=e252]:
+              - generic [ref=e254]:
+                - generic [ref=e255]: Are you Hispanic/Latino?
+                - generic [ref=e256]:
+                  - log [ref=e258]
+                  - generic [ref=e260]:
+                    - generic [ref=e261]:
+                      - generic [ref=e262]: Select...
+                      - combobox "Are you Hispanic/Latino?" [ref=e264]
+                    - button "Toggle flyout" [ref=e266] [cursor=pointer]:
+                      - img [ref=e267]
+              - link "Race & Ethnicity Definitions" [ref=e269] [cursor=pointer]:
+                - /url: https://job-boards.cdn.greenhouse.io/docs/2023/RaceEthnicityDefinitions.pdf
+            - generic [ref=e270]:
+              - paragraph [ref=e271]: "If you believe you belong to any of the categories of protected veterans listed below, please indicate by making the appropriate selection. As a government contractor subject to the Vietnam Era Veterans Readjustment Assistance Act (VEVRAA), we request this information in order to measure the effectiveness of the outreach and positive recruitment efforts we undertake pursuant to VEVRAA. Classification of protected categories is as follows:"
+              - paragraph [ref=e272]: "A \"disabled veteran\" is one of the following: a veteran of the U.S. military, ground, naval or air service who is entitled to compensation (or who but for the receipt of military retired pay would be entitled to compensation) under laws administered by the Secretary of Veterans Affairs; or a person who was discharged or released from active duty because of a service-connected disability."
+              - paragraph [ref=e273]: A "recently separated veteran" means any veteran during the three-year period beginning on the date of such veteran's discharge or release from active duty in the U.S. military, ground, naval, or air service.
+              - paragraph [ref=e274]: An "active duty wartime or campaign badge veteran" means a veteran who served on active duty in the U.S. military, ground, naval or air service during a war, or in a campaign or expedition for which a campaign badge has been authorized under the laws administered by the Department of Defense.
+              - paragraph [ref=e275]: An "Armed forces service medal veteran" means a veteran who, while serving on active duty in the U.S. military, ground, naval or air service, participated in a United States military operation for which an Armed Forces service medal was awarded pursuant to Executive Order 12985.
+            - generic [ref=e278]:
+              - generic [ref=e279]: Veteran Status
+              - generic [ref=e280]:
+                - log [ref=e282]
+                - generic [ref=e284]:
+                  - generic [ref=e285]:
+                    - generic [ref=e286]: Select...
+                    - combobox "Veteran Status" [ref=e288]
+                  - button "Toggle flyout" [ref=e290] [cursor=pointer]:
+                    - img [ref=e291]
+            - separator [ref=e293]
+            - generic [ref=e294]:
+              - heading "Voluntary Self-Identification of Disability" [level=2] [ref=e295]
+              - generic [ref=e296]:
+                - generic [ref=e297]:
+                  - generic [ref=e298]: Form CC-305
+                  - generic [ref=e299]: Page 1 of 1
+                - generic [ref=e300]:
+                  - generic [ref=e301]: OMB Control Number 1250-0005
+                  - generic [ref=e302]: Expires 04/30/2026
+              - strong [ref=e303]: Why are you being asked to complete this form?
+              - paragraph [ref=e304]: We are a federal contractor or subcontractor. The law requires us to provide equal employment opportunity to qualified people with disabilities. We have a goal of having at least 7% of our workers as people with disabilities. The law says we must measure our progress towards this goal. To do this, we must ask applicants and employees if they have a disability or have ever had one. People can become disabled, so we need to ask this question at least every five years.
+              - paragraph [ref=e305]:
+                - text: Completing this form is voluntary, and we hope that you will choose to do so. Your answer is confidential. No one who makes hiring decisions will see it. Your decision to complete the form and your answer will not harm you in any way. If you want to learn more about the law or this form, visit the U.S. Department of Labor’s Office of Federal Contract Compliance Programs (OFCCP) website at
+                - link "www.dol.gov/ofccp" [ref=e306] [cursor=pointer]:
+                  - /url: https://www.dol.gov/ofccp
+                - text: .
+              - strong [ref=e307]: How do you know if you have a disability?
+              - paragraph [ref=e308]:
+                - text: A disability is a condition that substantially limits one or more of your “major life activities.” If you have or have ever had such a condition, you are a person with a disability.
+                - strong [ref=e309]: "Disabilities include, but are not limited to:"
+              - list [ref=e310]:
+                - listitem [ref=e311]: Alcohol or other substance use disorder (not currently using drugs illegally)
+                - listitem [ref=e312]: Autoimmune disorder, for example, lupus, fibromyalgia, rheumatoid arthritis, HIV/AIDS
+                - listitem [ref=e313]: Blind or low vision
+                - listitem [ref=e314]: Cancer (past or present)
+                - listitem [ref=e315]: Cardiovascular or heart disease
+                - listitem [ref=e316]: Celiac disease
+                - listitem [ref=e317]: Cerebral palsy
+                - listitem [ref=e318]: Deaf or serious difficulty hearing
+                - listitem [ref=e319]: Diabetes
+                - listitem [ref=e320]: Disfigurement, for example, disfigurement caused by burns, wounds, accidents, or congenital disorders
+                - listitem [ref=e321]: Epilepsy or other seizure disorder
+                - listitem [ref=e322]: Gastrointestinal disorders, for example, Crohn's Disease, irritable bowel syndrome
+                - listitem [ref=e323]: Intellectual or developmental disability
+                - listitem [ref=e324]: Mental health conditions, for example, depression, bipolar disorder, anxiety disorder, schizophrenia, PTSD
+                - listitem [ref=e325]: Missing limbs or partially missing limbs
+                - listitem [ref=e326]: Mobility impairment, benefiting from the use of a wheelchair, scooter, walker, leg brace(s) and/or other supports
+                - listitem [ref=e327]: Nervous system condition, for example, migraine headaches, Parkinson’s disease, multiple sclerosis (MS)
+                - listitem [ref=e328]: Neurodivergence, for example, attention-deficit/hyperactivity disorder (ADHD), autism spectrum disorder, dyslexia, dyspraxia, other learning disabilities
+                - listitem [ref=e329]: Partial or complete paralysis (any cause)
+                - listitem [ref=e330]: Pulmonary or respiratory conditions, for example, tuberculosis, asthma, emphysema
+                - listitem [ref=e331]: Short stature (dwarfism)
+                - listitem [ref=e332]: Traumatic brain injury
+            - generic [ref=e335]:
+              - generic [ref=e336]: Disability Status
+              - generic [ref=e337]:
+                - log [ref=e339]
+                - generic [ref=e341]:
+                  - generic [ref=e342]:
+                    - generic [ref=e343]: Select...
+                    - combobox "Disability Status" [ref=e345]
+                  - button "Toggle flyout" [ref=e347] [cursor=pointer]:
+                    - img [ref=e348]
+            - paragraph [ref=e351]: "PUBLIC BURDEN STATEMENT: According to the Paperwork Reduction Act of 1995 no persons are required to respond to a collection of information unless such collection displays a valid OMB control number. This survey should take about 5 minutes to complete."
+          - button "Submit application" [ref=e353] [cursor=pointer]
+  - contentinfo [ref=e354]:
+    - generic [ref=e355]:
+      - paragraph [ref=e356]: Powered by
+      - link "Greenhouse logo" [ref=e357] [cursor=pointer]:
+        - /url: https://www.greenhouse.com
+        - img "Greenhouse logo" [ref=e358]
+  - iframe [ref=e372]:
+    - generic [ref=f5e6]:
+      - text: protected by
+      - strong [ref=f5e7]: reCAPTCHA

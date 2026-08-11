@@ -1,0 +1,425 @@
+- generic [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Back to jobs" [ref=e5] [cursor=pointer]:
+          - /url: https://job-boards.greenhouse.io/vercel
+          - img [ref=e6]
+          - text: Back to jobs
+        - generic [ref=e9]:
+          - generic [ref=e10]:
+            - heading "Software Engineer, Agent" [level=1] [ref=e11]
+            - generic [ref=e12]:
+              - img [ref=e13]
+              - generic [ref=e15]: Hybrid - New York City
+          - button "Apply" [ref=e16] [cursor=pointer]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - heading "About Vercel:" [level=2] [ref=e19]
+            - paragraph [ref=e20]: Vercel is the agentic infrastructure company. We free people and agents to ship what’s next.
+            - paragraph [ref=e21]: For more than a decade, Vercel has shaped how the web is built. As the team behind Next.js, v0, and AI SDK, we create products that help builders move from idea to production with speed, security, and exceptional developer experience.
+            - paragraph [ref=e22]: Now, software is entering a new era, and the next generation of products will not just be used by people. They will be built, extended, and operated by agents.
+            - paragraph [ref=e23]:
+              - generic [ref=e24]:
+                - text: We are building the platform for that future, trusted by companies like
+                - strong [ref=e25]: OpenAI, PayPal, Ramp, Supreme, and millions of developers worldwide
+                - text: . Whether you’re building our products, supporting our customers, growing our community, or shaping our story, you’ll help define what comes next.
+          - generic [ref=e26]:
+            - generic [ref=e28]:
+              - heading "About the role:" [level=2] [ref=e29]
+              - paragraph [ref=e30]:
+                - text: We’re looking for a Software
+                - emphasis [ref=e31]: Engineer
+                - text: to join the
+                - emphasis [ref=e32]: Vercel
+                - text: "Agent team. Our mission is simple: deploying on"
+                - emphasis [ref=e33]: Vercel
+                - text: should feel like adding a seasoned
+                - emphasis [ref=e34]: infrastructure
+                - emphasis [ref=e35]: engineer
+                - text: to your team. The
+                - emphasis [ref=e36]: Vercel
+                - text: Agent investigates incidents before you see them, fixes failing builds, reviews
+                - emphasis [ref=e37]: code
+                - text: with deep
+                - emphasis [ref=e38]: production
+                - text: context, and answers questions about your
+                - emphasis [ref=e39]: running
+                - text: app with the authority of someone who has read the logs.
+              - paragraph [ref=e40]:
+                - text: Today, this work spans multiple shipped
+                - emphasis [ref=e41]: "products:"
+                - text: automated
+                - emphasis [ref=e42]: code
+                - text: review on every PR,
+                - emphasis [ref=e43]: AI
+                - text: "-driven investigation of"
+                - emphasis [ref=e44]: production
+                - text: anomalies, an intelligent support agent that resolves the majority of customer issues without human intervention, and conversational
+                - emphasis [ref=e45]: code
+                - emphasis [ref=e46]: generation
+                - text: . We’re now unifying these into a single agent that appears pervasively across surfaces (like the
+                - emphasis [ref=e47]: Vercel
+                - text: dashboard,
+                - emphasis [ref=e48]: Vercel
+                - text: CLI, Slack, and many more), and is capable of multi-step reasoning,
+                - emphasis [ref=e49]: code
+                - text: execution in sandboxed environments, and taking real actions on your behalf.
+              - paragraph [ref=e50]:
+                - text: "Two things we’re most excited about:"
+                - strong [ref=e51]:
+                  - text: self-driving
+                  - emphasis [ref=e52]: infrastructure
+                - text: ", where 90% of what requires manual DevOps today gets handled automatically by the"
+                - emphasis [ref=e53]: platform
+                - text: ; and
+                - strong [ref=e54]: framework-defined agents
+                - text: ", where the agent is customized to each customer’s application, injecting the right skills when they’re needed rather than dumping generic best practices."
+              - paragraph [ref=e55]:
+                - text: This is a small team with an outsized mandate. You’ll work directly with leadership and across
+                - emphasis [ref=e56]: product,
+                - emphasis [ref=e57]: design
+                - text: ", and"
+                - emphasis [ref=e58]: infrastructure
+                - text: teams to define what self-driving
+                - emphasis [ref=e59]: infrastructure
+                - text: looks like — then
+                - emphasis [ref=e60]: build
+                - text: it.
+              - paragraph [ref=e61]: If you’re based within a pre-determined commuting distance of one of our offices (SF, NY, London, or Berlin), the role includes in-office anchor days on Monday, Tuesday, and Friday, even if the role is listed as remote. For location-specific details, please connect with our recruiting team.
+              - heading "What you will do:" [level=2] [ref=e62]
+              - list [ref=e63]:
+                - listitem [ref=e64]:
+                  - emphasis [ref=e65]: Design
+                  - text: and
+                  - emphasis [ref=e66]: build
+                  - text: agentic
+                  - emphasis [ref=e67]: systems
+                  - text: that autonomously investigate, diagnose, and remediate
+                  - emphasis [ref=e68]: production
+                  - text: issues — from 500 errors and
+                  - emphasis [ref=e69]: build
+                  - text: failures to
+                  - emphasis [ref=e70]: performance
+                  - text: regressions and security anomalies.
+                - listitem [ref=e71]:
+                  - text: Architect multi-step agent workflows that coordinate across tools,
+                  - emphasis [ref=e72]: APIs
+                  - text: ", and sandboxed"
+                  - emphasis [ref=e73]: code
+                  - text: execution environments, with durable state that survives crashes and timeouts.
+                - listitem [ref=e74]:
+                  - emphasis [ref=e75]: Build
+                  - text: the skills and
+                  - emphasis [ref=e76]: tool
+                  - emphasis [ref=e77]: integrations
+                  - text: that give the agent deep knowledge of the
+                  - emphasis [ref=e78]: Vercel
+                  - emphasis [ref=e79]: platform
+                  - text: ", such as deployments, functions, logs, metrics, DNS, and the full lifecycle of a web application."
+                - listitem [ref=e80]:
+                  - text: Ship polished,
+                  - emphasis [ref=e81]: user
+                  - text: "-facing experiences across multiple surfaces (Slack, dashboard, CLI) without waiting for a designer to hand you a mockup. This team values"
+                  - emphasis [ref=e82]: engineers
+                  - text: with strong
+                  - emphasis [ref=e83]: product
+                  - text: and UI instincts.
+                - listitem [ref=e84]:
+                  - emphasis [ref=e85]: Develop
+                  - text: the
+                  - emphasis [ref=e86]: infrastructure
+                  - text: for dynamic skill injection, so the agent acquires new capabilities at runtime rather than through redeployment, routing the right logic to the right context at the right time.
+                - listitem [ref=e87]:
+                  - text: Collaborate with other
+                  - emphasis [ref=e88]: engineers
+                  - text: on prompt
+                  - emphasis [ref=e89]: engineering,
+                  - text: model evaluation, and retrieval-augmented
+                  - emphasis [ref=e90]: generation
+                  - text: (RAG)
+                  - emphasis [ref=e91]: pipelines
+                  - text: that ground the agent in accurate, up-to-date knowledge.
+              - heading "About you:" [level=2] [ref=e92]
+              - list [ref=e93]:
+                - listitem [ref=e94]:
+                  - text: 7+ years of full-time software
+                  - emphasis [ref=e95]: engineering
+                  - text: experience, with strong
+                  - emphasis [ref=e96]: TypeScript
+                  - text: proficiency.
+                  - emphasis [ref=e97]: Engineers
+                  - text: with deep Python experience who are excited to work in
+                  - emphasis [ref=e98]: TypeScript
+                  - text: are also a great fit.
+                - listitem [ref=e99]:
+                  - text: A track record of
+                  - emphasis [ref=e100]: openness
+                  - text: "and adaptability: you’ve shifted into new technologies, new domains, or new roles and thrived. This space is changing faster than anyone can claim expertise; we want people who learn and adapt, not people who play expert."
+                - listitem [ref=e101]:
+                  - text: Strong
+                  - emphasis [ref=e102]: product
+                  - text: and UI sensibility. You care about the details of how an
+                  - emphasis [ref=e103]: AI
+                  - text: interaction feels to a
+                  - emphasis [ref=e104]: user
+                  - text: ", and you can"
+                  - emphasis [ref=e105]: build
+                  - text: great experiences without waiting for a designer.
+                - listitem [ref=e106]:
+                  - emphasis [ref=e107]: Full-stack
+                  - text: capability with an understanding of
+                  - emphasis [ref=e108]: infrastructure
+                  - text: ", CI/CD, observability, and how large-scale web"
+                  - emphasis [ref=e109]: applications
+                  - text: operate. The agent needs to reason about the same
+                  - emphasis [ref=e110]: systems
+                  - text: our customers use every day, you should too.
+                - listitem [ref=e111]:
+                  - text: Experience
+                  - emphasis [ref=e112]: building
+                  - text: or contributing to frameworks, platforms, or reusable abstractions, not just
+                  - emphasis [ref=e113]: feature
+                  - text: work. You know when to
+                  - emphasis [ref=e114]: build
+                  - text: a primitive versus ship a one-off.
+                - listitem [ref=e115]: Demonstrated ability to ship independently, influence architecture, and set direction on a small, high-impact team.
+                - listitem [ref=e116]:
+                  - text: Excellent communication skills, with an ability to translate technical detail into actionable
+                  - emphasis [ref=e117]: insight
+                  - text: for both
+                  - emphasis [ref=e118]: engineering
+                  - text: and partner teams.
+              - heading "Bonus if you:" [level=2] [ref=e119]
+              - list [ref=e120]:
+                - listitem [ref=e121]:
+                  - text: Have experience
+                  - emphasis [ref=e122]: building
+                  - text: agentic
+                  - emphasis [ref=e123]: systems
+                  - text: ","
+                  - emphasis [ref=e124]: AI
+                  - text: tooling, or automation frameworks, and especially agents in
+                  - emphasis [ref=e125]: production.
+                  - text: You understand the difference between a demo and a system that works reliably at scale.
+                - listitem [ref=e126]:
+                  - text: Are familiar with
+                  - emphasis [ref=e127]: LLM
+                  - emphasis [ref=e128]: APIs
+                  - text: (Anthropic,
+                  - emphasis [ref=e129]: OpenAI,
+                  - text: etc.), prompt
+                  - emphasis [ref=e130]: engineering,
+                  - text: or retrieval-augmented
+                  - emphasis [ref=e131]: generation
+                  - text: (RAG).
+                - listitem [ref=e132]:
+                  - text: Have worked with
+                  - emphasis [ref=e133]: Vercel,
+                  - emphasis [ref=e134]: Next.js
+                  - text: ", or the modern web deployment ecosystem."
+                - listitem [ref=e135]:
+                  - text: Have experience with sandboxed execution environments, container orchestration, or secure multi-tenant
+                  - emphasis [ref=e136]: systems
+                  - text: .
+              - heading "Benefits:" [level=2] [ref=e137]
+              - list [ref=e138]:
+                - listitem [ref=e139]: Competitive compensation package, including equity.
+                - listitem [ref=e140]: Inclusive Healthcare Package.
+                - listitem [ref=e141]:
+                  - text: Learn and Grow - we provide mentorship and send you to events that help you
+                  - emphasis [ref=e142]: build
+                  - text: your network and skills.
+                - listitem [ref=e143]: Flexible Time Off.
+                - listitem [ref=e144]: We will provide you the gear you need to do your role, and a WFH budget for you to outfit your space as needed.
+            - paragraph [ref=e145]: The San Francisco, CA base pay range for this role is $232,000 - $348,000 (Staff level IC and above). Actual salary will be based on job-related skills, level/experience, and location. Compensation outside of San Francisco may be adjusted based on employee location. The total compensation package may include benefits, equity-based compensation, and eligibility for a company bonus or variable pay program depending on the role. Your recruiter can share more details during the hiring process.
+            - paragraph [ref=e146]: Vercel is committed to fostering and empowering an inclusive community within our organization. We do not discriminate on the basis of race, religion, color, gender expression or identity, sexual orientation, national origin, citizenship, age, marital status, veteran status, disability status, or any other characteristic protected by law. Vercel encourages everyone to apply for our available positions, even if they don’t necessarily check every box on the job description.
+            - paragraph [ref=e147]
+        - generic [ref=e148]:
+          - img [ref=e149]
+          - generic [ref=e151]:
+            - paragraph [ref=e152]: Create a Job Alert
+            - paragraph [ref=e153]: Interested in building your career at Vercel? Get future opportunities sent straight to your email.
+            - link "Create alert" [ref=e154] [cursor=pointer]:
+              - /url: https://my.greenhouse.io/users/sign_in?job_board=vercel&source=job_alert_post
+      - separator [ref=e155]
+      - generic [ref=e156]:
+        - generic [ref=e158]:
+          - heading "Apply for this job" [level=2] [ref=e160]
+          - generic [ref=e161]:
+            - paragraph [ref=e163]: "*"
+            - paragraph [ref=e164]: indicates a required field
+        - generic [ref=e165]:
+          - generic [ref=e166]:
+            - generic [ref=e169]:
+              - generic [ref=e170]: First Name*
+              - textbox "First Name" [ref=e171]: Harsh
+            - generic [ref=e174]:
+              - generic [ref=e175]: Last Name*
+              - textbox "Last Name" [ref=e176]: Rajput
+            - generic [ref=e179]:
+              - generic [ref=e180]: Preferred First Name
+              - textbox "Preferred First Name" [ref=e181]: Harsh
+            - generic [ref=e184]:
+              - generic [ref=e185]: Email*
+              - textbox "Email" [ref=e186]: harxhist@gmail.com
+            - group "Phone" [ref=e188]:
+              - generic [ref=e189]: Phone
+              - generic [ref=e192]:
+                - generic [ref=e193]: Country*
+                - generic [ref=e194]:
+                  - log [ref=e196]
+                  - generic [ref=e198]:
+                    - generic [ref=e199]:
+                      - generic [ref=e935]: "+91"
+                      - combobox "Country" [ref=e201]
+                    - button "Toggle flyout" [ref=e203] [cursor=pointer]:
+                      - img [ref=e204]
+              - generic [ref=e208]:
+                - generic [ref=e209]: Phone*
+                - textbox "Phone" [active] [ref=e211]: 72170 16717
+            - group "Resume/CV*" [ref=e213]:
+              - generic [ref=e214]: Resume/CV*
+              - generic [ref=e216]:
+                - generic [ref=e218]:
+                  - button "Attach" [ref=e219] [cursor=pointer]
+                  - generic [ref=e220]: Attach
+                  - button "Attach" [ref=e221]
+                - button "Dropbox" [ref=e223] [cursor=pointer]
+                - button "Google Drive" [ref=e225] [cursor=pointer]
+                - generic [ref=e227]:
+                  - button "Enter manually" [ref=e228] [cursor=pointer]
+                  - generic [ref=e229]: Enter manually
+                - paragraph [ref=e230]: "Accepted file types: pdf, doc, docx, txt, rtf"
+          - generic [ref=e231]:
+            - separator [ref=e232]
+            - generic [ref=e235]:
+              - generic [ref=e236]: Are you currently based in any of these countries? Please note these are the only countries where we are accepting applications*
+              - generic [ref=e237]:
+                - log [ref=e239]
+                - generic [ref=e241]:
+                  - generic [ref=e242]:
+                    - generic [ref=e423]: India
+                    - combobox "Are you currently based in any of these countries? Please note these are the only countries where we are accepting applications" [ref=e245]
+                  - generic [ref=e246]:
+                    - button "Clear selections" [ref=e425] [cursor=pointer]:
+                      - img [ref=e426]
+                    - button "Toggle flyout" [ref=e247] [cursor=pointer]:
+                      - img [ref=e248]
+            - generic [ref=e250]:
+              - generic [ref=e252]:
+                - generic [ref=e253]: Will you require Visa Sponsorship now, or in the future?*
+                - generic [ref=e254]:
+                  - log [ref=e256]
+                  - generic [ref=e258]:
+                    - generic [ref=e259]:
+                      - generic [ref=e260]: Select...
+                      - combobox "Will you require Visa Sponsorship now, or in the future?" [ref=e262]
+                    - button "Toggle flyout" [ref=e264] [cursor=pointer]:
+                      - img [ref=e265]
+                  - textbox
+              - paragraph [ref=e269]:
+                - text: Please mark '
+                - strong [ref=e270]: "YES"
+                - text: "' if you will require Visa Sponsorship now, or in the future."
+                - text: Mark '
+                - strong [ref=e271]: "NO"
+                - text: "' if you will"
+                - strong [ref=e272]: NOT
+                - text: require Visa Sponsorship now, or in the future.
+            - generic [ref=e275]:
+              - generic [ref=e276]: Your authorization to work in the country where you live. Please choose the option that describes your work authorization. *
+              - generic [ref=e277]:
+                - log [ref=e279]
+                - generic [ref=e281]:
+                  - generic [ref=e282]:
+                    - generic [ref=e283]: Select...
+                    - combobox "Your authorization to work in the country where you live. Please choose the option that describes your work authorization." [ref=e285]
+                  - button "Toggle flyout" [ref=e287] [cursor=pointer]:
+                    - img [ref=e288]
+                - textbox
+            - generic [ref=e290]:
+              - generic [ref=e292]:
+                - generic [ref=e293]: Do you live in one of the following states? Alabama, Alaska, Delaware, Kansas, Maine, Mississippi, Montana, Nebraska, New Mexico, North Dakota, South Dakota, West Virginia, or Wyoming.*
+                - generic [ref=e294]:
+                  - log [ref=e296]
+                  - generic [ref=e298]:
+                    - generic [ref=e299]:
+                      - generic [ref=e300]: Select...
+                      - combobox "Do you live in one of the following states? Alabama, Alaska, Delaware, Kansas, Maine, Mississippi, Montana, Nebraska, New Mexico, North Dakota, South Dakota, West Virginia, or Wyoming." [ref=e302]
+                    - button "Toggle flyout" [ref=e304] [cursor=pointer]:
+                      - img [ref=e305]
+                  - textbox
+              - paragraph [ref=e309]:
+                - text: Please mark ‘
+                - strong [ref=e310]: "YES"
+                - text: ’ if you currently live in one of these states.
+                - text: If you do
+                - strong [ref=e311]: NOT
+                - text: currently live in one of these states, mark ‘
+                - strong [ref=e312]: "NO"
+                - text: .’
+            - generic [ref=e315]:
+              - generic [ref=e316]: LinkedIn Profile*
+              - textbox "LinkedIn Profile" [ref=e317]: https://linkedin.com/in/harxhist
+            - generic [ref=e320]:
+              - generic [ref=e321]: Twitter
+              - textbox "Twitter" [ref=e322]
+            - generic [ref=e325]:
+              - generic [ref=e326]: Github*
+              - textbox "Github" [ref=e327]: https://github.com/harxhist
+            - generic [ref=e330]:
+              - generic [ref=e331]: Website
+              - textbox "Website" [ref=e332]: https://har.sh10.in
+            - generic [ref=e333]:
+              - generic [ref=e335]:
+                - generic [ref=e336]: By submitting my application, I acknowledge that I have read and understand Vercel’s Job Applicant Privacy Notice - https://vercel.com/legal/job-applicant-privacy-notice *
+                - generic [ref=e337]:
+                  - log [ref=e339]
+                  - generic [ref=e341]:
+                    - generic [ref=e342]:
+                      - generic [ref=e343]: Select...
+                      - combobox "By submitting my application, I acknowledge that I have read and understand Vercel’s Job Applicant Privacy Notice - https://vercel.com/legal/job-applicant-privacy-notice" [ref=e345]
+                    - button "Toggle flyout" [ref=e347] [cursor=pointer]:
+                      - img [ref=e348]
+                  - textbox
+              - paragraph [ref=e352]:
+                - text: By submitting my application, I acknowledge that I have read and understand Vercel’s
+                - link "Job Applicant Privacy Notice" [ref=e353] [cursor=pointer]:
+                  - /url: https://vercel.com/legal/job-applicant-privacy-notice
+                - text: .
+            - generic [ref=e356]:
+              - generic [ref=e357]: Please double-check all the information provided above. Ensuring accuracy is crucial, as any errors or omissions may impact the review of your application.*
+              - generic [ref=e358]:
+                - log [ref=e360]
+                - generic [ref=e362]:
+                  - generic [ref=e363]:
+                    - generic [ref=e364]: Select...
+                    - combobox "Please double-check all the information provided above. Ensuring accuracy is crucial, as any errors or omissions may impact the review of your application." [ref=e366]
+                  - button "Toggle flyout" [ref=e368] [cursor=pointer]:
+                    - img [ref=e369]
+                - textbox
+            - generic [ref=e371]:
+              - generic [ref=e373]:
+                - generic [ref=e374]: Where did you first hear about this role?*
+                - generic [ref=e375]:
+                  - log [ref=e377]
+                  - generic [ref=e379]:
+                    - generic [ref=e380]:
+                      - generic [ref=e381]: Select...
+                      - combobox "Where did you first hear about this role?" [ref=e383]
+                    - button "Toggle flyout" [ref=e385] [cursor=pointer]:
+                      - img [ref=e386]
+                  - textbox
+              - paragraph [ref=e390]: If multiple things played a part, tell us about the very first one.
+          - button "Submit application" [ref=e392] [cursor=pointer]
+  - contentinfo [ref=e393]:
+    - generic [ref=e394]:
+      - paragraph [ref=e395]: Powered by
+      - link "Greenhouse logo" [ref=e396] [cursor=pointer]:
+        - /url: https://www.greenhouse.com
+        - img "Greenhouse logo" [ref=e397]
+  - iframe [ref=e411]:
+    - generic [ref=f5e6]:
+      - text: protected by
+      - strong [ref=f5e7]: reCAPTCHA

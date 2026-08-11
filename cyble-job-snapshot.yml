@@ -1,0 +1,490 @@
+- generic [ref=e2]:
+  - banner [ref=e5]:
+    - navigation [ref=e6]:
+      - link "Y Combinator" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img "Y Combinator" [ref=e8]
+      - button "Open menu" [ref=e9] [cursor=pointer]:
+        - generic [ref=e10]: Open menu
+        - img [ref=e11]
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - link [ref=e18] [cursor=pointer]:
+          - /url: ""
+        - generic [ref=e19]:
+          - heading "Cyble" [level=2] [ref=e20]:
+            - link "Cyble" [ref=e21] [cursor=pointer]:
+              - /url: /companies/cyble
+          - paragraph [ref=e22]: Cyble - World’s First Intelligence-Driven, AI-Native Security…
+      - generic [ref=e23]:
+        - heading "Senior Software Engineer – AI" [level=1] [ref=e24]
+        - generic [ref=e25]:
+          - generic [ref=e26]: ₹4M - ₹6M INR
+          - generic [ref=e27]: •
+          - generic [ref=e28]: Bengaluru, KA, IN / Bengaluru, Karnataka, IN
+        - generic [ref=e29]:
+          - generic [ref=e30]:
+            - strong [ref=e32]: Job type
+            - text: Full-time
+          - generic [ref=e33]:
+            - strong [ref=e35]: Role
+            - text: Engineering, Backend
+          - generic [ref=e36]:
+            - strong [ref=e38]: Experience
+            - text: 6+ years
+          - generic [ref=e39]:
+            - strong [ref=e41]: Visa
+            - text: US citizen/visa only
+          - generic [ref=e42]:
+            - strong [ref=e44]: Skills
+            - text: Go, Node.js, Python
+        - generic [ref=e47]:
+          - generic [ref=e48]: Apply to Cyble and hundreds of other fast-growing YC startups with a single profile.
+          - link "Apply to role ›" [ref=e49] [cursor=pointer]:
+            - /url: https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D87440&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=22781
+      - heading "About the role" [level=2] [ref=e50]
+      - generic [ref=e52]:
+        - heading "About Cyble" [level=3] [ref=e53]
+        - paragraph [ref=e54]: Cyble is revolutionizing the landscape of cybersecurity intelligence. Founded in 2019, Cyble began as a visionary college project and has quickly transformed into a leading force in proactive cyber threat detection and mitigation, that is now globally significant, with people in 20 countries - Headquartered in Alpharetta, Georgia, and with offices in Australia, Malaysia, Singapore, Dubai, Saudi Arabia and India
+        - paragraph [ref=e55]: "Our mission is clear: to provide visibility, intelligence and cybersecurity protection using cutting-edge advanced technology, giving enterprises a powerful advantage. We democratize real-time intelligence about cyber threats and vulnerabilities, enabling organizations to take proactive measures and maintain robust cybersecurity. We strive to make the digital world a safer place for everyone."
+        - paragraph [ref=e56]: At Cyble, artificial intelligence (AI) and innovation are central to all operations, with a commitment to continuous improvement and excellence in both products and business practices. Cyble values inclusivity, offering team members autonomy and flexibility to balance their professional and personal lives. Cyble fosters a culture where employees voices are heard, contributions are recognized, and everyone is encouraged to be part of something extraordinary.
+        - heading "About the Role" [level=3] [ref=e57]
+        - paragraph [ref=e58]:
+          - text: Cyble is building a
+          - strong [ref=e59]: cloud-native, AI-first cybersecurity intelligence platform
+          - text: that operates at global scale. We are looking for a
+          - strong [ref=e60]: Senior Software Engineer
+          - text: who is deeply hands-on and
+          - strong [ref=e61]: AI-native in how they think, design, and build systems
+          - text: .
+        - paragraph [ref=e62]:
+          - text: This role is for engineers with
+          - strong [ref=e63]: 6–8 years of experience
+          - text: who can design and build scalable SaaS services
+          - strong [ref=e64]: with AI embedded as a core capability
+          - text: — not as an afterthought. You will work on distributed systems, real-time data pipelines, and
+          - strong [ref=e65]: LLM-powered, agentic workflows
+          - text: that automate analysis, triage, and decision-making across the platform.
+        - heading "What You’ll Do at Cyble:" [level=3] [ref=e66]
+        - paragraph [ref=e67]:
+          - strong [ref=e68]: AI-Native Engineering
+        - list [ref=e69]:
+          - listitem [ref=e70]:
+            - text: Design and implement
+            - strong [ref=e71]: AI-driven backend services
+            - text: using LLMs for summarization, classification, enrichment, reasoning, and automated decision flows.
+          - listitem [ref=e72]:
+            - text: Build and operate
+            - strong [ref=e73]: RAG pipelines
+            - text: ", embedding workflows, and vector search layers to power intelligent features."
+          - listitem [ref=e74]:
+            - text: Implement
+            - strong [ref=e75]: agentic AI patterns
+            - text: for autonomous workflows (triage, correlation, remediation), with strong guardrails and observability.
+          - listitem [ref=e76]: Partner with AI/ML engineers to productionize models and inference services in a secure, scalable manner.
+        - paragraph [ref=e77]:
+          - strong [ref=e78]: Platform & Service Development
+        - list [ref=e79]:
+          - listitem [ref=e80]:
+            - text: Design, build, and maintain
+            - strong [ref=e81]: microservices and APIs
+            - text: for a multi-tenant SaaS platform using
+            - strong [ref=e82]: Go, Node.js (TypeScript), or Python
+            - text: .
+          - listitem [ref=e83]:
+            - text: Contribute to
+            - strong [ref=e84]: system design, domain modeling, and service decomposition
+            - text: ", aligning with platform-level architecture."
+          - listitem [ref=e85]:
+            - text: Build
+            - strong [ref=e86]: event-driven systems
+            - text: using Kafka, RabbitMQ, or cloud-native messaging services (SNS/SQS).
+          - listitem [ref=e87]: Implement ingestion and processing pipelines for external feeds, logs, and signals, including normalization and enrichment.
+        - paragraph [ref=e88]:
+          - strong [ref=e89]: Cloud, Reliability & Security
+        - list [ref=e90]:
+          - listitem [ref=e91]:
+            - text: Containerize and deploy services using
+            - strong [ref=e92]: Docker and Kubernetes
+            - text: ; build and maintain CI/CD pipelines.
+          - listitem [ref=e93]: Ensure high availability, observability, and performance using modern monitoring and alerting stacks.
+          - listitem [ref=e94]:
+            - text: Apply
+            - strong [ref=e95]: secure-by-design principles
+            - text: ", threat modeling, and compliance controls throughout development."
+        - paragraph [ref=e96]:
+          - strong [ref=e97]: Collaboration & Technical Leadership
+        - list [ref=e98]:
+          - listitem [ref=e99]: Collaborate closely with product, frontend, data, DevOps, and AI teams to deliver end-to-end capabilities.
+          - listitem [ref=e100]: Participate in architecture discussions, design reviews, and code reviews.
+          - listitem [ref=e101]:
+            - text: Mentor junior engineers and model a culture of
+            - strong [ref=e102]: ownership, innovation, and bias for action
+            - text: .
+        - heading "What You’ll Need:" [level=3] [ref=e103]
+        - list [ref=e104]:
+          - listitem [ref=e105]: 6–8 years of professional backend or platform engineering experience.
+          - listitem [ref=e106]: Hands-on, recent experience building AI/LLM-powered features in production systems.
+          - listitem [ref=e107]: "Strong understanding of LLM integration patterns: RAG, embeddings, prompt strategies, agents, and safety guardrails."
+          - listitem [ref=e108]: Proficiency in Go, Node.js (TypeScript), or Python (FastAPI/Flask/Django).
+          - listitem [ref=e109]: Solid grounding in distributed systems, microservices architecture, and cloud-native design.
+          - listitem [ref=e110]: Experience designing and consuming RESTful and/or gRPC APIs.
+          - listitem [ref=e111]: Hands-on experience with Kafka, RabbitMQ, SNS/SQS, or similar messaging systems.
+          - listitem [ref=e112]: Strong database fundamentals across SQL and NoSQL systems, including data modeling and indexing.
+          - listitem [ref=e113]: Experience building and operating production-grade SaaS platforms with CI/CD, observability, and reliability best practices.
+          - listitem [ref=e114]: Strong communication skills and comfort working in agile, cross-functional teams.
+        - heading "Preferred Skills" [level=3] [ref=e115]
+        - list [ref=e116]:
+          - listitem [ref=e117]:
+            - text: Experience in
+            - strong [ref=e118]: cybersecurity, threat intelligence, risk analytics, or security data platforms
+            - text: .
+          - listitem [ref=e119]:
+            - text: Experience with
+            - strong [ref=e120]: workflow orchestration engines
+            - text: (Temporal, Airflow, Cadence).
+          - listitem [ref=e121]:
+            - text: Knowledge of
+            - strong [ref=e122]: observability stacks
+            - text: (Prometheus, Grafana, ELK, Datadog, OpenTelemetry).
+          - listitem [ref=e123]:
+            - text: Experience with
+            - strong [ref=e124]: multi-region, multi-tenant SaaS architectures
+            - text: .
+          - listitem [ref=e125]:
+            - text: Contributions to
+            - strong [ref=e126]: open-source
+            - text: ", internal platforms, or developer tooling."
+        - heading "What We Offer" [level=3] [ref=e127]
+        - list [ref=e128]:
+          - listitem [ref=e129]:
+            - strong [ref=e130]: "Impactful Work:"
+            - text: Shape the user experience for a next-gen security platform
+          - listitem [ref=e131]:
+            - strong [ref=e132]: "Modern Stack:"
+            - text: Leverage React/TypeScript, real-time data, generative UI, and AI
+            - text: integrations
+          - listitem [ref=e133]:
+            - strong [ref=e134]: "Growth & Learning:"
+            - text: Access training budgets, conference support, and
+            - text: mentorship
+        - paragraph [ref=e135]:
+          - text: Apply now to join Cyble’s frontend engineering team and help deliver game-changing
+          - text: security experiences.
+        - paragraph [ref=e136]: If you like working in an inclusive environment, you want to advance your career quickly, and your opinion is valued, look no further than Cyble, Inc. We are young, hungry, and ready to impact the cyber security landscape!
+        - paragraph [ref=e137]
+        - paragraph [ref=e138]
+      - heading "About Cyble" [level=2] [ref=e139]
+      - paragraph [ref=e141]: Cyble is a cyber intelligence company that empowers organizations with darkweb & cybercrime monitoring and mitigation services.
+    - generic [ref=e142]:
+      - generic [ref=e143]:
+        - link "Cyble" [ref=e145] [cursor=pointer]:
+          - /url: /companies/cyble
+          - img "Cyble" [ref=e146]
+        - link "Cyble" [ref=e149] [cursor=pointer]:
+          - /url: /companies/cyble
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - generic [ref=e152]: "Founded:"
+            - generic [ref=e153]: "2019"
+          - generic [ref=e154]:
+            - generic [ref=e155]: "Batch:"
+            - generic [ref=e156]: W21
+          - generic [ref=e157]:
+            - generic [ref=e158]: "Team Size:"
+            - generic [ref=e159]: "197"
+          - generic [ref=e160]:
+            - generic [ref=e161]: "Status:"
+            - generic [ref=e162]: Active
+          - generic [ref=e164]:
+            - generic [ref=e165]: "Location:"
+            - generic [ref=e166]: San Francisco
+          - generic [ref=e167]:
+            - link "Company website" [ref=e168] [cursor=pointer]:
+              - /url: https://cyble.com/
+              - img [ref=e169]
+            - link "LinkedIn profile" [ref=e171] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/14707748/
+            - link "X (Twitter) account" [ref=e173] [cursor=pointer]:
+              - /url: https://twitter.com/cybleglobal
+              - img "X (Twitter) logo" [ref=e174]
+            - link "Facebook profile" [ref=e175] [cursor=pointer]:
+              - /url: https://www.facebook.com/cybleau
+            - link "Crunchbase profile" [ref=e177] [cursor=pointer]:
+              - /url: https://www.crunchbase.com/organization/cyble
+      - generic [ref=e179]: Founders
+      - generic [ref=e180]:
+        - generic [ref=e182]:
+          - img "Beenu Arora" [ref=e184]
+          - generic [ref=e185]:
+            - generic [ref=e186]:
+              - generic [ref=e187]: Beenu Arora
+              - generic [ref=e188]:
+                - link "Twitter account" [ref=e189] [cursor=pointer]:
+                  - /url: https://twitter.com/beenuar
+                  - img "Twitter account" [ref=e190]
+                - link "LinkedIn profile" [ref=e191] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/beenu-arora-b5068412/
+            - generic [ref=e193]: Founder
+        - generic [ref=e195]:
+          - img "Manish Chachada" [ref=e197]
+          - generic [ref=e198]:
+            - generic [ref=e199]:
+              - generic [ref=e200]: Manish Chachada
+              - generic [ref=e201]:
+                - link "Twitter account" [ref=e202] [cursor=pointer]:
+                  - /url: https://twitter.com/manishchachada
+                  - img "Twitter account" [ref=e203]
+                - link "LinkedIn profile" [ref=e204] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/manish-r-chachada/
+            - generic [ref=e206]: Founder
+      - generic [ref=e207]:
+        - generic [ref=e208]: Similar Jobs
+        - generic [ref=e209]:
+          - generic [ref=e210]:
+            - img "Pluto" [ref=e212]
+            - generic [ref=e213]:
+              - link "Pluto" [ref=e214] [cursor=pointer]:
+                - /url: /companies/pluto
+              - link "Senior Software Engineer - AI Infrastructure" [ref=e216] [cursor=pointer]:
+                - /url: /companies/pluto/jobs/oV6u4fY-senior-software-engineer-ai-infrastructure
+          - generic [ref=e217]:
+            - img "MixRank" [ref=e219]
+            - generic [ref=e220]:
+              - link "MixRank" [ref=e221] [cursor=pointer]:
+                - /url: /companies/mixrank
+              - link "Junior Software Engineer — Remote, Colombia" [ref=e223] [cursor=pointer]:
+                - /url: /companies/mixrank/jobs/4N6pNgc-junior-software-engineer-remote-colombia
+          - generic [ref=e224]:
+            - img "AiPrise" [ref=e226]
+            - generic [ref=e227]:
+              - link "AiPrise" [ref=e228] [cursor=pointer]:
+                - /url: /companies/aiprise
+              - link "Staff Software Engineer" [ref=e230] [cursor=pointer]:
+                - /url: /companies/aiprise/jobs/Uz2e9zi-staff-software-engineer
+          - generic [ref=e231]:
+            - img "GhostEye" [ref=e233]
+            - generic [ref=e234]:
+              - link "GhostEye" [ref=e235] [cursor=pointer]:
+                - /url: /companies/ghosteye
+              - link "Security Researcher - Offensive Security" [ref=e237] [cursor=pointer]:
+                - /url: /companies/ghosteye/jobs/lNIRF1W-security-researcher-offensive-security
+          - generic [ref=e238]:
+            - img "Lab0" [ref=e240]
+            - generic [ref=e241]:
+              - link "Lab0" [ref=e242] [cursor=pointer]:
+                - /url: /companies/lab0
+              - link "Founding Engineer" [ref=e244] [cursor=pointer]:
+                - /url: /companies/lab0/jobs/hlPvGkT-founding-engineer
+          - generic [ref=e245]:
+            - img "Kabilah" [ref=e247]
+            - generic [ref=e248]:
+              - link "Kabilah" [ref=e249] [cursor=pointer]:
+                - /url: /companies/kabilah
+              - link "Founding Engineer (AI)" [ref=e251] [cursor=pointer]:
+                - /url: /companies/kabilah/jobs/5galYSK-founding-engineer-ai
+          - generic [ref=e252]:
+            - img "OneChronos" [ref=e254]
+            - generic [ref=e255]:
+              - link "OneChronos" [ref=e256] [cursor=pointer]:
+                - /url: /companies/onechronos
+              - link "Technical Lead" [ref=e258] [cursor=pointer]:
+                - /url: /companies/onechronos/jobs/vzDNqOM-technical-lead
+          - generic [ref=e259]:
+            - img "Ardent" [ref=e261]
+            - generic [ref=e262]:
+              - link "Ardent" [ref=e263] [cursor=pointer]:
+                - /url: /companies/ardent
+              - link "Founding Engineer - Infrastructure (Staff)" [ref=e265] [cursor=pointer]:
+                - /url: /companies/ardent/jobs/pGoWrzd-founding-engineer-infrastructure-staff
+          - generic [ref=e266]:
+            - img "GovernGPT" [ref=e268]
+            - generic [ref=e269]:
+              - link "GovernGPT" [ref=e270] [cursor=pointer]:
+                - /url: /companies/governgpt
+              - link "Backend Engineer, Thinking Systems" [ref=e272] [cursor=pointer]:
+                - /url: /companies/governgpt/jobs/hRyltS0-backend-engineer-thinking-systems
+          - generic [ref=e273]:
+            - img "Closure" [ref=e275]
+            - generic [ref=e276]:
+              - link "Closure" [ref=e277] [cursor=pointer]:
+                - /url: /companies/closure
+              - link "Member of Technical Staff" [ref=e279] [cursor=pointer]:
+                - /url: /companies/closure/jobs/xUmCr0b-member-of-technical-staff
+          - generic [ref=e280]:
+            - img "Numeral" [ref=e282]
+            - generic [ref=e283]:
+              - link "Numeral" [ref=e284] [cursor=pointer]:
+                - /url: /companies/numeral
+              - link "Forward Deployed Engineer" [ref=e286] [cursor=pointer]:
+                - /url: /companies/numeral/jobs/drO1dy8-forward-deployed-engineer
+          - generic [ref=e287]:
+            - img "GIMO" [ref=e289]
+            - generic [ref=e290]:
+              - link "GIMO" [ref=e291] [cursor=pointer]:
+                - /url: /companies/gimo
+              - link "Senior Java Engineer" [ref=e293] [cursor=pointer]:
+                - /url: /companies/gimo/jobs/PnG2yGW-senior-java-engineer
+          - generic [ref=e294]:
+            - img "BioStack Platforms" [ref=e296]
+            - generic [ref=e297]:
+              - link "BioStack Platforms" [ref=e298] [cursor=pointer]:
+                - /url: /companies/biostack-platforms
+              - link "Founding Research Engineer, RL/Reasoning" [ref=e300] [cursor=pointer]:
+                - /url: /companies/biostack-platforms/jobs/M8GyMNX-founding-research-engineer-rl-reasoning
+          - generic [ref=e301]:
+            - img "Agave" [ref=e303]
+            - generic [ref=e304]:
+              - link "Agave" [ref=e305] [cursor=pointer]:
+                - /url: /companies/agave
+              - link "Full-Stack Software Engineer" [ref=e307] [cursor=pointer]:
+                - /url: /companies/agave/jobs/uNmv0Mv-full-stack-software-engineer
+          - generic [ref=e308]:
+            - img "Nango" [ref=e310]
+            - generic [ref=e311]:
+              - link "Nango" [ref=e312] [cursor=pointer]:
+                - /url: /companies/nango
+              - link "Staff Backend Engineer (Remote)" [ref=e314] [cursor=pointer]:
+                - /url: /companies/nango/jobs/KplJ2YB-staff-backend-engineer-remote
+          - generic [ref=e315]:
+            - img "Polymath" [ref=e317]
+            - generic [ref=e318]:
+              - link "Polymath" [ref=e319] [cursor=pointer]:
+                - /url: /companies/polymath
+              - link "Member of Technical Staff - Engineering" [ref=e321] [cursor=pointer]:
+                - /url: /companies/polymath/jobs/t8l6gRt-member-of-technical-staff-engineering
+          - generic [ref=e322]:
+            - img "CollectWise" [ref=e324]
+            - generic [ref=e325]:
+              - link "CollectWise" [ref=e326] [cursor=pointer]:
+                - /url: /companies/collectwise
+              - link "AI Agent Engineer" [ref=e328] [cursor=pointer]:
+                - /url: /companies/collectwise/jobs/oEAfzBS-ai-agent-engineer
+          - generic [ref=e329]:
+            - img "VectorShift" [ref=e331]
+            - generic [ref=e332]:
+              - link "VectorShift" [ref=e333] [cursor=pointer]:
+                - /url: /companies/vectorshift
+              - link "Backend Engineer (India)" [ref=e335] [cursor=pointer]:
+                - /url: /companies/vectorshift/jobs/pPOjyts-backend-engineer-india
+          - generic [ref=e336]:
+            - img "Stacksync" [ref=e338]
+            - generic [ref=e339]:
+              - link "Stacksync" [ref=e340] [cursor=pointer]:
+                - /url: /companies/stacksync
+              - link "Senior Backend Engineer" [ref=e342] [cursor=pointer]:
+                - /url: /companies/stacksync/jobs/kTbfPJr-senior-backend-engineer
+          - generic [ref=e343]:
+            - img "Terminal" [ref=e345]
+            - generic [ref=e346]:
+              - link "Terminal" [ref=e347] [cursor=pointer]:
+                - /url: /companies/terminal
+              - link "Software Engineer, Data Platform" [ref=e349] [cursor=pointer]:
+                - /url: /companies/terminal/jobs/ESIucQf-software-engineer-data-platform
+  - contentinfo "Footer" [ref=e350]:
+    - heading "Footer" [level=2] [ref=e351]
+    - generic [ref=e352]:
+      - generic [ref=e353]:
+        - generic [ref=e355]:
+          - link "Y Combinator Y Combinator" [ref=e356] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e357]: Y Combinator
+            - img "Y Combinator" [ref=e358]
+          - heading "Make something people want." [level=3] [ref=e359]
+        - generic [ref=e360]:
+          - generic [ref=e361]:
+            - heading "Programs" [level=3] [ref=e362]
+            - list [ref=e363]:
+              - listitem [ref=e364]:
+                - link "YC Program" [ref=e365] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e366]:
+                - link "Startup School" [ref=e367] [cursor=pointer]:
+                  - /url: https://startupschool.org
+              - listitem [ref=e368]:
+                - link "Work at a Startup" [ref=e369] [cursor=pointer]:
+                  - /url: /jobs
+              - listitem [ref=e370]:
+                - link "Co-Founder Matching" [ref=e371] [cursor=pointer]:
+                  - /url: /cofounder-matching
+          - generic [ref=e372]:
+            - heading "Resources" [level=3] [ref=e373]
+            - list [ref=e374]:
+              - listitem [ref=e375]:
+                - link "Startup Directory" [ref=e376] [cursor=pointer]:
+                  - /url: /companies
+              - listitem [ref=e377]:
+                - link "Startup Library" [ref=e378] [cursor=pointer]:
+                  - /url: /library
+              - listitem [ref=e379]:
+                - link "Investors" [ref=e380] [cursor=pointer]:
+                  - /url: /investors
+              - listitem [ref=e381]:
+                - link "Demo Day" [ref=e382] [cursor=pointer]:
+                  - /url: /demoday
+              - listitem [ref=e383]:
+                - link "Safe" [ref=e384] [cursor=pointer]:
+                  - /url: /documents
+              - listitem [ref=e385]:
+                - link "Hacker News" [ref=e386] [cursor=pointer]:
+                  - /url: https://news.ycombinator.com/
+              - listitem [ref=e387]:
+                - link "Launch YC" [ref=e388] [cursor=pointer]:
+                  - /url: /launches
+              - listitem [ref=e389]:
+                - link "YC Deals" [ref=e390] [cursor=pointer]:
+                  - /url: https://deals.ycombinator.com
+          - generic [ref=e391]:
+            - heading "Company" [level=3] [ref=e392]
+            - list [ref=e393]:
+              - listitem [ref=e394]:
+                - link "YC Blog" [ref=e395] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e396]:
+                - link "Contact" [ref=e397] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e398]:
+                - link "Press" [ref=e399] [cursor=pointer]:
+                  - /url: /press
+              - listitem [ref=e400]:
+                - link "People" [ref=e401] [cursor=pointer]:
+                  - /url: /people
+              - listitem [ref=e402]:
+                - link "Careers" [ref=e403] [cursor=pointer]:
+                  - /url: /software
+              - listitem [ref=e404]:
+                - link "Privacy Policy" [ref=e405] [cursor=pointer]:
+                  - /url: /legal#privacy
+              - listitem [ref=e406]:
+                - link "Notice at Collection" [ref=e407] [cursor=pointer]:
+                  - /url: /legal#notice-at-collection
+              - listitem [ref=e408]:
+                - link "Security" [ref=e409] [cursor=pointer]:
+                  - /url: /security
+              - listitem [ref=e410]:
+                - link "Terms of Use" [ref=e411] [cursor=pointer]:
+                  - /url: /legal#tou
+      - generic [ref=e412]:
+        - generic [ref=e413]:
+          - link "Twitter" [ref=e414] [cursor=pointer]:
+            - /url: https://twitter.com/ycombinator
+            - generic [ref=e415]: Twitter
+            - img [ref=e416]
+          - link "Facebook" [ref=e418] [cursor=pointer]:
+            - /url: https://www.facebook.com/YCombinator/
+            - generic [ref=e419]: Facebook
+            - img [ref=e420]
+          - link "Instagram" [ref=e422] [cursor=pointer]:
+            - /url: https://www.instagram.com/ycombinator
+            - generic [ref=e423]: Instagram
+            - img [ref=e424]
+          - link "LinkedIn" [ref=e426] [cursor=pointer]:
+            - /url: https://www.linkedin.com/school/y-combinator/
+            - generic [ref=e427]: LinkedIn
+            - img [ref=e428]
+          - link "Youtube" [ref=e430] [cursor=pointer]:
+            - /url: https://www.youtube.com/c/ycombinator
+            - generic [ref=e431]: Youtube
+            - img [ref=e432]
+        - paragraph [ref=e434]: © 2026 Y Combinator

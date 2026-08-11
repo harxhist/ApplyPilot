@@ -1,0 +1,176 @@
+:root {
+  --bg: #0f1419;
+  --panel: #1a222c;
+  --panel-2: #243040;
+  --border: #2f3d4d;
+  --text: #e7eef6;
+  --muted: #8fa3b8;
+  --accent: #3d9cf0;
+  --good: #3ecf8e;
+  --warn: #e6b84a;
+  --bad: #f07178;
+  --font: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  font-family: var(--font);
+  background: radial-gradient(1200px 600px at 10% -10%, #1b2a3a 0%, var(--bg) 55%);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100%;
+}
+
+.nav {
+  background: rgba(15, 20, 25, 0.92);
+  border-right: 1px solid var(--border);
+  padding: 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.35rem 0.6rem 1rem;
+  font-size: 1.05rem;
+}
+.nav a {
+  color: var(--muted);
+  padding: 0.45rem 0.65rem;
+  border-radius: 6px;
+  display: block;
+}
+.nav a.active, .nav a:hover {
+  background: var(--panel-2);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.main {
+  padding: 1.1rem 1.4rem 2rem;
+  overflow: auto;
+}
+
+h1 { font-size: 1.35rem; margin: 0 0 0.85rem; font-weight: 650; }
+h2 { font-size: 1.05rem; margin: 1.2rem 0 0.55rem; font-weight: 600; }
+.muted { color: var(--muted); }
+.error { color: var(--bad); white-space: pre-wrap; }
+.ok { color: var(--good); }
+
+.grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 0.9rem;
+}
+.card .label { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.card .value { font-size: 1.45rem; font-weight: 650; margin-top: 0.2rem; }
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  align-items: center;
+}
+input, select, textarea, button {
+  font: inherit;
+  color: var(--text);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.55rem;
+}
+textarea { width: 100%; min-height: 180px; font-family: var(--mono); font-size: 12px; }
+button {
+  cursor: pointer;
+  background: #2a4a6a;
+  border-color: #3a5f85;
+}
+button.danger { background: #5a2a32; border-color: #7a3a44; }
+button.secondary { background: var(--panel); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+th, td {
+  text-align: left;
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+th { color: var(--muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; }
+tr:hover td { background: rgba(61, 156, 240, 0.06); }
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  background: var(--panel-2);
+  font-size: 0.75rem;
+}
+.badge.good { background: #1d3d30; color: var(--good); }
+.badge.warn { background: #3d3420; color: var(--warn); }
+.badge.bad { background: #3d2226; color: var(--bad); }
+
+.split {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 0.85rem;
+}
+@media (max-width: 960px) {
+  .layout { grid-template-columns: 1fr; }
+  .nav { flex-direction: row; flex-wrap: wrap; border-right: none; border-bottom: 1px solid var(--border); }
+  .split { grid-template-columns: 1fr; }
+}
+
+.drawer {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem;
+  max-height: 80vh;
+  overflow: auto;
+}
+.mono { font-family: var(--mono); font-size: 12px; white-space: pre-wrap; }
+.logbox {
+  background: #0b1015;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem;
+  max-height: 360px;
+  overflow: auto;
+  font-family: var(--mono);
+  font-size: 12px;
+  white-space: pre-wrap;
+}
+.token-bar {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+.token-bar input { flex: 1; min-width: 0; }

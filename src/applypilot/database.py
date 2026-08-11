@@ -427,6 +427,22 @@ def ensure_columns(conn: sqlite3.Connection | None = None) -> list[str]:
     conn.execute("CREATE INDEX IF NOT EXISTS idx_jst_at ON job_state_transitions(at)")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_jobs_state ON jobs(state)")
 
+    # Operator API: pipeline run history (additive, 2026-08)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS pipeline_runs (
+            id          TEXT PRIMARY KEY,
+            stages      TEXT NOT NULL,
+            params      TEXT,
+            status      TEXT NOT NULL,
+            started_at  TEXT NOT NULL,
+            finished_at TEXT,
+            log_path    TEXT,
+            error       TEXT,
+            result      TEXT
+        )
+    """)
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_pipeline_runs_started ON pipeline_runs(started_at)")
+
     if changed:
         commit_with_retry(conn)
 
@@ -1053,7 +1069,206 @@ def get_stats(conn: sqlite3.Connection | None = None) -> dict:
         "companies": sorted(blocked_companies)[:20],
     }
 
+    # Canonical state distribution for operator UI
+    state_rows = conn.execute(
+        "SELECT COALESCE(state, 'unknown') AS st, COUNT(*) AS cnt "
+        "FROM jobs GROUP BY st ORDER BY cnt DESC"
+    ).fetchall()
+    stats["by_state"] = [(row[0], row[1]) for row in state_rows]
+
     return stats
+
+
+def list_jobs(
+    *,
+    q: str | None = None,
+    state: str | None = None,
+    min_score: int | None = None,
+    max_score: int | None = None,
+    site: str | None = None,
+    company: str | None = None,
+    applied: bool | None = None,
+    limit: int = 50,
+    offset: int = 0,
+    order_by: str = "discovered_at",
+    order_dir: str = "desc",
+    conn: sqlite3.Connection | None = None,
+) -> dict:
+    """Paginated job list for the operator API."""
+    if conn is None:
+        conn = get_connection()
+
+    allowed_order = {
+        "discovered_at", "fit_score", "company", "title", "state",
+        "scored_at", "applied_at", "site",
+    }
+    if order_by not in allowed_order:
+        order_by = "discovered_at"
+    direction = "ASC" if str(order_dir).lower() == "asc" else "DESC"
+
+    where: list[str] = []
+    params: list = []
+
+    if q:
+        where.append(
+            "(title LIKE ? OR company LIKE ? OR location LIKE ? OR url LIKE ?)"
+        )
+        like = f"%{q}%"
+        params.extend([like, like, like, like])
+    if state:
+        where.append("state = ?")
+        params.append(state)
+    if min_score is not None:
+        where.append("fit_score >= ?")
+        params.append(min_score)
+    if max_score is not None:
+        where.append("fit_score <= ?")
+        params.append(max_score)
+    if site:
+        where.append("site = ?")
+        params.append(site)
+    if company:
+        where.append("company LIKE ?")
+        params.append(f"%{company}%")
+    if applied is True:
+        where.append("applied_at IS NOT NULL")
+    elif applied is False:
+        where.append("applied_at IS NULL")
+
+    clause = (" WHERE " + " AND ".join(where)) if where else ""
+    total = conn.execute(f"SELECT COUNT(*) FROM jobs{clause}", params).fetchone()[0]
+
+    rows = conn.execute(
+        f"""SELECT url, title, company, location, site, state, fit_score,
+                   salary, discovered_at, scored_at, applied_at, apply_status,
+                   apply_error, apply_category, eligibility, application_url,
+                   tailored_resume_path, cover_letter_path, needs_human_reason
+            FROM jobs{clause}
+            ORDER BY {order_by} {direction}
+            LIMIT ? OFFSET ?""",
+        [*params, limit, offset],
+    ).fetchall()
+
+    items = [dict(r) for r in rows] if rows else []
+    return {"total": total, "limit": limit, "offset": offset, "items": items}
+
+
+def get_job(url: str, conn: sqlite3.Connection | None = None) -> dict | None:
+    """Return full job row + state history."""
+    if conn is None:
+        conn = get_connection()
+    row = conn.execute("SELECT * FROM jobs WHERE url = ?", (url,)).fetchone()
+    if not row:
+        return None
+    job = dict(row)
+    job["transitions"] = state_history(conn, url)
+    return job
+
+
+def list_hitl_jobs(conn: sqlite3.Connection | None = None) -> list[dict]:
+    if conn is None:
+        conn = get_connection()
+    rows = conn.execute(
+        """SELECT url, title, company, location, fit_score, application_url,
+                  needs_human_reason, needs_human_url, needs_human_instructions,
+                  apply_status, state, last_attempted_at
+           FROM jobs
+           WHERE apply_status = 'needs_human'
+              OR (needs_human_reason IS NOT NULL AND needs_human_reason != '')
+           ORDER BY last_attempted_at IS NULL, last_attempted_at DESC"""
+    ).fetchall()
+    return [dict(r) for r in rows]
+
+
+def create_pipeline_run(
+    run_id: str,
+    stages: list[str],
+    params: dict,
+    log_path: str | None,
+    conn: sqlite3.Connection | None = None,
+) -> dict:
+    import json as _json
+    from datetime import datetime, timezone
+
+    if conn is None:
+        conn = get_connection()
+    now = datetime.now(timezone.utc).isoformat()
+    conn.execute(
+        """INSERT INTO pipeline_runs
+           (id, stages, params, status, started_at, log_path)
+           VALUES (?, ?, ?, 'running', ?, ?)""",
+        (run_id, _json.dumps(stages), _json.dumps(params), now, log_path),
+    )
+    commit_with_retry(conn)
+    return {"id": run_id, "status": "running", "started_at": now}
+
+
+def finish_pipeline_run(
+    run_id: str,
+    status: str,
+    error: str | None = None,
+    result: dict | None = None,
+    conn: sqlite3.Connection | None = None,
+) -> None:
+    import json as _json
+    from datetime import datetime, timezone
+
+    if conn is None:
+        conn = get_connection()
+    now = datetime.now(timezone.utc).isoformat()
+    conn.execute(
+        """UPDATE pipeline_runs
+           SET status = ?, finished_at = ?, error = ?, result = ?
+           WHERE id = ?""",
+        (
+            status,
+            now,
+            error,
+            _json.dumps(result) if result is not None else None,
+            run_id,
+        ),
+    )
+    commit_with_retry(conn)
+
+
+def get_pipeline_run(run_id: str, conn: sqlite3.Connection | None = None) -> dict | None:
+    import json as _json
+
+    if conn is None:
+        conn = get_connection()
+    row = conn.execute("SELECT * FROM pipeline_runs WHERE id = ?", (run_id,)).fetchone()
+    if not row:
+        return None
+    d = dict(row)
+    for key in ("stages", "params", "result"):
+        if d.get(key):
+            try:
+                d[key] = _json.loads(d[key])
+            except Exception:
+                pass
+    return d
+
+
+def list_pipeline_runs(limit: int = 50, conn: sqlite3.Connection | None = None) -> list[dict]:
+    import json as _json
+
+    if conn is None:
+        conn = get_connection()
+    rows = conn.execute(
+        "SELECT * FROM pipeline_runs ORDER BY started_at DESC LIMIT ?",
+        (limit,),
+    ).fetchall()
+    out = []
+    for row in rows:
+        d = dict(row)
+        for key in ("stages", "params", "result"):
+            if d.get(key):
+                try:
+                    d[key] = _json.loads(d[key])
+                except Exception:
+                    pass
+        out.append(d)
+    return out
 
 
 def extract_company(application_url: str | None) -> str | None:

@@ -1,0 +1,148 @@
+- generic [ref=e2]:
+  - list [ref=e4]:
+    - listitem [ref=e5]:
+      - link "Harvey" [ref=e6] [cursor=pointer]:
+        - /url: https://www.harvey.ai/
+        - img "Harvey" [ref=e7]
+    - listitem [ref=e8]:
+      - link "Back to Harvey’s Job Listings" [ref=e9] [cursor=pointer]:
+        - /url: /harvey
+        - img [ref=e10]
+    - listitem
+  - generic [ref=e12]:
+    - heading "Senior Software Engineer, Backend" [level=1] [ref=e14]
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - heading "Location" [level=2] [ref=e18]
+          - paragraph [ref=e19]: Bengaluru
+        - generic [ref=e20]:
+          - heading "Employment Type" [level=2] [ref=e21]
+          - paragraph [ref=e22]: Full time
+        - generic [ref=e23]:
+          - heading "Location Type" [level=2] [ref=e24]
+          - paragraph [ref=e25]: Hybrid
+        - generic [ref=e26]:
+          - heading "Department" [level=2] [ref=e27]
+          - paragraph [ref=e28]: Engineering
+      - generic [ref=e29]:
+        - tablist [ref=e30]:
+          - tab "Overview" [ref=e31] [cursor=pointer]
+          - tab "Application" [selected] [ref=e32] [cursor=pointer]
+        - tabpanel "Application" [ref=e34]:
+          - generic [ref=e56]:
+            - button "Choose File" [ref=e57]
+            - generic [ref=e59]:
+              - generic [ref=e60]:
+                - img [ref=e62]
+                - heading "Autofill from resume" [level=3] [ref=e64]
+              - paragraph [ref=e65]: Upload your resume here to autofill key application fields.
+              - button "Upload file" [ref=e67] [cursor=pointer]
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - heading "Basic Information" [level=2] [ref=e71]
+              - generic [ref=e72]:
+                - generic [ref=e73]: Legal First and Last Name*
+                - textbox "Legal First and Last Name*" [ref=e75] [cursor=pointer]:
+                  - /placeholder: Type here...
+              - generic [ref=e76]:
+                - generic [ref=e77]: Preferred First Name*
+                - textbox "Preferred First Name*" [ref=e79] [cursor=pointer]:
+                  - /placeholder: Type here...
+              - generic [ref=e80]:
+                - generic [ref=e81]: Preferred Last Name*
+                - textbox "Preferred Last Name*" [ref=e83] [cursor=pointer]:
+                  - /placeholder: Type here...
+              - generic [ref=e84]:
+                - generic [ref=e85]: Email*
+                - textbox "Email*" [ref=e87] [cursor=pointer]:
+                  - /placeholder: hello@example.com...
+              - generic [ref=e88]:
+                - generic [ref=e89]: Phone Number*
+                - textbox "Phone Number*" [ref=e90] [cursor=pointer]:
+                  - /placeholder: 1-415-555-1234...
+              - generic [ref=e91]:
+                - generic [ref=e92]: Location*
+                - generic [ref=e93]:
+                  - combobox "Start typing..." [ref=e94] [cursor=pointer]
+                  - button [ref=e95] [cursor=pointer]:
+                    - img [ref=e96]
+              - generic [ref=e98]:
+                - generic [ref=e99]: Current or Most Recent Employer*
+                - textbox "Current or Most Recent Employer*" [ref=e101] [cursor=pointer]:
+                  - /placeholder: Type here...
+              - generic [ref=e102]:
+                - generic [ref=e103]: University or School Attended
+                - textbox "University or School Attended" [ref=e105] [cursor=pointer]:
+                  - /placeholder: Type here...
+              - generic [ref=e106]:
+                - generic [ref=e107]: Pronouns
+                - textbox "Pronouns" [ref=e109] [cursor=pointer]:
+                  - /placeholder: Type here...
+            - generic [ref=e110]:
+              - heading "Work Eligibility" [level=2] [ref=e112]
+              - generic [ref=e113]:
+                - generic [ref=e114]: Are you legally authorized to work in the country where this role is located, for any employer?*
+                - generic [ref=e115]:
+                  - button "Yes" [ref=e116] [cursor=pointer]
+                  - button "No" [ref=e117] [cursor=pointer]
+              - group [ref=e119]:
+                - generic [ref=e120]: Will you now or will you in the future require employment visa sponsorship?*
+                - generic [ref=e121]:
+                  - radio "Yes, I will require Harvey to sponsor my employment" [ref=e124] [cursor=pointer]
+                  - generic [ref=e125]: Yes, I will require Harvey to sponsor my employment
+                - generic [ref=e126]:
+                  - radio "No, I do not require sponsorship to work in the country where this role is located" [ref=e129] [cursor=pointer]
+                  - generic [ref=e130]: No, I do not require sponsorship to work in the country where this role is located
+              - group [ref=e132]:
+                - generic [ref=e133]: By checking this box, I confirm that I have read and understood Harvey's Applicant Privacy Notice - India, and expressly consent to the collection, use, disclosure, transfer, and other processing of my personal data as described in that notice.*
+                - paragraph [ref=e135]:
+                  - link "Harvey Applicant Privacy Notice - India" [ref=e136] [cursor=pointer]:
+                    - /url: https://harveyai.notion.site/Harvey-Applicant-Privacy-Notice-India-32fac3fcdd7a800085cdd9f0be029e20?source=copy_link
+                - generic [ref=e137]:
+                  - generic [ref=e138] [cursor=pointer]:
+                    - img [ref=e139]
+                    - checkbox "I consent" [ref=e141]
+                  - generic [ref=e142]: I consent
+            - generic [ref=e143]:
+              - heading "Harvey Hybrid Policy" [level=2] [ref=e145]
+              - group [ref=e147]:
+                - generic [ref=e148]: "Harvey follows a hybrid in-office model — we’re in the office three days a week, which gives us the best of both worlds: focused collaboration and flexibility. Are you excited and able to join us in person on those days?*"
+                - generic [ref=e149]:
+                  - radio "Yes, I’m able to work from the office 3 days a week" [ref=e152] [cursor=pointer]
+                  - generic [ref=e153]: Yes, I’m able to work from the office 3 days a week
+                - generic [ref=e154]:
+                  - radio "I may need flexibility and would like to discuss" [ref=e157] [cursor=pointer]
+                  - generic [ref=e158]: I may need flexibility and would like to discuss
+                - generic [ref=e159]:
+                  - radio "No, I’m only able to work remotely" [ref=e162] [cursor=pointer]
+                  - generic [ref=e163]: No, I’m only able to work remotely
+            - generic [ref=e164]:
+              - heading "Resume & Professional Links" [level=2] [ref=e166]
+              - generic [ref=e167]:
+                - generic [ref=e168]: LinkedIn*
+                - textbox "LinkedIn*" [ref=e170] [cursor=pointer]:
+                  - /placeholder: Type here...
+              - generic [ref=e171]:
+                - generic [ref=e172]: Resume*
+                - button "Resume*" [ref=e173]
+                - generic [ref=e174]:
+                  - button "Upload File" [ref=e175] [cursor=pointer]:
+                    - img [ref=e176]
+                    - generic [ref=e178]: Upload File
+                  - paragraph [ref=e179]: or drag and drop here
+          - button "Submit Application" [ref=e180] [cursor=pointer]:
+            - text: Submit Application
+            - img [ref=e181]
+  - contentinfo [ref=e43]:
+    - link "Learn more about Ashby" [ref=e44] [cursor=pointer]:
+      - /url: https://www.ashbyhq.com
+      - generic [ref=e45]: Powered by
+      - img "Ashby" [ref=e46]
+    - paragraph [ref=e52]:
+      - link "Privacy Policy" [ref=e53] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/privacy
+      - link "Security" [ref=e54] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/security
+      - link "Vulnerability Disclosure" [ref=e55] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/disclosure

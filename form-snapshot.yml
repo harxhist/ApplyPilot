@@ -1,0 +1,366 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e316]
+  - region "Notifications alt+T"
+  - banner [ref=e317]:
+    - generic [ref=e318]:
+      - link "Skip to content" [ref=e319] [cursor=pointer]:
+        - /url: "#main"
+      - link "Homepage" [ref=e321] [cursor=pointer]:
+        - /url: /home
+        - generic [ref=e322]:
+          - generic:
+            - generic "Cursor logo animation"
+          - img [ref=e323]
+        - generic [ref=e332]: Cursor
+      - navigation [ref=e333]:
+        - list [ref=e334]:
+          - listitem [ref=e335]:
+            - button "Models" [ref=e336] [cursor=pointer]
+          - listitem [ref=e337]:
+            - link "Product" [ref=e338] [cursor=pointer]:
+              - /url: /product
+            - button "Expand Menu" [ref=e339]:
+              - generic [ref=e340]: ↓
+          - listitem [ref=e341]:
+            - link "Enterprise" [ref=e342] [cursor=pointer]:
+              - /url: /enterprise
+          - listitem [ref=e343]:
+            - link "Pricing" [ref=e344] [cursor=pointer]:
+              - /url: /pricing
+          - listitem [ref=e345]:
+            - link "Resources" [ref=e346] [cursor=pointer]:
+              - /url: /changelog
+            - button "Expand Menu" [ref=e347]:
+              - generic [ref=e348]: ↓
+      - generic [ref=e349]:
+        - link "Sign in" [ref=e350] [cursor=pointer]:
+          - /url: /dashboard
+        - link "Contact" [ref=e351] [cursor=pointer]:
+          - /url: /contact-sales?source=navbar
+          - generic [ref=e352]: Contact
+        - link "Download" [ref=e353] [cursor=pointer]:
+          - /url: /download
+  - main [ref=e354]:
+    - article [ref=e356]:
+      - generic [ref=e357]:
+        - generic [ref=e358]:
+          - heading "Software Engineer, Model Routing & Inference" [level=1] [ref=e359]
+          - paragraph [ref=e360]: Engineering · Full-time · New York; San Francisco
+          - link "Apply" [ref=e361] [cursor=pointer]:
+            - /url: "#apply"
+            - text: Apply
+            - generic [ref=e363]: ↓
+        - generic [ref=e365]:
+          - paragraph [ref=e366]: Our mission is to automate coding. The first step in our journey is to build the best tool for professional programmers, using a combination of inventive research, design, and engineering. Our organization is very flat, and our team is small and talent dense. We particularly like people who are truth-seeking, passionate, and creative. We enjoy spirited debate, crazy ideas, and shipping code.
+          - heading "About the Role" [level=3] [ref=e367]:
+            - strong [ref=e368]: About the Role
+          - paragraph [ref=e369]:
+            - text: As a Software Engineer on the
+            - strong [ref=e370]: Model Routing & Inference
+            - text: team at Cursor, you'll build the inference platform that powers every AI interaction in the product.
+          - paragraph [ref=e371]: "This team owns the full inference path: making Cursor's AI faster, more reliable, and more cost-effective at a scale few teams in the world get to operate at. Every agent session, every tab completion, and every chat message flows through your stack."
+          - paragraph
+          - heading "Example projects include..." [level=3] [ref=e372]
+          - list [ref=e373]:
+            - listitem [ref=e374]:
+              - paragraph [ref=e375]: Building and evolving our inference gateway, a single abstraction over every provider's API semantics, so model onboarding becomes a config change.
+            - listitem [ref=e376]:
+              - paragraph [ref=e377]: Designing intelligent cross-provider failover so no single provider outage causes user-visible degradation.
+            - listitem [ref=e378]:
+              - paragraph [ref=e379]: Designing routing backpressure and admission control so traffic spikes don't cascade into providers.
+          - paragraph
+          - heading "You may be a fit if" [level=3] [ref=e380]
+          - list [ref=e381]:
+            - listitem [ref=e382]:
+              - paragraph [ref=e383]: You have deep experience building high-throughput, low-latency distributed systems, especially in inference serving, traffic routing, or real-time data pipelines.
+            - listitem [ref=e384]:
+              - paragraph [ref=e385]: You're comfortable reasoning about cost/performance tradeoffs at scale (GPU utilization, provider economics, capacity planning).
+            - listitem [ref=e386]:
+              - paragraph [ref=e387]: You have strong software engineering fundamentals and enjoy shipping production systems that handle millions of requests.
+            - listitem [ref=e388]:
+              - paragraph [ref=e389]: "You make good calls in the gray area: weighing reliability, cost, latency, and user experience when there isn't a single \"right\" answer."
+          - paragraph
+          - heading "Applying" [level=3] [ref=e390]
+          - paragraph [ref=e391]: If there appears to be a fit, we'll reach to schedule 2-3 short technicals. After, we'll schedule an onsite in our office, where you'll work on a small project, discuss ideas, and meet the team.
+          - paragraph
+          - paragraph [ref=e392]: "#LI-DNI"
+        - generic [ref=e393]:
+          - generic [ref=e394]:
+            - separator [ref=e395]
+            - heading "Apply for this role" [level=2] [ref=e396]
+          - form "Job application form" [ref=e397]:
+            - generic [ref=e398]:
+              - generic [ref=e399]: Name*
+              - textbox "Namerequired" [ref=e400]
+            - generic [ref=e401]:
+              - generic [ref=e402]: Email*
+              - textbox "Emailrequired" [ref=e403]:
+                - /placeholder: hello@world.com
+            - generic [ref=e404]:
+              - generic [ref=e405]: Resume
+              - generic [ref=e406]:
+                - button "Resume" [ref=e407]
+                - button "↥ Upload file" [ref=e408] [cursor=pointer]
+            - generic [ref=e409]:
+              - generic [ref=e410]: LinkedIn URL
+              - textbox "LinkedIn URL" [ref=e411]:
+                - /placeholder: https://
+            - generic [ref=e412]:
+              - generic [ref=e413]: GitHub Profile
+              - textbox "GitHub Profile" [ref=e414]:
+                - /placeholder: https://
+            - generic [ref=e415]:
+              - generic [ref=e416]: "Please write a short note on a project you're proud of:"
+              - textbox "Please write a short note on a project you're proud of:" [ref=e417]
+            - generic [ref=e418]:
+              - generic [ref=e419]: Will you now or in the future require visa sponsorship to work in the country where this position is located?*
+              - generic [ref=e420]:
+                - generic [ref=e421] [cursor=pointer]:
+                  - radio "Yes" [ref=e422]
+                  - generic [ref=e424]: "Yes"
+                - generic [ref=e425] [cursor=pointer]:
+                  - radio "No" [ref=e426]
+                  - generic [ref=e428]: "No"
+            - generic [ref=e429]:
+              - generic [ref=e430]:
+                - generic [ref=e431]:
+                  - paragraph [ref=e432]:
+                    - strong [ref=e433]: U.S. EQUAL EMPLOYMENT OPPORTUNITY INFORMATION
+                    - text: (Completion is voluntary and will not subject you to adverse treatment)
+                  - paragraph
+                  - paragraph [ref=e434]: Anysphere, Inc. provides equal employment opportunities to applicants and employees without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, protected veteran status, disability, or any other classification protected by applicable law.
+                  - paragraph
+                  - paragraph [ref=e435]: We invite all applicants to voluntarily self-identify their race, ethnicity, and gender. Submission of the information on this form is strictly voluntary and refusal to provide it will not subject you to any adverse treatment. Information obtained will be retained in a confidential file and separate from personnel records. This information may only be used in accordance with the provision of applicable federal laws, executive orders, and regulations. If you want more information about any of the sections, please check with a company representative.
+                - generic [ref=e436]:
+                  - strong [ref=e438]: Gender
+                  - generic [ref=e439]:
+                    - generic [ref=e440] [cursor=pointer]:
+                      - radio "Male" [ref=e441]
+                      - generic [ref=e443]: Male
+                    - generic [ref=e444] [cursor=pointer]:
+                      - radio "Female" [ref=e445]
+                      - generic [ref=e447]: Female
+                    - generic [ref=e448] [cursor=pointer]:
+                      - radio "Decline to self-identify" [ref=e449]
+                      - generic [ref=e451]: Decline to self-identify
+                - generic [ref=e452]:
+                  - strong [ref=e454]: Race
+                  - generic [ref=e455]:
+                    - generic [ref=e456] [cursor=pointer]:
+                      - radio "Hispanic or Latino" [ref=e457]
+                      - generic [ref=e459]: Hispanic or Latino
+                    - generic [ref=e460] [cursor=pointer]:
+                      - radio "White (Not Hispanic or Latino)" [ref=e461]
+                      - generic [ref=e463]: White (Not Hispanic or Latino)
+                    - generic [ref=e464] [cursor=pointer]:
+                      - radio "Black or African American (Not Hispanic or Latino)" [ref=e465]
+                      - generic [ref=e467]: Black or African American (Not Hispanic or Latino)
+                    - generic [ref=e468] [cursor=pointer]:
+                      - radio "Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)" [ref=e469]
+                      - generic [ref=e471]: Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)
+                    - generic [ref=e472] [cursor=pointer]:
+                      - radio "Asian (Not Hispanic or Latino)" [ref=e473]
+                      - generic [ref=e475]: Asian (Not Hispanic or Latino)
+                    - generic [ref=e476] [cursor=pointer]:
+                      - radio "American Indian or Alaska Native (Not Hispanic or Latino)" [ref=e477]
+                      - generic [ref=e479]: American Indian or Alaska Native (Not Hispanic or Latino)
+                    - generic [ref=e480] [cursor=pointer]:
+                      - radio "Two or More Races (Not Hispanic or Latino)" [ref=e481]
+                      - generic [ref=e483]: Two or More Races (Not Hispanic or Latino)
+                    - generic [ref=e484] [cursor=pointer]:
+                      - radio "Decline to self-identify" [ref=e485]
+                      - generic [ref=e487]: Decline to self-identify
+              - generic [ref=e488]:
+                - generic [ref=e489]:
+                  - paragraph [ref=e490]:
+                    - strong [ref=e491]: SELF-IDENTIFICATION OF VETERAN STATUS
+                    - text: (Completion is voluntary and will not subject you to adverse treatment)
+                  - paragraph [ref=e492]: If you believe that you belong to any of the following categories of protected veterans, please indicate by making the appropriate selection
+                  - list [ref=e493]:
+                    - listitem [ref=e494]:
+                      - paragraph [ref=e495]:
+                        - strong [ref=e496]: Disabled veteran
+                        - text: – A veteran who served on active duty in the U.S. military and is entitled to disability compensation (or who but for the receipt of military retired pay would be entitled to disability compensation) under laws administered by the Secretary of Veterans Affairs, or was discharged or released from active duty because of a service-connected disability
+                    - listitem [ref=e497]:
+                      - paragraph [ref=e498]:
+                        - strong [ref=e499]: Recently separated veteran
+                        - text: – A veteran separated during the three-year period beginning on the date of the veteran's discharge or release from active duty in the U.S military, ground, naval, or air service
+                    - listitem [ref=e500]:
+                      - paragraph [ref=e501]:
+                        - strong [ref=e502]: Active duty wartime or campaign badge veteran
+                        - text: – A veteran who served on active duty in the U.S. military during a war, or in a campaign or expedition for which a campaign badge was authorized under the laws administered by the Department of Defense
+                    - listitem [ref=e503]:
+                      - paragraph [ref=e504]:
+                        - strong [ref=e505]: Armed forces service medal veteran
+                        - text: – A veteran who, while serving on active duty in the U.S. military, ground, naval, or air service, participated in a United States military operation for which an Armed Forces service medal was awarded pursuant to Executive Order 12985 (61 Fed. Reg. 1209).
+                - generic [ref=e506]:
+                  - strong [ref=e508]: Veteran Status
+                  - generic [ref=e509]:
+                    - generic [ref=e510] [cursor=pointer]:
+                      - radio "I identify as one or more of the classifications of protected veteran listed above" [ref=e511]
+                      - generic [ref=e513]: I identify as one or more of the classifications of protected veteran listed above
+                    - generic [ref=e514] [cursor=pointer]:
+                      - radio "I am not a protected veteran" [ref=e515]
+                      - generic [ref=e517]: I am not a protected veteran
+                    - generic [ref=e518] [cursor=pointer]:
+                      - radio "I decline to self-identify for protected veteran status" [ref=e519]
+                      - generic [ref=e521]: I decline to self-identify for protected veteran status
+            - generic [ref=e523]:
+              - generic [ref=e524]: Has someone at Cursor or Graphite referred you for this role? If so, please include their email here
+              - textbox "Has someone at Cursor or Graphite referred you for this role? If so, please include their email here" [ref=e525]:
+                - /placeholder: hello@world.com
+            - button "Submit application →" [ref=e527] [cursor=pointer]
+  - contentinfo [ref=e528]:
+    - navigation [ref=e530]:
+      - generic [ref=e531]:
+        - generic [ref=e532]:
+          - heading "Product" [level=3] [ref=e533]
+          - list [ref=e534]:
+            - listitem [ref=e535]:
+              - link "Agents" [ref=e536] [cursor=pointer]:
+                - /url: /en-US/product
+            - listitem [ref=e537]:
+              - link "Teams" [ref=e538] [cursor=pointer]:
+                - /url: /en-US/business/teams
+            - listitem [ref=e539]:
+              - link "Enterprise" [ref=e540] [cursor=pointer]:
+                - /url: /en-US/enterprise
+            - listitem [ref=e541]:
+              - link "Pricing" [ref=e542] [cursor=pointer]:
+                - /url: /en-US/pricing
+            - listitem [ref=e543]:
+              - link "Code Review" [ref=e544] [cursor=pointer]:
+                - /url: /en-US/bugbot
+            - listitem [ref=e545]:
+              - link "CLI" [ref=e546] [cursor=pointer]:
+                - /url: /en-US/cli
+            - listitem [ref=e547]:
+              - link "Cloud Agents" [ref=e548] [cursor=pointer]:
+                - /url: /agents
+            - listitem [ref=e549]:
+              - link "Composer" [ref=e550] [cursor=pointer]:
+                - /url: /en-US/composer
+            - listitem [ref=e551]:
+              - link "Marketplace ↗" [ref=e552] [cursor=pointer]:
+                - /url: https://cursor.com/marketplace
+                - text: Marketplace
+                - generic [ref=e553]: ↗
+        - generic [ref=e554]:
+          - heading "Resources" [level=3] [ref=e555]
+          - list [ref=e556]:
+            - listitem [ref=e557]:
+              - link "Download" [ref=e558] [cursor=pointer]:
+                - /url: /en-US/download
+            - listitem [ref=e559]:
+              - link "Changelog" [ref=e560] [cursor=pointer]:
+                - /url: /en-US/changelog
+            - listitem [ref=e561]:
+              - link "Docs" [ref=e562] [cursor=pointer]:
+                - /url: /docs
+            - listitem [ref=e563]:
+              - link "Learn ↗" [ref=e564] [cursor=pointer]:
+                - /url: https://cursor.com/learn
+                - text: Learn
+                - generic [ref=e565]: ↗
+            - listitem [ref=e566]:
+              - link "Value Calculator" [ref=e567] [cursor=pointer]:
+                - /url: /en-US/cost-savings
+            - listitem [ref=e568]:
+              - link "Forum ↗" [ref=e569] [cursor=pointer]:
+                - /url: https://forum.cursor.com/
+                - text: Forum
+                - generic [ref=e570]: ↗
+            - listitem [ref=e571]:
+              - link "Help ↗" [ref=e572] [cursor=pointer]:
+                - /url: https://cursor.com/help
+                - text: Help
+                - generic [ref=e573]: ↗
+            - listitem [ref=e574]:
+              - link "Workshops" [ref=e575] [cursor=pointer]:
+                - /url: /en-US/workshops
+            - listitem [ref=e576]:
+              - link "Status ↗" [ref=e577] [cursor=pointer]:
+                - /url: https://status.cursor.com/
+                - text: Status
+                - generic [ref=e578]: ↗
+        - generic [ref=e579]:
+          - heading "Company" [level=3] [ref=e580]
+          - list [ref=e581]:
+            - listitem [ref=e582]:
+              - link "Careers" [ref=e583] [cursor=pointer]:
+                - /url: /en-US/careers
+            - listitem [ref=e584]:
+              - link "Blog" [ref=e585] [cursor=pointer]:
+                - /url: /en-US/blog
+            - listitem [ref=e586]:
+              - link "Community" [ref=e587] [cursor=pointer]:
+                - /url: /en-US/community
+            - listitem [ref=e588]:
+              - link "Students" [ref=e589] [cursor=pointer]:
+                - /url: /en-US/students
+            - listitem [ref=e590]:
+              - link "Brand" [ref=e591] [cursor=pointer]:
+                - /url: /en-US/brand
+            - listitem [ref=e592]:
+              - link "Future" [ref=e593] [cursor=pointer]:
+                - /url: /en-US/future
+            - listitem [ref=e594]:
+              - link "Anysphere ↗" [ref=e595] [cursor=pointer]:
+                - /url: https://anysphere.inc/
+                - text: Anysphere
+                - generic [ref=e596]: ↗
+        - generic [ref=e597]:
+          - heading "Legal" [level=3] [ref=e598]
+          - list [ref=e599]:
+            - listitem [ref=e600]:
+              - link "Terms of Service" [ref=e601] [cursor=pointer]:
+                - /url: /en-US/terms-of-service
+            - listitem [ref=e602]:
+              - link "Privacy Policy" [ref=e603] [cursor=pointer]:
+                - /url: /en-US/privacy
+            - listitem [ref=e604]:
+              - link "Data Use" [ref=e605] [cursor=pointer]:
+                - /url: /en-US/data-use
+            - listitem [ref=e606]:
+              - link "Security" [ref=e607] [cursor=pointer]:
+                - /url: /en-US/security
+        - generic [ref=e608]:
+          - heading "Connect" [level=3] [ref=e609]
+          - list [ref=e610]:
+            - listitem [ref=e611]:
+              - link "X ↗" [ref=e612] [cursor=pointer]:
+                - /url: https://x.com/cursor_ai
+                - text: X
+                - generic [ref=e613]: ↗
+            - listitem [ref=e614]:
+              - link "LinkedIn ↗" [ref=e615] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/cursorai
+                - text: LinkedIn
+                - generic [ref=e616]: ↗
+            - listitem [ref=e617]:
+              - link "YouTube ↗" [ref=e618] [cursor=pointer]:
+                - /url: https://www.youtube.com/@cursor_ai
+                - text: YouTube
+                - generic [ref=e619]: ↗
+    - generic [ref=e620]:
+      - generic [ref=e621]:
+        - generic [ref=e622]:
+          - text: © 2026
+          - link "Anysphere, Inc." [ref=e623] [cursor=pointer]:
+            - /url: https://anysphere.inc
+        - generic [ref=e624]:
+          - text: 🛡
+          - link "SOC 2 Certified" [ref=e625] [cursor=pointer]:
+            - /url: /en-US/security
+      - generic [ref=e626]:
+        - generic [ref=e627]:
+          - button "System theme" [ref=e629] [cursor=pointer]:
+            - generic [ref=e630]: 🖥
+          - button "Light theme" [ref=e631] [cursor=pointer]:
+            - generic [ref=e632]: ☉
+          - button "Dark theme" [ref=e633] [cursor=pointer]:
+            - generic [ref=e634]: ☾
+        - button "🌐 English ↓" [ref=e637] [cursor=pointer]:
+          - generic [ref=e638]: 🌐
+          - text: English
+          - generic [ref=e639]: ↓

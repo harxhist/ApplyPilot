@@ -63,3 +63,50 @@ employers:
     name: "Ashby"
     neighborhood: "Remote"
     tier: 2
+
+  # ── Harsh dream / day1 queue ──
+
+  supabase:
+    name: "Supabase"
+    neighborhood: "Remote"
+    tier: 1
+
+  railway:
+    name: "Railway"
+    neighborhood: "Remote"
+    tier: 2
+
+  perplexity:
+    name: "Perplexity"
+    neighborhood: "SF / Remote"
+    tier: 1
+
+  harvey:
+    name: "Harvey"
+    neighborhood: "Remote"
+    tier: 1
+
+  neon:
+    name: "Neon"
+    neighborhood: "Remote"
+    tier: 2
+
+  mercor:
+    name: "Mercor"
+    neighborhood: "Remote"
+    tier: 2
+
+  poolside:
+    name: "Poolside"
+    neighborhood: "Remote"
+    tier: 2
+
+  cursor:
+    name: "Cursor"
+    neighborhood: "SF / Remote"
+    tier: 1
+
+  render:
+    name: "Render"
+    neighborhood: "Remote"
+    tier: 2

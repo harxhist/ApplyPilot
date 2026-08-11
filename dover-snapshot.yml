@@ -1,0 +1,116 @@
+- generic [ref=e2]:
+  - region "Notifications Alt+T"
+  - generic [ref=e8]:
+    - generic [ref=e10]:
+      - link "url" [ref=e12] [cursor=pointer]:
+        - /url: https://usethirdchair.com
+        - img "url" [ref=e13]
+      - generic [ref=e15]: Senior Software Engineer (Backend)
+      - generic [ref=e17]:
+        - generic "Job location" [ref=e18]:
+          - img [ref=e20]
+          - generic [ref=e23]: Remote (India)
+        - generic "Employment Type" [ref=e24]:
+          - img [ref=e26]
+          - generic [ref=e29]: Full-time
+        - generic "Salary Range" [ref=e30]:
+          - img [ref=e32]
+          - generic [ref=e38]: ₹3,000,000 - ₹6,000,000 / yr
+        - generic "Equity Range" [ref=e39]:
+          - img [ref=e41]
+          - generic [ref=e44]: 0.05-0.3 %
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - button "Apply" [ref=e49] [cursor=pointer]
+        - generic [ref=e51]:
+          - paragraph [ref=e52]:
+            - strong [ref=e53]: "What makes you a good fit:"
+          - paragraph [ref=e54]: • 4+ years of professional work experience developing production level Node.js or Go backends.
+          - paragraph [ref=e55]: • Strong experience with relational DBMSs like PostgreSQL and AWS services such as ECS, RDS, Lambda functions, CloudWatch, Elasticache etc.
+          - paragraph [ref=e56]: • Strong understanding of System Design principles for production-grade enterprise systems.
+          - paragraph [ref=e57]: • Well integrated with AI coding tools like Claude, Codex etc.
+          - paragraph [ref=e58]:
+            - text: •
+            - strong [ref=e59]:
+              - emphasis [ref=e60]: Comfortable with US timezones.
+          - heading [level=3]
+          - paragraph [ref=e61]:
+            - strong [ref=e62]: "What makes you a great fit:"
+          - paragraph [ref=e63]: • Past experience with OpenAI APIs for completions, function calling and building context aware assistants.
+          - paragraph [ref=e64]: • Proven experience working with very large datasets and high-throughput systems and working with OLAP databases like Redshift.
+          - paragraph [ref=e65]: • Strong sense of cost optimization strategies, system design, and building efficient API stacks.
+          - paragraph [ref=e66]: • Building multi-agent systems using frameworks like CrewAI or such.
+          - paragraph [ref=e67]:
+            - strong [ref=e68]: "Benefits:"
+          - paragraph [ref=e69]: • Work from anywhere - We're a distributed team across multiple timezones with a focus on outputs instead of location or working hours.
+          - paragraph [ref=e70]: • Generous PTO policy.
+          - paragraph [ref=e71]: • Competitive pay bracket.
+          - paragraph [ref=e72]: • Equity at a fast growing YC backed co in a disruptive market.
+          - paragraph [ref=e73]:
+            - strong [ref=e74]: "Please read before applying:"
+          - paragraph [ref=e75]:
+            - text: "• Please include a note where you answer in not more than 100 words: ‘"
+            - emphasis [ref=e76]: What is the most complex backend feature you’ve developed where you were the sole or primary developer. Mention the technical details, peak production load etc.’
+          - paragraph [ref=e77]:
+            - text: • Applications that don’t include the note or meet the minimum requirements will not be considered.
+            - text: • We review every application and have not more than 4 rounds in the process with a decision within 14 days of applying.
+      - generic [ref=e80]:
+        - generic [ref=e81]: Apply
+        - generic [ref=e82]:
+          - button "Autofill from resume Drag & drop or upload to autofill your application. Upload file" [ref=e84]:
+            - generic [ref=e85]:
+              - img [ref=e86]
+              - generic [ref=e88]:
+                - generic [ref=e89]: Autofill from resume
+                - generic [ref=e90]: Drag & drop or upload to autofill your application.
+            - button "Upload file" [ref=e91] [cursor=pointer]: Upload file
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]: First Name *
+              - generic [ref=e96]:
+                - textbox [ref=e97]
+                - group
+            - generic [ref=e98]:
+              - generic [ref=e99]: Last Name *
+              - generic [ref=e101]:
+                - textbox [ref=e102]
+                - group
+          - generic [ref=e103]:
+            - generic [ref=e104]: Email *
+            - generic [ref=e106]:
+              - textbox [ref=e107]
+              - group
+          - generic [ref=e108]:
+            - generic [ref=e109]: LinkedIn Profile URL *
+            - generic [ref=e111]:
+              - textbox [ref=e112]
+              - group
+          - generic [ref=e113]:
+            - generic [ref=e114]: Phone Number
+            - generic [ref=e116]:
+              - textbox [ref=e117]
+              - group
+          - generic [ref=e118]:
+            - generic [ref=e119]: What is the most complex backend feature you’ve developed where you were the sole or primary developer. Mention the technical details, peak production load etc.
+            - generic [ref=e121]:
+              - textbox [ref=e122]
+              - group
+          - generic [ref=e123]:
+            - generic [ref=e124]: Resume *
+            - button "Drag and drop file or browse computer (PDF, 5 MB maximum)" [ref=e126]:
+              - generic [ref=e127]:
+                - img [ref=e128]
+                - generic [ref=e131]: Drag and drop file or browse computer
+                - generic [ref=e132]: (PDF, 5 MB maximum)
+          - button "Apply" [ref=e133] [cursor=pointer]: Apply
+    - generic [ref=e134]:
+      - link "Jobs powered by Dover Logo" [ref=e135] [cursor=pointer]:
+        - /url: https://dover.com?utm_medium=careers_page&utm_source=third-chair&utm_campaign=dover_logo
+        - generic [ref=e136]:
+          - generic [ref=e137]: Jobs powered by
+          - img "Dover Logo" [ref=e138]
+      - generic [ref=e139]:
+        - text: By applying you agree to Dover's
+        - link "terms" [ref=e140] [cursor=pointer]:
+          - /url: /Third Chair/careers/e8010f63-a6fa-44fd-9d87-325bbfa0d772/audit
+        - text: .

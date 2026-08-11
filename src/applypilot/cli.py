@@ -195,7 +195,11 @@ def apply(
         ),
     ),
     max_score: Optional[int] = typer.Option(None, "--max-score", help="Maximum fit score for job selection (useful for testing on lower-score jobs)."),
-    model: str = typer.Option("sonnet", "--model", "-m", help="Claude model name (sonnet | haiku | opus)."),
+    model: Optional[str] = typer.Option(
+        None, "--model", "-m",
+        help="Cursor model id (default=Auto | auto | composer-2.5). "
+             "Falls back to APPLY_MODEL, then LLM_MODEL, then default.",
+    ),
     continuous: bool = typer.Option(False, "--continuous", "-c", help="Run forever, polling for new jobs."),
     dry_run: bool = typer.Option(False, "--dry-run", help="Preview actions without submitting."),
     headless: bool = typer.Option(False, "--headless", help="Run browsers in headless mode."),
@@ -222,32 +226,32 @@ def apply(
     # --- Utility modes (no Chrome/Claude needed) ---
 
     if mark_applied:
-        from applypilot.apply.launcher import mark_job
-        mark_job(mark_applied, "applied")
+        from applypilot import ops
+        ops.mark_job_applied(mark_applied)
         console.print(f"[green]Marked as applied:[/green] {mark_applied}")
         return
 
     if mark_failed:
-        from applypilot.apply.launcher import mark_job
-        mark_job(mark_failed, "failed", reason=fail_reason)
+        from applypilot import ops
+        ops.mark_job_failed(mark_failed, reason=fail_reason)
         console.print(f"[yellow]Marked as failed:[/yellow] {mark_failed} ({fail_reason or 'manual'})")
         return
 
     if reset_failed:
-        from applypilot.apply.launcher import reset_failed as do_reset
-        count = do_reset()
+        from applypilot import ops
+        count = ops.reset_failed_jobs()
         console.print(f"[green]Reset {count} failed job(s) for retry.[/green]")
         return
 
     if reset_category:
-        from applypilot.database import reset_by_category
-        count = reset_by_category(reset_category)
+        from applypilot import ops
+        count = ops.reset_jobs_by_category(reset_category)
         console.print(f"[green]Reset {count} job(s) in category '{reset_category}' for retry.[/green]")
         return
 
     if sessions:
-        from applypilot.apply.chrome import list_ats_sessions
-        ats_sessions = list_ats_sessions()
+        from applypilot import ops
+        ats_sessions = ops.list_ats_sessions()
         if not ats_sessions:
             console.print("[dim]No saved ATS sessions.[/dim]")
             return
@@ -263,8 +267,8 @@ def apply(
         return
 
     if clear_session:
-        from applypilot.apply.chrome import clear_ats_session
-        if clear_ats_session(clear_session):
+        from applypilot import ops
+        if ops.clear_ats_session(clear_session):
             console.print(f"[green]Cleared ATS session: {clear_session}[/green]")
         else:
             console.print(f"[yellow]No session found for: {clear_session}[/yellow]")
@@ -284,6 +288,9 @@ def apply(
 
     # Check 1: Tier 3 required (Claude Code CLI + Chrome)
     check_tier(3, "auto-apply")
+
+    from applypilot.apply.cursor_runtime import resolve_apply_model
+    model = resolve_apply_model(model)
 
     # Check 2: Profile exists
     if not _profile_path.exists():
@@ -666,6 +673,25 @@ def dashboard() -> None:
     from applypilot.view import open_dashboard
 
     open_dashboard()
+
+
+@app.command()
+def serve(
+    host: str = typer.Option("127.0.0.1", "--host", help="Bind host."),
+    port: int = typer.Option(8080, "--port", "-p", help="Bind port."),
+    reload: bool = typer.Option(False, "--reload", help="Auto-reload (dev)."),
+) -> None:
+    """Start the operator HTTP API (FastAPI / uvicorn)."""
+    _bootstrap()
+    import uvicorn
+
+    console.print(f"[bold]ApplyPilot API[/bold] http://{host}:{port}/docs")
+    uvicorn.run(
+        "applypilot.api.app:app",
+        host=host,
+        port=port,
+        reload=reload,
+    )
 
 
 # `applypilot human-review` was deleted in plan 5 of the apply UX overhaul.

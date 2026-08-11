@@ -1,9 +1,11 @@
-# ApplyPilot — Claude Code Operating Manual
+# ApplyPilot — Claude / Cursor Operating Manual
+
+> **Harsh fork note (2026-08):** Tier-3 apply uses **Cursor Agent SDK** (`applypilot.apply.cursor_runtime`), not Claude Code CLI. See [`AGENTS.md`](AGENTS.md) for the daily loop. Tier-2 scoring/tailoring still uses Gemini/OpenAI.
 
 ## Mission
 
 ApplyPilot is an autonomous job application pipeline.
-Claude's job is to **operate, monitor, and fix the pipeline** — not to manually do what the pipeline automates.
+Claude/Cursor's job is to **operate, monitor, and fix the pipeline** — not to manually do what the pipeline automates.
 
 **The goal**: Discover jobs → Score them → Tailor resumes → Generate cover letters → Auto-apply. All automated.
 
@@ -61,7 +63,7 @@ Multi-provider fallback with two-tier model strategy:
 
 Key behaviors:
 - `get_client(quality=False)` for fast, `get_client(quality=True)` for quality
-- On 429: marks model exhausted for 5 min, falls to next in chain
+- On 429: paces via `LLM_MIN_INTERVAL_SEC` (default 5s); marks model exhausted for `LLM_QUOTA_COOLDOWN_SEC` (default 10 min), falls to next in chain
 - `config.load_env()` MUST be called before importing `llm` (env vars read at module import)
 - Gemini 2.5+ thinking tokens consume max_tokens budget — set much higher than visible output needs
 

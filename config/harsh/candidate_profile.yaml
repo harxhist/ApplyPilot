@@ -1,0 +1,62 @@
+# Ground-truth candidate profile for autonomous applications.
+# Never invent values. Ask the candidate if a field is null.
+
+identity:
+  full_name: Harsh Rajput
+  email: harxhist@gmail.com
+  phone: "+917217016717"
+  phone_display: "+91-7217016717"
+  current_city: Delhi, India
+  country: India
+  personal_site: https://har.sh10.in
+  linkedin: https://linkedin.com/in/harxhist
+  github: https://github.com/harxhist
+
+documents:
+  resume_pdf: job_search/resume/master/HarshRajput_resume.pdf
+  resume_tex: job_search/resume/master/latest_master_main.tex
+  resume_md: job_search/resume/master/current_resume.md
+
+experience:
+  years_of_experience: 3
+  notice_period_days: 0
+  notice_period_label: Immediate joinee
+  earliest_start_date: "2026-08-06"
+  last_ctc_inr_lpa: 20
+  expected_ctc_inr_lpa: 30
+  expected_ctc_usd: 40000
+  current_ctc_usd: 25000
+  target_domains:
+    - backend_api
+    - applied_ai_llm_rag_agents
+    - fullstack_react_next
+  seniority_policy: soft_senior_2_to_5_yoe
+  min_comp_inr_lpa: 30
+
+authorization:
+  work_auth_india: true
+  needs_us_eu_sponsorship: true
+  willing_to_relocate: true
+  relocate_where: everywhere
+  work_mode_preference: Any  # Remote / Hybrid / Onsite all OK
+
+eeo:
+  gender: Male
+  veteran_status: Not a veteran
+  disability: No disability
+  # Use these when voluntary EEO forms appear
+
+cover_letter:
+  always: true
+  tone: human
+  style_rules:
+    - No decorative dashes or em-dashes
+    - Short and specific to the job description
+    - No fabricated experience
+
+application_defaults:
+  skip_list_path: job_search_agent/config/skip_companies.txt
+  master_log_path: job_search_agent/data/master_applications.csv
+  job_pool_path: job_search_agent/lists/job_pool.json
+  queue_path: job_search_agent/lists/day1_queue.json
+  runs_dir: job_search_agent/runs

@@ -1,0 +1,207 @@
+- generic [ref=e2]:
+  - list [ref=e4]:
+    - listitem [ref=e5]:
+      - link "Supabase" [ref=e6] [cursor=pointer]:
+        - /url: https://supabase.com/
+        - img "Supabase" [ref=e7]
+    - listitem [ref=e8]:
+      - link "Back to Supabase’s Job Listings" [ref=e9] [cursor=pointer]:
+        - /url: /supabase
+        - img [ref=e10]
+    - listitem
+  - generic [ref=e12]:
+    - heading "AI Platform Engineer" [level=1] [ref=e14]
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - heading "Location" [level=2] [ref=e18]
+          - paragraph [ref=e19]: Remote
+        - generic [ref=e20]:
+          - heading "Employment Type" [level=2] [ref=e21]
+          - paragraph [ref=e22]: Full time
+        - generic [ref=e23]:
+          - heading "Department" [level=2] [ref=e24]
+          - paragraph [ref=e25]: Growth
+      - generic [ref=e26]:
+        - tablist [ref=e27]:
+          - tab "Overview" [selected] [ref=e28] [cursor=pointer]
+          - tab "Application" [ref=e29] [cursor=pointer]
+        - tabpanel "Overview" [ref=e31]:
+          - generic [ref=e32]:
+            - heading "About Supabase" [level=2] [ref=e33]
+            - paragraph [ref=e34]: Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All services are deeply integrated and designed for growth.
+            - heading "About the Role" [level=2] [ref=e35]
+            - paragraph [ref=e36]:
+              - text: We are hiring a
+              - strong [ref=e37]: AI Platform Engineer
+              - text: to build the execution layer for Supabase's internal AI systems.
+            - paragraph [ref=e38]: "Supabase is building an AI-native internal operating system: a common way of working across the company where AI carries a meaningful share of the operational load rather than sitting alongside it as an assistant. We are standing up a new central team to build those systems, enable the teams, and embed AI operations throughout the organization. You are the engineer on that team."
+            - paragraph [ref=e39]: "The execution layer is yours. You will build the platform that actually runs agents: an event-triggered queue, a headless model-agnostic runtime, durable state so work survives a restart, a human review gate, atomic rollback, and full logging of every prompt, tool call and decision so any run can be reconstructed. You will build the evaluation layer that makes any of it trustworthy, because an agent that cannot be measured cannot be trusted with anything beyond reading. And you will build the agents themselves, across everything from executive reporting down to a layer of agents that watch the platform and improve it."
+            - paragraph [ref=e40]: "This is a governance-heavy environment by design, and that is the interesting part of the problem. Agents are risk-tiered from read-only internal data through to external-facing output, with review depth, evaluation requirements and human approval scaling by tier. Some capabilities are permanently off limits: an agent may read and report, it may carry a human-authored update into a system of record once a human consents, and it may initiate contact within a strict budget, but it may never autonomously write a commitment (an owner, a due date, a status) into a shared work system. Your job is to make that structurally impossible rather than merely forbidden."
+            - paragraph [ref=e41]: You will be the only engineer on this platform. You will close open architecture decisions yourself, own the infrastructure end to end, and instrument the system so it reports its own return.
+            - heading "What You'll Be Responsible For" [level=2] [ref=e42]
+            - paragraph [ref=e43]: "In this role, you'll:"
+            - list [ref=e44]:
+              - listitem [ref=e45]:
+                - paragraph [ref=e46]:
+                  - strong [ref=e47]: Ship the agent platform to production.
+                  - text: An event-triggered queue, a headless model-agnostic runtime (choosing the runtime is an open decision you will close), durable state that survives a failed run, a human review gate, atomic rollback, and complete run logging in the warehouse.
+              - listitem [ref=e48]:
+                - paragraph [ref=e49]:
+                  - strong [ref=e50]: Own the evaluation layer, and switch on the gate that depends on it.
+                  - text: Golden suites with behavioral assertions rather than intuition, judge criteria with a written rubric, safety cases that must pass on every run, and a CI gate that blocks a regression from merging. This is the precondition for every agent that does anything beyond read internal data.
+              - listitem [ref=e51]:
+                - paragraph [ref=e52]:
+                  - strong [ref=e53]: Build and register the agent portfolio.
+                  - text: Reporting, drafting, linting, triage and question-answering agents across the executive, team-lead and individual-contributor layers, plus a meta layer that observes the platform and improves it.
+              - listitem [ref=e54]:
+                - paragraph [ref=e55]:
+                  - strong [ref=e56]: Enforce governance in code.
+                  - text: Risk tiers the pipeline actually enforces, least-privilege credentials per agent, tool-permission gates, a decision audit log, and autonomy classes where the dangerous class has no code path rather than a warning label. Nothing runs without a registered owner, tier, tool grant and human gate.
+              - listitem [ref=e57]:
+                - paragraph [ref=e58]:
+                  - strong [ref=e59]: Design how the system contacts people.
+                  - text: A hard interruption budget per person, message bundling instead of a stream of pings, and a structure that gives something useful before it asks for anything. Adoption depends on this more than on any other single design choice.
+              - listitem [ref=e60]:
+                - paragraph [ref=e61]:
+                  - strong [ref=e62]: Own the platform tooling.
+                  - text: The compiler and validator, inventory integrity, and the paths that distribute context and capabilities into the repositories and chat surfaces where work happens.
+              - listitem [ref=e63]:
+                - paragraph [ref=e64]:
+                  - strong [ref=e65]: Compute the operating measures from production data.
+                  - text: A pipeline from raw system activity through to a computed maturity grade per team, defensible enough that a team can dispute the result and be answered with the query rather than an opinion.
+              - listitem [ref=e66]:
+                - paragraph [ref=e67]:
+                  - strong [ref=e68]: Instrument the platform's own return.
+                  - text: A ledger that logs the work each agent absorbs and computes the monthly figure, so the value of the system is a measurement rather than a claim.
+            - heading "How You'll Think" [level=2] [ref=e69]
+            - heading "Recursive Thinking" [level=3] [ref=e70]
+            - paragraph [ref=e71]: You build the generator, not the artifact. When you need thirty agents, you do not write thirty agents; you build the inventory, the compiler and the distribution path that makes the thirty-first cost an afternoon, then a meta layer whose job is to watch the platform, find its drift and file the fix.
+            - paragraph [ref=e72]: The evaluation layer is the same move applied to trust. You are not checking whether one agent is correct today. You are building the machine that decides whether every future agent is allowed to ship, which means the suite has to be right in a way the agent does not, and the thing that grades has to be graded too.
+            - heading "Inversion Thinking" [level=3] [ref=e73]
+            - paragraph [ref=e74]: You start from the failure and work backward to the design. The rule is that an agent may never autonomously write a commitment into a shared work system. The weak implementation is an instruction in a prompt. The strong one is that the credential in the agent's tool grant physically cannot set an owner, a due date or a status, so no amount of clever input, prompt injection or model error produces the forbidden write. You reach for the second one first.
+            - paragraph [ref=e75]: "Same for evaluation. Before writing a suite you enumerate how the agent can be wrong: an update that invents progress that did not happen, one that quotes a private channel into a public digest, one that is accurate and reads as an accusation, one that credits the wrong person. Then the suite is that list, each case caught before the agent ships rather than after it embarrasses someone."
+            - heading "AI-Native Execution" [level=3] [ref=e76]
+            - paragraph [ref=e77]: "You use agentic tools on real work, in files and repositories, with the same rigor you apply to anything else you ship. You have a setup of your own and can describe it mechanically: what triggers it, what it is allowed to touch, where the human approves, what it logs, and how you found out the one time it went wrong."
+            - paragraph [ref=e78]: That experience is this job, generalized. You are building for async engineers across 40+ countries who will judge the platform by whether it saves them an hour or costs them one, so you are your own first user and your own harshest reviewer.
+            - heading "You Might Be a Good Fit If You" [level=2] [ref=e79]
+            - heading "Must Have" [level=3] [ref=e80]
+            - list [ref=e81]:
+              - listitem [ref=e82]:
+                - paragraph [ref=e83]:
+                  - strong [ref=e84]: Have shipped production LLM agent systems that other people depended on.
+                  - text: Not demos, not internal showcases. Systems with operational history, real users and at least one incident you can talk through. Prompt engineering on its own does not clear this bar.
+              - listitem [ref=e85]:
+                - paragraph [ref=e86]:
+                  - strong [ref=e87]: Design evaluations, not spot checks.
+                  - text: You build golden sets, write behavioral assertions, define judge rubrics, set pass thresholds and gate CI on the result. You can explain why "we reviewed a bunch of outputs and they looked good" is not evaluation.
+              - listitem [ref=e88]:
+                - paragraph [ref=e89]:
+                  - strong [ref=e90]: Have done deep API work against the systems work actually lives in
+                  - text: ", and have authored MCP servers. You know the specific failure modes of those APIs, not just that they exist."
+              - listitem [ref=e91]:
+                - paragraph [ref=e92]:
+                  - strong [ref=e93]: Own infrastructure end to end
+                  - text: in Python on GCP, with a cloud warehouse and infrastructure as code. You provision, deploy, monitor and roll back your own systems, and you close architecture decisions rather than routing them onward.
+              - listitem [ref=e94]:
+                - paragraph [ref=e95]:
+                  - strong [ref=e96]: Have taste about how software contacts humans.
+                  - text: You treat every notification as spending a limited amount of trust.
+            - heading "Strong Signal" [level=3] [ref=e97]
+            - list [ref=e98]:
+              - listitem [ref=e99]:
+                - paragraph [ref=e100]:
+                  - strong [ref=e101]: Public work in this space.
+                  - text: An open-source agent framework, an MCP server, an evaluation harness, or writing on agent reliability that other practitioners cite.
+              - listitem [ref=e102]:
+                - paragraph [ref=e103]:
+                  - strong [ref=e104]: LLM observability and cost instrumentation.
+                  - text: Tracing agent runs, attributing spend per run, and building the queries that turn raw logs into a report someone acts on.
+              - listitem [ref=e105]:
+                - paragraph [ref=e106]:
+                  - strong [ref=e107]: You have built an internal platform that non-engineers adopted voluntarily
+                  - text: ", and can describe what you changed after watching them use it."
+            - heading "What Success Looks Like" [level=2] [ref=e108]
+            - list [ref=e109]:
+              - listitem [ref=e110]:
+                - paragraph [ref=e111]:
+                  - strong [ref=e112]: The platform is boring.
+                  - text: Agents run on a schedule and on events, state survives restarts, failed runs roll back cleanly, and every run can be reconstructed from its log.
+              - listitem [ref=e113]:
+                - paragraph [ref=e114]:
+                  - strong [ref=e115]: Nothing ships unevaluated.
+                  - text: Every registered agent has a real suite with safety cases, the gate blocks regressions, and when someone challenges an output the answer is a test case rather than an argument.
+              - listitem [ref=e116]:
+                - paragraph [ref=e117]:
+                  - strong [ref=e118]: The dangerous action is impossible, not discouraged.
+                  - text: An audit of any agent's credentials shows it cannot perform the writes it is not allowed to perform, and the audit log makes every consequential decision traceable.
+              - listitem [ref=e119]:
+                - paragraph [ref=e120]:
+                  - strong [ref=e121]: Teams pull the platform instead of being pushed.
+                  - text: Agents get adopted because the reports are useful and the contact is rare and well-timed, and each team ends up with at least one workflow that runs automatically.
+              - listitem [ref=e122]:
+                - paragraph [ref=e123]:
+                  - strong [ref=e124]: The platform reports its own value.
+                  - text: The work absorbed is measured and published, so the case for expanding it is made with data rather than enthusiasm.
+            - heading "What We Offer" [level=3] [ref=e125]:
+              - strong [ref=e126]: What We Offer
+            - list [ref=e127]:
+              - listitem [ref=e128]:
+                - paragraph [ref=e129]:
+                  - strong [ref=e130]: Fully Remote
+                - paragraph [ref=e131]: We hire globally. We believe you can do your best work from anywhere. There are no Supabase offices, but we provide a WeWork membership or co-working allowance you can use anywhere in the world.
+              - listitem [ref=e132]:
+                - paragraph [ref=e133]:
+                  - strong [ref=e134]: ESOP
+                - paragraph [ref=e135]: Every team member receives ESOP (equity ownership) in the company. We want everyone to share in the upside of what we’re building together.
+              - listitem [ref=e136]:
+                - paragraph [ref=e137]:
+                  - strong [ref=e138]: Tech Allowance
+                - paragraph [ref=e139]: Use this budget to set up your ideal work environment—laptop, monitor, headphones, or whatever helps you do your best work.
+              - listitem [ref=e140]:
+                - paragraph [ref=e141]:
+                  - strong [ref=e142]: Health Benefits
+                - paragraph [ref=e143]: Supabase covers 100% of health insurance for employees and 80% for dependents, wherever you are. Your wellbeing and your family’s health are important to us.
+              - listitem [ref=e144]:
+                - paragraph [ref=e145]:
+                  - strong [ref=e146]: Annual Off-Sites
+                - paragraph [ref=e147]: Once a year, the entire company gathers in a new city for a week of connection, collaboration, and fun. It’s a highlight of our year.
+              - listitem [ref=e148]:
+                - paragraph [ref=e149]:
+                  - strong [ref=e150]: Flexible Work
+                - paragraph [ref=e151]: We operate asynchronously and trust you to manage your own time. You know what needs to be done and when.
+              - listitem [ref=e152]:
+                - paragraph [ref=e153]:
+                  - strong [ref=e154]: Professional Development
+                - paragraph [ref=e155]: Every team member receives an annual education allowance to spend on learning—courses, books, conferences, or anything that supports your growth.
+                - paragraph [ref=e156]
+            - heading "About the Team" [level=3] [ref=e157]:
+              - strong [ref=e158]: About the Team
+            - paragraph [ref=e159]: Supabase was born-remote and open-source-first. We believe our globally distributed team is our secret weapon in building tools developers love.
+            - list [ref=e160]:
+              - listitem [ref=e161]:
+                - paragraph [ref=e162]: ~400 team members
+              - listitem [ref=e163]:
+                - paragraph [ref=e164]: 60+ countries
+              - listitem [ref=e165]:
+                - paragraph [ref=e166]: 20+ languages spoken
+              - listitem [ref=e167]:
+                - paragraph [ref=e168]: Over $1B raised (including our $500M Series F)
+              - listitem [ref=e169]:
+                - paragraph [ref=e170]: 540,000+ community members
+            - paragraph [ref=e171]: We move fast, build in public, and use what we ship. If it’s in your project, we probably use it in ours too. We believe deeply in the open-source ecosystem and strive to support—not replace—existing tools and communities.
+          - link "Apply for this Job" [ref=e172] [cursor=pointer]:
+            - /url: /supabase/3b5d54ca-741b-45ac-bd3f-31605a0d3541/application
+            - button "Apply for this Job" [ref=e173]
+  - contentinfo [ref=e174]:
+    - link "Learn more about Ashby" [ref=e175] [cursor=pointer]:
+      - /url: https://www.ashbyhq.com
+      - generic [ref=e176]: Powered by
+      - img "Ashby" [ref=e177]
+    - paragraph [ref=e183]:
+      - link "Privacy Policy" [ref=e184] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/privacy
+      - link "Security" [ref=e185] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/security
+      - link "Vulnerability Disclosure" [ref=e186] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/disclosure

@@ -134,3 +134,55 @@ employers:
     name: "SoFi"
     neighborhood: "Seattle (remote-heavy)"
     tier: 2
+
+  # ── Harsh dream / day1 queue (India + remote + transfer) ──
+
+  cloudflare:
+    name: "Cloudflare"
+    neighborhood: "Remote / Global"
+    tier: 1
+
+  gleanwork:
+    name: "Glean"
+    neighborhood: "Remote / SF / India"
+    tier: 1
+
+  mongodb:
+    name: "MongoDB"
+    neighborhood: "Gurugram / Global"
+    tier: 2
+
+  phonepe:
+    name: "PhonePe"
+    neighborhood: "India"
+    tier: 1
+
+  planetscale:
+    name: "PlanetScale"
+    neighborhood: "Remote"
+    tier: 2
+
+  postman:
+    name: "Postman"
+    neighborhood: "Bangalore / SF"
+    tier: 1
+
+  dropbox:
+    name: "Dropbox"
+    neighborhood: "Remote / Global"
+    tier: 2
+
+  thoughtworks:
+    name: "Thoughtworks"
+    neighborhood: "India / Global"
+    tier: 2
+
+  togetherai:
+    name: "Together AI"
+    neighborhood: "Remote"
+    tier: 1
+
+  vercel:
+    name: "Vercel"
+    neighborhood: "Remote"
+    tier: 1

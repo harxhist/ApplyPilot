@@ -1,0 +1,379 @@
+- generic [ref=e2]:
+  - list [ref=e7]:
+    - listitem [ref=e8]:
+      - link "OpenAI" [ref=e589] [cursor=pointer]:
+        - /url: https://openai.com/
+        - img "OpenAI" [ref=e590]
+    - link "Back to OpenAI’s Job Listings" [ref=e591] [cursor=pointer]:
+      - /url: https://openai.com/careers/search/
+      - img [ref=e12]
+    - listitem
+  - generic [ref=e14]:
+    - heading "Backend Software Engineer, Applied Foundations" [level=1] [ref=e592]
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - heading "Location" [level=2] [ref=e593]
+          - paragraph [ref=e21]: San Francisco; Mountain View
+        - generic [ref=e22]:
+          - heading "Employment Type" [level=2] [ref=e594]
+          - paragraph [ref=e24]: Full time
+        - generic [ref=e25]:
+          - heading "Location Type" [level=2] [ref=e595]
+          - paragraph [ref=e27]: Hybrid
+        - generic [ref=e28]:
+          - heading "Department" [level=2] [ref=e596]
+          - paragraph [ref=e30]: Applied AI
+        - generic [ref=e31]:
+          - heading "Compensation" [level=2] [ref=e597]
+          - list [ref=e33]:
+            - listitem [ref=e34]:
+              - generic [ref=e35]: $185K – $385K • Offers Equity
+          - generic [ref=e36]:
+            - paragraph [ref=e37]: The base pay offered may vary depending on multiple individualized factors, including market location, job-related knowledge, skills, and experience. If the role is non-exempt, overtime pay will be provided consistent with applicable laws. In addition to the salary range listed above, total compensation also includes generous equity, performance-related bonus(es) for eligible employees, and the following benefits.
+            - list [ref=e38]:
+              - listitem [ref=e39]:
+                - paragraph [ref=e40]: Medical, dental, and vision insurance for you and your family, with employer contributions to Health Savings Accounts
+              - listitem [ref=e41]:
+                - paragraph [ref=e42]: Pre-tax accounts for Health FSA, Dependent Care FSA, and commuter expenses (parking and transit)
+              - listitem [ref=e43]:
+                - paragraph [ref=e44]: 401(k) retirement plan with employer match
+              - listitem [ref=e45]:
+                - paragraph [ref=e46]: Paid parental leave (up to 24 weeks for birth parents and 20 weeks for non-birthing parents), plus paid medical and caregiver leave (up to 8 weeks)
+              - listitem [ref=e47]:
+                - paragraph [ref=e48]: "Paid time off: flexible PTO for exempt employees and up to 15 days annually for non-exempt employees"
+              - listitem [ref=e49]:
+                - paragraph [ref=e50]: 13+ paid company holidays, and multiple paid coordinated company office closures throughout the year for focus and recharge, plus paid sick or safe time (1 hour per 30 hours worked, or more, as required by applicable state or local law)
+              - listitem [ref=e51]:
+                - paragraph [ref=e52]: Mental health and wellness support
+              - listitem [ref=e53]:
+                - paragraph [ref=e54]: Employer-paid basic life and disability coverage
+              - listitem [ref=e55]:
+                - paragraph [ref=e56]: Annual learning and development stipend to fuel your professional growth
+              - listitem [ref=e57]:
+                - paragraph [ref=e58]: Daily meals in our offices, and meal delivery credits as eligible
+              - listitem [ref=e59]:
+                - paragraph [ref=e60]: Relocation support for eligible employees
+              - listitem [ref=e61]:
+                - paragraph [ref=e62]: Additional taxable fringe benefits, such as charitable donation matching and wellness stipends, may also be provided.
+            - paragraph [ref=e63]: More details about our benefits are available to candidates during the hiring process.
+            - paragraph [ref=e64]: This role is at-will and OpenAI reserves the right to modify base pay and other compensation components at any time based on individual performance, team or company results, or market conditions.
+      - generic [ref=e65]:
+        - tablist [ref=e66]:
+          - tab "Overview" [ref=e598] [cursor=pointer]
+          - tab "Application" [selected] [ref=e599] [cursor=pointer]
+        - tabpanel "Application" [ref=e70]:
+          - generic [ref=e71]:
+            - button "Choose File" [ref=e600]
+            - generic [ref=e73]:
+              - generic [ref=e74]:
+                - generic [ref=e75]:
+                  - img [ref=e77]
+                  - heading "Autofill from resume" [level=3] [ref=e601]
+                - paragraph [ref=e80]: Upload your resume here to autofill key application fields.
+                - button "Upload file" [ref=e602] [cursor=pointer]
+              - generic [ref=e416]:
+                - heading "Autofill completed!" [level=2] [ref=e603]
+                - paragraph [ref=e418]: Please review the information we filled in for you below.
+          - generic [ref=e84]:
+            - generic [ref=e85] [cursor=pointer]:
+              - img [ref=e86]
+              - generic [ref=e88]: This job has application limits
+              - img [ref=e89]
+            - paragraph [ref=e93]: "Please Note: we have set up limits for applications across roles. Candidates may not apply more than 5 times in any 180 day span."
+          - generic [ref=e419]:
+            - generic [ref=e420]:
+              - generic [ref=e421]:
+                - generic [ref=e422]: Legal Name*
+                - paragraph [ref=e424]: Please enter your legal name exactly as shown on your government-issued ID. This helps keep records accurate for later hiring steps.
+                - textbox "Legal Name*" [ref=e604] [cursor=pointer]:
+                  - /placeholder: Type here...
+                  - text: Harsh Rajput
+              - generic [ref=e427]:
+                - generic [ref=e428]: Preferred Name (if applicable)
+                - textbox "Preferred Name (if applicable)" [ref=e605] [cursor=pointer]:
+                  - /placeholder: Type here...
+              - generic [ref=e431]:
+                - generic [ref=e432]: Email*
+                - textbox "Email*" [ref=e606] [cursor=pointer]:
+                  - /placeholder: hello@example.com...
+                  - text: harxhist@gmail.com
+              - generic [ref=e435]:
+                - generic [ref=e436]: Resume*
+                - button "Resume*" [ref=e607]
+                - generic [ref=e515]:
+                  - paragraph [ref=e516]:
+                    - img [ref=e517]
+                    - text: Harsh_Rajput_Resume.docx
+                  - button "Delete file" [ref=e608] [cursor=pointer]:
+                    - img [ref=e520]
+                - generic [ref=e445]:
+                  - button "Replace" [ref=e609] [cursor=pointer]:
+                    - generic [ref=e514]: Replace
+                  - paragraph [ref=e448]: or drag and drop here
+              - generic [ref=e449]:
+                - generic [ref=e450]: Phone Number*
+                - textbox "Phone Number*" [ref=e610] [cursor=pointer]:
+                  - /placeholder: 1-415-555-1234...
+                  - text: "917217016717"
+              - generic [ref=e452]:
+                - generic [ref=e453]: Where are you currently located?*
+                - generic [ref=e454]:
+                  - combobox "Start typing..." [ref=e455] [cursor=pointer]: Delhi, India
+                  - button [ref=e456] [cursor=pointer]:
+                    - img [ref=e457]
+              - generic [ref=e459]:
+                - generic [ref=e460]: When can you start a new role?*
+                - textbox "Pick date..." [ref=e611] [cursor=pointer]: 08/06/2026
+              - generic [ref=e464]:
+                - generic [ref=e465]: Are you authorized to work in the country where the job is located?*
+                - generic [ref=e466]:
+                  - button "Yes" [ref=e612] [cursor=pointer]
+                  - button "No" [active] [ref=e613] [cursor=pointer]
+              - generic [ref=e469]:
+                - generic [ref=e470]: Will you now or in the future require sponsorship for employment visa status in this country?*
+                - paragraph [ref=e472]: We may provide immigration and sponsorship support to new employees based on their unique circumstances.
+                - generic [ref=e473]:
+                  - button "Yes" [ref=e614] [cursor=pointer]
+                  - button "No" [ref=e615] [cursor=pointer]
+              - generic [ref=e476]:
+                - generic [ref=e477]: Are you able to work from our US office three days per week?*
+                - generic [ref=e478]:
+                  - button "Yes" [ref=e616] [cursor=pointer]
+                  - button "No" [ref=e617] [cursor=pointer]
+              - generic [ref=e481]:
+                - generic [ref=e482]: Additional Information
+                - paragraph [ref=e484]: Please share anything else you want us to know, such as your motivation to apply or additional context for your application.
+                - textbox "Additional Information" [ref=e618] [cursor=pointer]:
+                  - /placeholder: Type here...
+                  - text: "I rebuilt Causix in Go to run AI inference on live call traffic at 10K+ CPM on Redis and PostgreSQL, which matches Applied Foundations work: durable queues, fast storage, and inference services that stay correct under load. I also built AI Mind, an incremental RAG pipeline over a 2.5GB corpus with Pinecone and LLM APIs, and a Go fraud inference service at UIDAI on Kafka/Redis at 1,500+ entries per minute. Willing to relocate to San Francisco or Mountain View and work hybrid from the US office three days a week. GitHub: https://github.com/harxhist | Portfolio: https://har.sh10.in"
+            - generic [ref=e486]:
+              - group [ref=e488]:
+                - generic [ref=e489]: Applicant Arbitration Agreement Acknowledgement*
+                - paragraph [ref=e491]:
+                  - link "Applicant Arbitration Agreement" [ref=e619] [cursor=pointer]:
+                    - /url: https://cdn.openai.com/pdf/applicant-arbitration-agreement.pdf
+                - generic [ref=e493]:
+                  - generic [ref=e494] [cursor=pointer]:
+                    - img [ref=e495]
+                    - checkbox "I acknowledge that I have opened, read, and understood the Arbitration Agreement. I understand that by submitting my application, I am agreeing to be bound by the terms of the Arbitration Agreement." [checked] [ref=e620]
+                  - generic [ref=e498]: I acknowledge that I have opened, read, and understood the Arbitration Agreement. I understand that by submitting my application, I am agreeing to be bound by the terms of the Arbitration Agreement.
+              - group [ref=e500]:
+                - generic [ref=e501]: I hereby certify that I have not knowingly withheld any information that might adversely affect my chances for employment and that the answers given by me are true and correct to the best of my knowledge. I further certify that I, the undersigned applicant, have personally completed this application. I understand that, to the extent permitted by applicable law, any omission or misstatement of material fact on this application or on any document used to secure employment shall be grounds for rejection of this application or for immediate discharge if I am employed, regardless of the time elapsed before discovery. *
+                - paragraph [ref=e503]:
+                  - strong [ref=e504]: OpenAI is not seeking, nor should you disclose, any information that may be subject to confidentiality obligations to third parties, including but not limited to, your current employer.
+                - generic [ref=e505]:
+                  - generic [ref=e506] [cursor=pointer]:
+                    - img [ref=e507]
+                    - checkbox "I confirm I have read the above." [checked] [ref=e621]
+                  - generic [ref=e510]: I confirm I have read the above.
+          - generic [ref=e182]:
+            - generic [ref=e183]:
+              - generic [ref=e185]:
+                - paragraph [ref=e186]:
+                  - strong [ref=e187]: U.S. EQUAL EMPLOYMENT OPPORTUNITY INFORMATION
+                  - text: (Completion is voluntary and will not subject you to adverse treatment)
+                - paragraph [ref=e188]
+                - paragraph [ref=e189]: OpenAI provides equal employment opportunities to applicants and employees without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, protected veteran status, disability, or any other classification protected by applicable law.
+                - paragraph [ref=e190]
+                - paragraph [ref=e191]: OpenAI is a federal contractor or subcontractor subject to certain governmental recordkeeping and reporting requirements for the administration of civil rights laws and regulations. Employment decisions are made on the basis of job-related criteria without regard to race, ethnicity, color, religion, sex, sexual orientation, gender identity, marital status, age, genetic information, national origin, disability, protected veteran status, or any other classification protected by applicable law.
+                - paragraph [ref=e192]
+                - paragraph [ref=e193]: We invite all applicants to voluntarily self-identify their race, ethnicity, and gender. Submission of the information on this form is strictly voluntary and refusal to provide it will not subject you to any adverse treatment. Information obtained will be retained in a confidential file and separate from personnel records. This information may only be used in accordance with the provision of applicable federal laws, executive orders, and regulations. If you want more information about any of the sections, please check with a company representative.
+              - group [ref=e195]:
+                - generic [ref=e196]: Gender
+                - paragraph [ref=e198]: Input gender
+                - generic [ref=e199]:
+                  - radio "Male" [checked] [ref=e622] [cursor=pointer]
+                  - generic [ref=e203]: Male
+                - generic [ref=e204]:
+                  - radio "Female" [ref=e623] [cursor=pointer]
+                  - generic [ref=e208]: Female
+                - generic [ref=e209]:
+                  - radio "Decline to self-identify" [ref=e624] [cursor=pointer]
+                  - generic [ref=e213]: Decline to self-identify
+              - group [ref=e215]:
+                - generic [ref=e216]: Race
+                - generic [ref=e217]:
+                  - list [ref=e218]:
+                    - listitem [ref=e219]:
+                      - paragraph [ref=e220]:
+                        - strong [ref=e221]: Hispanic or Latino
+                        - text: "- A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin regardless of race."
+                  - list [ref=e222]:
+                    - listitem [ref=e223]:
+                      - paragraph [ref=e224]:
+                        - strong [ref=e225]: White
+                        - text: (Not Hispanic or Latino) - A person having origins in any of the original peoples of Europe, the Middle East, or North Africa.
+                    - listitem [ref=e226]:
+                      - paragraph [ref=e227]:
+                        - strong [ref=e228]: Black or African American
+                        - text: (Not Hispanic or Latino) - A person having origins in any of the Black racial groups of Africa.
+                    - listitem [ref=e229]:
+                      - paragraph [ref=e230]:
+                        - strong [ref=e231]: Native Hawaiian or Other Pacific Islander
+                        - text: (Not Hispanic or Latino) - A person having origins in any of the peoples of Hawaii, Guam, Samoa, or other Pacific Islands.
+                    - listitem [ref=e232]:
+                      - paragraph [ref=e233]:
+                        - strong [ref=e234]: Asian
+                        - text: (Not Hispanic or Latino) - A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian Subcontinent, including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam.
+                    - listitem [ref=e235]:
+                      - paragraph [ref=e236]:
+                        - strong [ref=e237]: American Indian or Alaska Native
+                        - text: (Not Hispanic or Latino) - A person having origins in any of the original peoples of North and South America (including Central America), and who maintain tribal affiliation or community attachment.
+                    - listitem [ref=e238]:
+                      - paragraph [ref=e239]:
+                        - strong [ref=e240]: Two or More Races
+                        - text: (Not Hispanic or Latino) - All persons who identify with more than one of the above five races.
+                - generic [ref=e241]:
+                  - radio "Hispanic or Latino" [ref=e625] [cursor=pointer]
+                  - generic [ref=e245]: Hispanic or Latino
+                - generic [ref=e246]:
+                  - radio "White (Not Hispanic or Latino)" [ref=e626] [cursor=pointer]
+                  - generic [ref=e250]: White (Not Hispanic or Latino)
+                - generic [ref=e251]:
+                  - radio "Black or African American (Not Hispanic or Latino)" [ref=e627] [cursor=pointer]
+                  - generic [ref=e255]: Black or African American (Not Hispanic or Latino)
+                - generic [ref=e256]:
+                  - radio "Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)" [ref=e628] [cursor=pointer]
+                  - generic [ref=e260]: Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)
+                - generic [ref=e261]:
+                  - radio "Asian (Not Hispanic or Latino)" [checked] [ref=e629] [cursor=pointer]
+                  - generic [ref=e265]: Asian (Not Hispanic or Latino)
+                - generic [ref=e266]:
+                  - radio "American Indian or Alaska Native (Not Hispanic or Latino)" [ref=e630] [cursor=pointer]
+                  - generic [ref=e270]: American Indian or Alaska Native (Not Hispanic or Latino)
+                - generic [ref=e271]:
+                  - radio "Two or More Races (Not Hispanic or Latino)" [ref=e631] [cursor=pointer]
+                  - generic [ref=e275]: Two or More Races (Not Hispanic or Latino)
+                - generic [ref=e276]:
+                  - radio "Decline to self-identify" [ref=e632] [cursor=pointer]
+                  - generic [ref=e280]: Decline to self-identify
+            - generic [ref=e281]:
+              - generic [ref=e283]:
+                - paragraph [ref=e284]:
+                  - strong [ref=e285]: SELF-IDENTIFICATION OF VETERAN STATUS
+                  - text: (Completion is voluntary and will not subject you to adverse treatment)
+                - paragraph [ref=e286]: OpenAI is a Government contractor subject to Section 4212 of the Vietnam Era Veterans’ Readjustment Assistance Act of 1974, as amended by the Jobs for Veterans Act of 2002, which requires Government contractors to take affirmative action to employ and advance in employment protected veterans. If you believe that you belong to any of the following categories of protected veterans, please indicate by making the appropriate selection.
+                - list [ref=e287]:
+                  - listitem [ref=e288]:
+                    - paragraph [ref=e289]:
+                      - strong [ref=e290]: Disabled veteran
+                      - text: – A veteran who served on active duty in the U.S. military and is entitled to disability compensation (or who but for the receipt of military retired pay would be entitled to disability compensation) under laws administered by the Secretary of Veterans Affairs, or was discharged or released from active duty because of a service-connected disability
+                  - listitem [ref=e291]:
+                    - paragraph [ref=e292]:
+                      - strong [ref=e293]: Recently separated veteran
+                      - text: – A veteran separated during the three-year period beginning on the date of the veteran's discharge or release from active duty in the U.S military, ground, naval, or air service
+                  - listitem [ref=e294]:
+                    - paragraph [ref=e295]:
+                      - strong [ref=e296]: Active duty wartime or campaign badge veteran
+                      - text: – A veteran who served on active duty in the U.S. military during a war, or in a campaign or expedition for which a campaign badge was authorized under the laws administered by the Department of Defense
+                  - listitem [ref=e297]:
+                    - paragraph [ref=e298]:
+                      - strong [ref=e299]: Armed forces service medal veteran
+                      - text: – A veteran who, while serving on active duty in the U.S. military, ground, naval, or air service, participated in a United States military operation for which an Armed Forces service medal was awarded pursuant to Executive Order 12985 (61 Fed. Reg. 1209).
+              - group [ref=e301]:
+                - generic [ref=e302]: Veteran Status
+                - generic [ref=e303]:
+                  - radio "I identify as one or more of the classifications of protected veteran listed above" [ref=e633] [cursor=pointer]
+                  - generic [ref=e307]: I identify as one or more of the classifications of protected veteran listed above
+                - generic [ref=e308]:
+                  - radio "I am not a protected veteran" [checked] [ref=e634] [cursor=pointer]
+                  - generic [ref=e312]: I am not a protected veteran
+                - generic [ref=e313]:
+                  - radio "I decline to self-identify for protected veteran status" [ref=e635] [cursor=pointer]
+                  - generic [ref=e317]: I decline to self-identify for protected veteran status
+            - generic [ref=e318]:
+              - generic [ref=e320]:
+                - paragraph [ref=e321]:
+                  - strong [ref=e322]: VOLUNTARY SELF-IDENTIFICATION OF DISABILITY
+                - paragraph [ref=e323]:
+                  - emphasis [ref=e324]: Form CC-305, OMB Control Number 1250-0005, Expires 4/30/2026
+                - paragraph [ref=e325]:
+                  - strong [ref=e326]: Why are you being asked to complete this form?
+                - paragraph [ref=e327]: We are a federal contractor or subcontractor. The law requires us to provide equal employment opportunity to qualified people with disabilities. We have a goal of having at least 7% of our workers as people with disabilities. The law says we must measure our progress towards this goal. To do this, we must ask applicants and employees if they have a disability or have ever had one. People can become disabled, so we need to ask this question at least every five years.
+                - paragraph [ref=e328]:
+                  - text: Completing this form is voluntary, and we hope that you will choose to do so. Your answer is confidential. No one who makes hiring decisions will see it. Your decision to complete the form and your answer will not harm you in any way. If you want to learn more about the law or this form, visit the U.S. Department of Labor’s Office of Federal Contract Compliance Programs (OFCCP) website at
+                  - link "www.dol.gov/ofccp" [ref=e636] [cursor=pointer]:
+                    - /url: http://www.dol.gov/ofccp
+                  - text: .
+                - paragraph [ref=e330]:
+                  - strong [ref=e331]: How do you know if you have a disability?
+                - paragraph [ref=e332]:
+                  - text: A disability is a condition that substantially limits one or more of your “major life activities.” If you have or have ever had such a condition, you are a person with a disability.
+                  - strong [ref=e333]: "Disabilities include, but are not limited to:"
+                - list [ref=e334]:
+                  - listitem [ref=e335]:
+                    - paragraph [ref=e336]: Alcohol or other substance use disorder (not currently using drugs illegally)
+                  - listitem [ref=e337]:
+                    - paragraph [ref=e338]: Autoimmune disorder, for example, lupus, fibromyalgia, rheumatoid arthritis, HIV/AIDS
+                  - listitem [ref=e339]:
+                    - paragraph [ref=e340]: Blind or low vision
+                  - listitem [ref=e341]:
+                    - paragraph [ref=e342]: Cancer (past or present)
+                  - listitem [ref=e343]:
+                    - paragraph [ref=e344]: Cardiovascular or heart disease
+                  - listitem [ref=e345]:
+                    - paragraph [ref=e346]: Celiac disease
+                  - listitem [ref=e347]:
+                    - paragraph [ref=e348]: Cerebral palsy
+                  - listitem [ref=e349]:
+                    - paragraph [ref=e350]: Deaf or serious difficulty hearing
+                  - listitem [ref=e351]:
+                    - paragraph [ref=e352]: Diabetes
+                  - listitem [ref=e353]:
+                    - paragraph [ref=e354]: Disfigurement, for example, disfigurement caused by burns, wounds, accidents, or congenital disorders
+                  - listitem [ref=e355]:
+                    - paragraph [ref=e356]: Epilepsy or other seizure disorder
+                  - listitem [ref=e357]:
+                    - paragraph [ref=e358]: Gastrointestinal disorders, for example, Crohn's Disease, irritable bowel syndrome
+                  - listitem [ref=e359]:
+                    - paragraph [ref=e360]: Intellectual or developmental disability
+                  - listitem [ref=e361]:
+                    - paragraph [ref=e362]: Mental health conditions, for example, depression, bipolar disorder, anxiety disorder, schizophrenia, PTSD
+                  - listitem [ref=e363]:
+                    - paragraph [ref=e364]: Missing limbs or partially missing limbs
+                  - listitem [ref=e365]:
+                    - paragraph [ref=e366]: Mobility impairment, benefiting from the use of a wheelchair, scooter, walker, leg brace(s) and/or other supports
+                  - listitem [ref=e367]:
+                    - paragraph [ref=e368]: Nervous system condition, for example, migraine headaches, Parkinson’s disease, multiple sclerosis (MS)
+                  - listitem [ref=e369]:
+                    - paragraph [ref=e370]: Neurodivergence, for example, attention-deficit/hyperactivity disorder (ADHD), autism spectrum disorder, dyslexia, dyspraxia, other learning disabilities
+                  - listitem [ref=e371]:
+                    - paragraph [ref=e372]: Partial or complete paralysis (any cause)
+                  - listitem [ref=e373]:
+                    - paragraph [ref=e374]: Pulmonary or respiratory conditions, for example, tuberculosis, asthma, emphysema
+                  - listitem [ref=e375]:
+                    - paragraph [ref=e376]: Short stature (dwarfism)
+                  - listitem [ref=e377]:
+                    - paragraph [ref=e378]: Traumatic brain injury
+                - paragraph [ref=e379]: "PUBLIC BURDEN STATEMENT: According to the Paperwork Reduction Act of 1995 no persons are required to respond to a collection of information unless such collection displays a valid OMB control number. This survey should take about 5 minutes to complete."
+              - group [ref=e381]:
+                - generic [ref=e382]: Disability Status
+                - generic [ref=e383]:
+                  - radio "Yes, I have a disability, or have had one in the past" [ref=e637] [cursor=pointer]
+                  - generic [ref=e387]: Yes, I have a disability, or have had one in the past
+                - generic [ref=e388]:
+                  - radio "No, I don't have a disability and have not had one in the past" [checked] [ref=e638] [cursor=pointer]
+                  - generic [ref=e392]: No, I don't have a disability and have not had one in the past
+                - generic [ref=e393]:
+                  - radio "I do not want to answer" [ref=e639] [cursor=pointer]
+                  - generic [ref=e397]: I do not want to answer
+          - button "Submit Application" [ref=e640] [cursor=pointer]:
+            - text: Submit Application
+            - img [ref=e399]
+          - paragraph [ref=e401]:
+            - text: OpenAI may use Artificial Intelligence with this application.
+            - link "Learn more." [ref=e641] [cursor=pointer]:
+              - /url: /openai/automation-notice
+  - contentinfo [ref=e403]:
+    - link "Learn more about Ashby" [ref=e642] [cursor=pointer]:
+      - /url: https://www.ashbyhq.com
+      - generic [ref=e405]: Powered by
+      - img "Ashby" [ref=e643]
+    - paragraph [ref=e412]:
+      - link "Privacy Policy" [ref=e644] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/privacy
+      - link "Security" [ref=e645] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/security
+      - link "Vulnerability Disclosure" [ref=e646] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/disclosure

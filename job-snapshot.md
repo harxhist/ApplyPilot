@@ -1,0 +1,146 @@
+- generic [ref=e2]:
+  - list [ref=e4]:
+    - listitem [ref=e5]:
+      - link "Mercor" [ref=e6] [cursor=pointer]:
+        - /url: https://mercor.com/
+        - img "Mercor" [ref=e7]
+    - link "Back to Mercor’s Job Listings" [ref=e8] [cursor=pointer]:
+      - /url: https://mercor.com/careers
+      - img [ref=e9]
+    - listitem
+  - generic [ref=e11]:
+    - heading "Software Engineer, Agents" [level=1] [ref=e13]
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - heading "Location" [level=2] [ref=e17]
+          - paragraph [ref=e18]: San Francisco or NYC; New York City
+        - generic [ref=e19]:
+          - heading "Employment Type" [level=2] [ref=e20]
+          - paragraph [ref=e21]: Full time
+        - generic [ref=e22]:
+          - heading "Department" [level=2] [ref=e23]
+          - paragraph [ref=e24]:
+            - generic [ref=e25]: Engineering ›
+            - generic [ref=e26]: Core Engineering
+        - generic [ref=e27]:
+          - heading "Compensation" [level=2] [ref=e28]
+          - list [ref=e29]:
+            - listitem [ref=e30]:
+              - generic [ref=e31]: $130K – $500K • Offers Equity
+      - generic [ref=e32]:
+        - tablist [ref=e33]:
+          - tab "Overview" [selected] [ref=e34] [cursor=pointer]
+          - tab "Application" [ref=e35] [cursor=pointer]
+        - tabpanel "Overview" [ref=e37]:
+          - generic [ref=e38]:
+            - heading "About Mercor" [level=1] [ref=e39]:
+              - strong [ref=e40]: About Mercor
+            - paragraph [ref=e41]
+            - paragraph [ref=e42]: "Mercor's mission is to organize human intelligence to power the AI economy. We're a leading AI data company, building the layer between human expertise and frontier models. Millions of domain experts on the platform are paid over $4 million per day to train frontier AI models. Mercor's APEX benchmark family measures AI's real-world impact on professional work. Mercor Enterprise brings this same infrastructure to Fortune 500 companies: helping companies capture how their best people actually work, translating that expertise directly back into agents."
+            - paragraph [ref=e44]: Mercor is creating a new category of work where expertise powers AI advancement. Achieving this requires an ambitious, fast-paced and deeply committed team. You’ll work alongside researchers, operators, and AI companies at the forefront of shaping the systems that are redefining society. Mercor is a profitable Series C company valued at $10 billion. We work in-person five days a week in our San Francisco, NYC, or London offices.
+            - paragraph [ref=e45]:
+              - strong [ref=e46]: About the Role
+            - paragraph [ref=e47]: "We're looking for a strong engineer who can build agentic products that scale. You will work with:"
+            - list [ref=e48]:
+              - listitem [ref=e49]:
+                - paragraph [ref=e50]:
+                  - strong [ref=e51]: Backend
+                  - text: ": Python, FastAPI, Django, Pydantic"
+              - listitem [ref=e52]:
+                - paragraph [ref=e53]:
+                  - strong [ref=e54]: Frontend
+                  - text: ": Next.js, React, TypeScript, Tailwind"
+              - listitem [ref=e55]:
+                - paragraph [ref=e56]:
+                  - strong [ref=e57]: Data
+                  - text: ": PostgreSQL, MySQL, Snowflake, DuckDB, Redis"
+              - listitem [ref=e58]:
+                - paragraph [ref=e59]:
+                  - strong [ref=e60]: Orchestration/Infra
+                  - text: ": Kubernetes, Temporal, Modal, Woz"
+              - listitem [ref=e61]:
+                - paragraph [ref=e62]:
+                  - strong [ref=e63]: Agents/LLM
+                  - text: ": LangGraph, LangChain, FastMCP, Harbor, NemoGym"
+              - listitem [ref=e64]:
+                - paragraph [ref=e65]:
+                  - strong [ref=e66]: Observability
+                  - text: ": Datadog, PostHog, LangSmith"
+            - paragraph [ref=e67]:
+              - text: At the end of the process, you’ll be
+              - strong [ref=e68]: team-matched
+              - text: "to where you can have the most impact, on one of the following:"
+            - list [ref=e69]:
+              - listitem [ref=e70]:
+                - paragraph [ref=e71]:
+                  - strong [ref=e72]: Automation
+                  - text: – We build intelligent systems and agents that automate operational work at scale—handling talent management, decision-making insights, and knowledge access—so humans can focus on higher-level thinking.This is a newly formed, CEO-facing team focused on 0→1 product development, with a strong emphasis on business impact. The work is highly cross-functional, touching nearly every system across the company.
+              - listitem [ref=e73]:
+                - paragraph [ref=e74]:
+                  - strong [ref=e75]: Studio
+                  - text: – We own Mercor’s evaluation system & annotation platform for RL environments and tasks. We build harnesses, agents, verifiers, and the end-to-end infrastructure for producing frontier data. Our mission is to scale up high quality RL environments/tasks and expand their capabilities. We work closely with researchers at frontier AI labs to jointly shape the direction of next-generation models.
+            - paragraph [ref=e76]:
+              - strong [ref=e77]: What You’ll Do
+            - list [ref=e78]:
+              - listitem [ref=e79]:
+                - paragraph [ref=e80]: Own agentic features end-to-end — from scoping with researchers/ops partners through implementation, launch, and iteration on real customer feedback.
+              - listitem [ref=e81]:
+                - paragraph [ref=e82]: Design and ship LLM agents, harnesses, and verifiers — including the tools, prompts, and policies that make them reliable.
+              - listitem [ref=e83]:
+                - paragraph [ref=e84]: Build the Python/FastAPI services and Temporal/Modal pipelines that orchestrate agent runs, human-in-the-loop review and iterations.
+              - listitem [ref=e85]:
+                - paragraph [ref=e86]: Build state of the art RL environments that expand the capabilities of frontier agents, with realistic enterprise apps, simulated coworkers, and rich company data rooms that support tasks spanning hours to days.
+              - listitem [ref=e87]:
+                - paragraph [ref=e88]: Build tooling that turns agent trajectories into insight, from statistical analysis to automated failure mode detection.
+              - listitem [ref=e89]:
+                - paragraph [ref=e90]: Build and refine the full-stack surfaces and data infrastructure — craft Next.js/React interfaces where operators and experts work with agents, evolve data models to give agents the structured context and audit trails they need.
+              - listitem [ref=e91]:
+                - paragraph [ref=e92]: Define agent quality and drive continuous improvement — build evals, instrument traces, analyze failure modes, and iterate on prompts, tools, and guardrails while raising the bar for reliability, cost, latency, and UX.
+              - listitem [ref=e93]:
+                - paragraph [ref=e94]: Partner cross-functionally to shape agent autonomy — work with Product, Design, Research and Ops to draw the lines between autonomous action, propose-and-approve flows, and human-in-the-loop decisions.
+            - paragraph [ref=e95]:
+              - strong [ref=e96]: Why Mercor
+            - list [ref=e97]:
+              - listitem [ref=e98]:
+                - paragraph [ref=e99]: "Impact: Your work powers how the world’s leading AI labs train and test their models."
+              - listitem [ref=e100]:
+                - paragraph [ref=e101]: "Learning: Get early insights into frontier model capabilities months before the market."
+              - listitem [ref=e102]:
+                - paragraph [ref=e103]: "Growth: Work on both infrastructure and research-adjacent projects with fast paths to ownership."
+            - paragraph [ref=e104]:
+              - strong [ref=e105]: Benefits
+            - list [ref=e106]:
+              - listitem [ref=e107]:
+                - paragraph [ref=e108]: Bi-annual performance bonus structure
+              - listitem [ref=e109]:
+                - paragraph [ref=e110]: Generous equity grant vested over 4 years
+              - listitem [ref=e111]:
+                - paragraph [ref=e112]: Up to $15k Relocation bonus
+              - listitem [ref=e113]:
+                - paragraph [ref=e114]: $10K housing bonus (if you live within 0.5 miles of our office)
+              - listitem [ref=e115]:
+                - paragraph [ref=e116]: $1.5K monthly stipend for meals
+              - listitem [ref=e117]:
+                - paragraph [ref=e118]: Free Equinox membership
+              - listitem [ref=e119]:
+                - paragraph [ref=e120]: $200 monthly laundry reimbursement
+              - listitem [ref=e121]:
+                - paragraph [ref=e122]: $200 monthly personal wellness reimbursement
+              - listitem [ref=e123]:
+                - paragraph [ref=e124]: Health, Dental, Vision insurance
+          - link "Apply for this Job" [ref=e125] [cursor=pointer]:
+            - /url: /mercor/4f4fc8c3-4056-47bb-9e00-1db6e5dd958f/application
+            - button "Apply for this Job" [ref=e126]
+  - contentinfo [ref=e127]:
+    - link "Learn more about Ashby" [ref=e128] [cursor=pointer]:
+      - /url: https://www.ashbyhq.com
+      - generic [ref=e129]: Powered by
+      - img "Ashby" [ref=e130]
+    - paragraph [ref=e136]:
+      - link "Privacy Policy" [ref=e137] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/privacy
+      - link "Security" [ref=e138] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/security
+      - link "Vulnerability Disclosure" [ref=e139] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/disclosure

@@ -1,0 +1,15 @@
+.git
+.venv
+**/__pycache__
+**/*.pyc
+web/node_modules
+web/dist
+*.md
+!README.md
+.env
+.pytest_cache
+.ruff_cache
+chrome-extension
+tests
+docs
+**/*.log

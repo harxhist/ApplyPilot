@@ -11,7 +11,7 @@
 [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-green.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/ibarrajo/ApplyPilot?style=social)](https://github.com/ibarrajo/ApplyPilot)
 
-> **Forked from [Pickle-Pixel/ApplyPilot](https://github.com/Pickle-Pixel/ApplyPilot)** — this fork adds multi-provider LLM fallback, human-in-the-loop apply, Gmail tracking, a Q&A knowledge base, ATS session persistence, and significant pipeline hardening. Thank you to the original authors for the foundation.
+> **Forked from [Pickle-Pixel/ApplyPilot](https://github.com/Pickle-Pixel/ApplyPilot)** — this checkout is personalized for Harsh Rajput. **Apply stage uses Cursor Agent SDK** (local + Playwright MCP), not Claude Code CLI. See [`AGENTS.md`](AGENTS.md). Upstream fork also added multi-provider LLM fallback, HITL, Gmail tracking, Q&A knowledge base, and ATS session persistence.
 
 
 
@@ -92,9 +92,9 @@ Each stage is independent. Run them all or pick what you need.
 | Node.js 18+ | Auto-apply | Needed for `npx` to run Playwright MCP server |
 | Gemini API key | Scoring, tailoring, cover letters, tracking | Free tier (15 RPM / 1M tokens/day) is enough |
 | Chrome/Chromium | Auto-apply | Auto-detected on most systems |
-| Claude Code CLI | Auto-apply | Install from [claude.ai/code](https://claude.ai/code) |
+| Cursor API key | Auto-apply (this checkout) | [Dashboard → Integrations](https://cursor.com/dashboard/integrations) — replaces Claude Code CLI |
 
-**Gemini API key is free.** Get one at [aistudio.google.com](https://aistudio.google.com). OpenAI is also supported as a fallback — see [LLM Configuration](#llm-configuration).
+**Gemini API key is free.** Get one at [aistudio.google.com](https://aistudio.google.com). OpenAI is also supported as a fallback — see [LLM Configuration](#llm-configuration). This checkout’s apply stage needs `CURSOR_API_KEY` (see [`AGENTS.md`](AGENTS.md)).
 
 ### Optional
 
@@ -137,7 +137,7 @@ ApplyPilot uses a two-tier model strategy with automatic multi-provider fallback
 | **Fast** | Scoring, HN extraction | Gemini 2.5 Flash → Gemini 2.0 Flash → GPT-4.1 Nano → GPT-4.1 Mini → Claude Haiku |
 | **Quality** | Tailoring, cover letters | Gemini 2.5 Pro → Gemini 2.5 Flash → GPT-4.1 Mini → Claude Sonnet → Claude Haiku |
 
-On rate limit (429): the exhausted model is skipped for 5 minutes and the next in chain is tried automatically. No intervention needed.
+On rate limit (429): global pacing (`LLM_MIN_INTERVAL_SEC`, default 5s) spaces calls; exhausted models cool for `LLM_QUOTA_COOLDOWN_SEC` (default 10 min) then the next in chain is tried. No intervention needed.
 
 Set `GEMINI_API_KEY` and optionally `OPENAI_API_KEY` in `~/.applypilot/.env`. Both have free tiers that cover normal usage.
 

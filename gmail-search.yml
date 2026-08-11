@@ -1,0 +1,136 @@
+- generic [ref=e1]:
+  - iframe [ref=e2]:
+    
+  - generic [ref=e10]:
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - link "Skip to content" [ref=e14] [cursor=pointer]:
+          - /url: ""
+        - link "Using Gmail with screen readers" [ref=e15] [cursor=pointer]:
+          - /url: ""
+      - heading [level=1] [ref=e17]:
+        - banner [ref=e18]:
+          - generic [ref=e19]:
+            - generic [ref=e20]:
+              - button "Main menu" [expanded] [ref=e21] [cursor=pointer]:
+                - img [ref=e22]
+              - link "Gmail" [ref=e26] [cursor=pointer]:
+                - /url: "#inbox"
+                - img [ref=e27]
+            - generic [ref=e28]:
+              - search [ref=e30]:
+                - heading "Search" [level=2] [ref=e31]
+                - table [ref=e273]:
+                  - rowgroup [ref=e274]:
+                    - row "from:greenhouse.io newer_than:1d" [ref=e275]:
+                      - cell "from:greenhouse.io newer_than:1d" [ref=e276]:
+                        - textbox "Search mail" [ref=e277]: from:greenhouse.io newer_than:1d
+                - button "Advanced search options" [ref=e34] [cursor=pointer]:
+                  - img [ref=e35]
+                - button "Clear search" [ref=e37] [cursor=pointer]:
+                  - img [ref=e38]
+                - button "Search mail" [disabled] [ref=e41] [cursor=pointer]:
+                  - img [ref=e42]
+              - generic [ref=e45]:
+                - button "Support" [ref=e279] [cursor=pointer]:
+                  - img [ref=e280]
+                - button "Settings" [ref=e49] [cursor=pointer]:
+                  - img [ref=e50]
+                - generic [ref=e53]:
+                  - generic:
+                    - button "Ask Gemini" [ref=e60] [cursor=pointer]
+                    - tooltip [ref=e63]: Ask Gemini
+            - generic [ref=e65]:
+              - button "Google apps" [ref=e69] [cursor=pointer]:
+                - img [ref=e70]
+              - 'button "Google Account: Harsh (harxhist@gmail.com)" [ref=e75] [cursor=pointer]':
+                - img [ref=e77]
+                - img [ref=e83]
+      - alert [ref=e86]
+    - generic [ref=e89]:
+      - navigation [ref=e90]:
+        - button "Compose" [ref=e93] [cursor=pointer]
+        - generic [ref=e99]:
+          - generic "Labels" [ref=e101]:
+            - heading "Labels" [level=2] [ref=e102]
+            - generic [ref=e103]:
+              - generic [ref=e104]:
+                - generic [ref=e106]:
+                  - generic [ref=e111]:
+                    - link "Inbox 6 unread" [ref=e113] [cursor=pointer]:
+                      - /url: https://mail.google.com/mail/u/0/#inbox
+                      - text: Inbox
+                    - generic [ref=e114]: "6"
+                  - link "Starred" [ref=e121] [cursor=pointer]:
+                    - /url: https://mail.google.com/mail/u/0/#starred
+                  - link "Snoozed" [ref=e128] [cursor=pointer]:
+                    - /url: https://mail.google.com/mail/u/0/#snoozed
+                  - link "Sent" [ref=e135] [cursor=pointer]:
+                    - /url: https://mail.google.com/mail/u/0/#sent
+                  - generic [ref=e140]:
+                    - link "Drafts 4 unread" [ref=e142] [cursor=pointer]:
+                      - /url: https://mail.google.com/mail/u/0/#drafts
+                      - text: Drafts
+                    - generic [ref=e143]: "4"
+                - link "Purchases has menu" [ref=e152] [cursor=pointer]:
+                  - /url: https://mail.google.com/mail/u/0/#category/purchases
+                  - text: Purchases
+              - button "More labels" [ref=e154] [cursor=pointer]:
+                - generic [ref=e155]: More
+          - generic [ref=e158]:
+            - heading "Labels" [ref=e159]
+            - button "Create new label" [ref=e160] [cursor=pointer]
+          - generic "Labels" [ref=e162]:
+            - heading "Labels" [level=2] [ref=e163]
+            - generic [ref=e167]:
+              - link "aiastro has menu" [ref=e174] [cursor=pointer]:
+                - /url: https://mail.google.com/mail/u/0/#label/aiastro
+                - text: aiastro
+              - link "career has menu" [ref=e181] [cursor=pointer]:
+                - /url: https://mail.google.com/mail/u/0/#label/career
+                - text: career
+              - link "harxh has menu" [ref=e188] [cursor=pointer]:
+                - /url: https://mail.google.com/mail/u/0/#label/harxh
+                - text: harxh
+      - main [ref=e202]:
+        - generic [ref=e203]:
+          - toolbar "search refinement"
+          - generic [ref=e204]:
+            - generic [ref=e207]:
+              - button "Select" [ref=e209] [cursor=pointer]:
+                - checkbox [ref=e211]
+              - button "Refresh" [ref=e214] [cursor=pointer]
+              - button "More email options" [ref=e218] [cursor=pointer]
+            - generic [ref=e221]:
+              - button "Showing most relevant" [ref=e227] [cursor=pointer]:
+                - generic [ref=e229]: Showing most relevant
+                - img [ref=e232]
+              - generic [ref=e239]:
+                - button "Input tools on/off (Ctrl-Shift-K)" [ref=e240] [cursor=pointer]
+                - button "Select input tool" [ref=e242] [cursor=pointer]
+        - heading "Conversations" [level=2] [ref=e245]
+        - generic [ref=e246]:
+          - generic:
+            - generic:
+              - grid:
+                - rowgroup
+          - table [ref=e248]:
+            - rowgroup [ref=e253]:
+              - row "No messages matched your search. Try using search options such as sender, date, size and more." [ref=e254]:
+                - cell "No messages matched your search. Try using search options such as sender, date, size and more." [ref=e255]:
+                  - text: No messages matched your search. Try using
+                  - link "search options" [ref=e257] [cursor=pointer]
+                  - text: such as sender, date, size and more.
+      - generic [ref=e260]:
+        - complementary "Side panel" [ref=e261]:
+          - tablist [ref=e263]:
+            - tab "Calendar"
+            - tab "Keep"
+            - tab "Tasks"
+            - tab "Contacts"
+            - separator [disabled] [ref=e283]
+            - tab "More Add-ons"
+        - generic:
+          - button "Hide side panel":
+            - img [ref=e269] [cursor=pointer]
+  - generic [ref=e272]: Suggestions updated

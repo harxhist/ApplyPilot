@@ -1,0 +1,283 @@
+- generic [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - separator [ref=e4]
+      - generic [ref=e5]:
+        - generic [ref=e7]:
+          - heading "Apply for this job" [level=2] [ref=e9]
+          - generic [ref=e10]:
+            - paragraph [ref=e12]: "*"
+            - paragraph [ref=e13]: indicates a required field
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - generic [ref=e18]:
+              - generic [ref=e19]: First Name*
+              - textbox "First Name" [ref=e20]: Harsh
+            - generic [ref=e23]:
+              - generic [ref=e24]: Last Name*
+              - textbox "Last Name" [ref=e25]: Rajput
+            - generic [ref=e28]:
+              - generic [ref=e29]: Preferred First Name*
+              - textbox "Preferred First Name" [ref=e30]: Harsh
+            - generic [ref=e33]:
+              - generic [ref=e34]: Email*
+              - textbox "Email" [ref=e35]: harxhist@gmail.com
+            - group "Phone" [ref=e37]:
+              - generic [ref=e38]: Phone
+              - generic [ref=e41]:
+                - generic [ref=e42]: Country*
+                - generic [ref=e43]:
+                  - log [ref=e45]
+                  - generic [ref=e47]:
+                    - generic [ref=e48]:
+                      - generic [ref=e854]: "+91"
+                      - combobox "Country" [ref=e50]
+                    - button "Toggle flyout" [ref=e52] [cursor=pointer]:
+                      - img [ref=e53]
+              - generic [ref=e57]:
+                - generic [ref=e58]: Phone*
+                - textbox "Phone" [ref=e60]: 072170 16717
+            - generic [ref=e61]:
+              - generic [ref=e63]:
+                - generic [ref=e64]: Location (City)*
+                - generic [ref=e65]:
+                  - log [ref=e67]
+                  - generic [ref=e69]:
+                    - generic [ref=e70]:
+                      - generic [ref=e867]: Delhi, India
+                      - combobox "Location (City)" [ref=e72]
+                    - button "Clear selections" [ref=e870] [cursor=pointer]:
+                      - img [ref=e871]
+              - button "Locate me" [ref=e73] [cursor=pointer]
+            - group "Resume/CV*" [ref=e75]:
+              - generic [ref=e76]: Resume/CV*
+              - generic [ref=e873]:
+                - img [ref=e874]
+                - paragraph [ref=e878]: Harsh_Rajput_Resume.docx
+                - button "Remove file" [ref=e879] [cursor=pointer]:
+                  - img [ref=e880]
+            - group "Cover Letter" [ref=e92]:
+              - generic [ref=e93]: Cover Letter
+              - generic [ref=e882]:
+                - img [ref=e883]
+                - paragraph [ref=e887]: Harsh_Rajput_Cover_Letter.docx
+                - button "Remove file" [ref=e888] [cursor=pointer]:
+                  - img [ref=e889]
+          - generic [ref=e108]:
+            - separator [ref=e109]
+            - generic [ref=e112]:
+              - generic [ref=e113]: LinkedIn Profile
+              - textbox "LinkedIn Profile" [ref=e114]: https://linkedin.com/in/harxhist
+            - generic [ref=e117]:
+              - generic [ref=e118]: Website
+              - textbox "Website" [ref=e119]: https://har.sh10.in
+            - generic [ref=e122]:
+              - generic [ref=e123]: How did you hear about this job?*
+              - textbox "How did you hear about this job?" [ref=e124]: Online Job Board
+            - generic [ref=e127]:
+              - generic [ref=e128]: Are you legally authorized to work in the country in which you are applying?*
+              - generic [ref=e129]:
+                - log [ref=e131]
+                - generic [ref=e133]:
+                  - generic [ref=e134]:
+                    - generic [ref=e895]: "Yes"
+                    - combobox "Are you legally authorized to work in the country in which you are applying?" [ref=e137]
+                  - generic [ref=e138]:
+                    - button "Clear selections" [ref=e897] [cursor=pointer]:
+                      - img [ref=e898]
+                    - button "Toggle flyout" [ref=e139] [cursor=pointer]:
+                      - img [ref=e140]
+            - generic [ref=e144]:
+              - generic [ref=e145]: Do you now or will you in the future need sponsorship for employment visa status in the country in which you are applying?*
+              - generic [ref=e146]:
+                - log [ref=e148]
+                - generic [ref=e150]:
+                  - generic [ref=e151]:
+                    - generic [ref=e904]: "No"
+                    - combobox "Do you now or will you in the future need sponsorship for employment visa status in the country in which you are applying?" [ref=e154]
+                  - generic [ref=e155]:
+                    - button "Clear selections" [ref=e906] [cursor=pointer]:
+                      - img [ref=e907]
+                    - button "Toggle flyout" [ref=e156] [cursor=pointer]:
+                      - img [ref=e157]
+            - generic [ref=e161]:
+              - generic [ref=e162]: Do you currently or have you previously worked for Databricks in the past?*
+              - generic [ref=e163]:
+                - log [ref=e165]
+                - generic [ref=e167]:
+                  - generic [ref=e168]:
+                    - generic [ref=e916]: "No"
+                    - combobox "Do you currently or have you previously worked for Databricks in the past?" [ref=e171]
+                  - generic [ref=e172]:
+                    - button "Clear selections" [ref=e918] [cursor=pointer]:
+                      - img [ref=e919]
+                    - button "Toggle flyout" [ref=e173] [cursor=pointer]:
+                      - img [ref=e174]
+            - 'group "Please confirm whether any of the below applies to you. Select all that apply. Note: This information will only be used to ensure compliance with U.S. sanctions and export controls. *" [ref=e177]':
+              - generic [ref=e178]: "Please confirm whether any of the below applies to you. Select all that apply. Note: This information will only be used to ensure compliance with U.S. sanctions and export controls. *"
+              - generic [ref=e179]:
+                - checkbox "Citizen or permanent resident of Cuba, Iran, North Korea, or Syria" [ref=e181]
+                - generic [ref=e182]: Citizen or permanent resident of Cuba, Iran, North Korea, or Syria
+              - generic [ref=e183]:
+                - checkbox "Ordinarily a resident of Cuba, Iran, North Korea, Syria or the Crimea, Donetsk, Luhansk, Zaporizhzhia, or Kherson regions of Ukraine" [ref=e185]
+                - generic [ref=e186]: Ordinarily a resident of Cuba, Iran, North Korea, Syria or the Crimea, Donetsk, Luhansk, Zaporizhzhia, or Kherson regions of Ukraine
+              - generic [ref=e187]:
+                - checkbox "Ordinarily a resident of Russia or Belarus and not willing to relocate for a Databricks role" [ref=e189]
+                - generic [ref=e190]: Ordinarily a resident of Russia or Belarus and not willing to relocate for a Databricks role
+              - generic [ref=e191]:
+                - generic [ref=e192]:
+                  - checkbox "None of the above" [checked] [ref=e193]
+                  - img
+                - generic [ref=e194]: None of the above
+            - group "If you selected a response to the prior question other than “none of the above,” please confirm whether any of the following also applies to you. Select all that apply. *" [ref=e196]:
+              - generic [ref=e197]: If you selected a response to the prior question other than “none of the above,” please confirm whether any of the following also applies to you. Select all that apply. *
+              - generic [ref=e198]:
+                - checkbox "U.S. citizen" [ref=e200]
+                - generic [ref=e201]: U.S. citizen
+              - generic [ref=e202]:
+                - checkbox "U.S. non-citizen national" [ref=e204]
+                - generic [ref=e205]: U.S. non-citizen national
+              - generic [ref=e206]:
+                - checkbox "U.S. permanent resident (Green Card holder)" [ref=e208]
+                - generic [ref=e209]: U.S. permanent resident (Green Card holder)
+              - generic [ref=e210]:
+                - checkbox "Individual granted asylum in the U.S." [ref=e212]
+                - generic [ref=e213]: Individual granted asylum in the U.S.
+              - generic [ref=e214]:
+                - checkbox "Individual granted refugee status in the U.S." [ref=e216]
+                - generic [ref=e217]: Individual granted refugee status in the U.S.
+              - generic [ref=e218]:
+                - checkbox "Individual granted citizenship in a country other than Cuba, Iran, North Korea, or Syria" [ref=e220]
+                - generic [ref=e221]: Individual granted citizenship in a country other than Cuba, Iran, North Korea, or Syria
+              - generic [ref=e222]:
+                - checkbox "Individual granted permanent residency in a country other than Cuba, Iran, North Korea, or Syria" [ref=e224]
+                - generic [ref=e225]: Individual granted permanent residency in a country other than Cuba, Iran, North Korea, or Syria
+              - generic [ref=e226]:
+                - checkbox "None of these apply to me" [ref=e228]
+                - generic [ref=e229]: None of these apply to me
+              - generic [ref=e230]:
+                - generic [ref=e231]:
+                  - checkbox "Not applicable (i.e., I selected “none of the above” for the prior question)" [checked] [ref=e232]
+                  - img
+                - generic [ref=e233]: Not applicable (i.e., I selected “none of the above” for the prior question)
+          - generic [ref=e234]:
+            - separator [ref=e235]
+            - generic [ref=e236]:
+              - heading "Voluntary Self-Identification" [level=2] [ref=e237]
+              - paragraph [ref=e238]: For government reporting purposes, we ask candidates to respond to the below self-identification survey. Completion of the form is entirely voluntary. Whatever your decision, it will not be considered in the hiring process or thereafter. Any information that you do provide will be recorded and maintained in a confidential file.
+              - paragraph [ref=e239]: As set forth in Databricks’s Equal Employment Opportunity policy, we do not discriminate on the basis of any protected group status under any applicable law.
+            - generic [ref=e242]:
+              - generic [ref=e243]: Gender
+              - generic [ref=e244]:
+                - log [ref=e246]
+                - generic [ref=e248]:
+                  - generic [ref=e249]:
+                    - generic [ref=e926]: Male
+                    - combobox "Gender" [ref=e252]
+                  - generic [ref=e253]:
+                    - button "Clear selections" [ref=e928] [cursor=pointer]:
+                      - img [ref=e929]
+                    - button "Toggle flyout" [ref=e254] [cursor=pointer]:
+                      - img [ref=e255]
+            - generic [ref=e257]:
+              - generic [ref=e259]:
+                - generic [ref=e260]: Are you Hispanic/Latino?
+                - generic [ref=e261]:
+                  - log [ref=e263]: option No, selected.
+                  - generic [ref=e265]:
+                    - generic [ref=e266]:
+                      - generic [ref=e936]: "No"
+                      - combobox "Are you Hispanic/Latino?" [active] [ref=e269]
+                    - generic [ref=e270]:
+                      - button "Clear selections" [ref=e938] [cursor=pointer]:
+                        - img [ref=e939]
+                      - button "Toggle flyout" [ref=e271] [cursor=pointer]:
+                        - img [ref=e272]
+              - generic [ref=e942]:
+                - generic [ref=e943]: Please identify your race
+                - generic [ref=e944]:
+                  - log [ref=e946]
+                  - generic [ref=e948]:
+                    - generic [ref=e949]:
+                      - generic [ref=e950]: Select...
+                      - combobox "Please identify your race" [ref=e952]
+                    - button "Toggle flyout" [ref=e954] [cursor=pointer]:
+                      - img [ref=e955]
+              - link "Race & Ethnicity Definitions" [ref=e274] [cursor=pointer]:
+                - /url: https://job-boards.cdn.greenhouse.io/docs/2023/RaceEthnicityDefinitions.pdf
+            - generic [ref=e275]:
+              - paragraph [ref=e276]: "If you believe you belong to any of the categories of protected veterans listed below, please indicate by making the appropriate selection. As a government contractor subject to the Vietnam Era Veterans Readjustment Assistance Act (VEVRAA), we request this information in order to measure the effectiveness of the outreach and positive recruitment efforts we undertake pursuant to VEVRAA. Classification of protected categories is as follows:"
+              - paragraph [ref=e277]: "A \"disabled veteran\" is one of the following: a veteran of the U.S. military, ground, naval or air service who is entitled to compensation (or who but for the receipt of military retired pay would be entitled to compensation) under laws administered by the Secretary of Veterans Affairs; or a person who was discharged or released from active duty because of a service-connected disability."
+              - paragraph [ref=e278]: A "recently separated veteran" means any veteran during the three-year period beginning on the date of such veteran's discharge or release from active duty in the U.S. military, ground, naval, or air service.
+              - paragraph [ref=e279]: An "active duty wartime or campaign badge veteran" means a veteran who served on active duty in the U.S. military, ground, naval or air service during a war, or in a campaign or expedition for which a campaign badge has been authorized under the laws administered by the Department of Defense.
+              - paragraph [ref=e280]: An "Armed forces service medal veteran" means a veteran who, while serving on active duty in the U.S. military, ground, naval or air service, participated in a United States military operation for which an Armed Forces service medal was awarded pursuant to Executive Order 12985.
+            - generic [ref=e283]:
+              - generic [ref=e284]: Veteran Status
+              - generic [ref=e285]:
+                - log [ref=e287]
+                - generic [ref=e289]:
+                  - generic [ref=e290]:
+                    - generic [ref=e291]: Select...
+                    - combobox "Veteran Status" [ref=e293]
+                  - button "Toggle flyout" [ref=e295] [cursor=pointer]:
+                    - img [ref=e296]
+            - separator [ref=e298]
+            - generic [ref=e299]:
+              - heading "Voluntary Self-Identification of Disability" [level=2] [ref=e300]
+              - generic [ref=e301]:
+                - generic [ref=e302]:
+                  - generic [ref=e303]: Form CC-305
+                  - generic [ref=e304]: Page 1 of 1
+                - generic [ref=e305]:
+                  - generic [ref=e306]: OMB Control Number 1250-0005
+                  - generic [ref=e307]: Expires 04/30/2026
+              - strong [ref=e308]: Why are you being asked to complete this form?
+              - paragraph [ref=e309]: We are a federal contractor or subcontractor. The law requires us to provide equal employment opportunity to qualified people with disabilities. We have a goal of having at least 7% of our workers as people with disabilities. The law says we must measure our progress towards this goal. To do this, we must ask applicants and employees if they have a disability or have ever had one. People can become disabled, so we need to ask this question at least every five years.
+              - paragraph [ref=e310]:
+                - text: Completing this form is voluntary, and we hope that you will choose to do so. Your answer is confidential. No one who makes hiring decisions will see it. Your decision to complete the form and your answer will not harm you in any way. If you want to learn more about the law or this form, visit the U.S. Department of Labor’s Office of Federal Contract Compliance Programs (OFCCP) website at
+                - link "www.dol.gov/ofccp" [ref=e311] [cursor=pointer]:
+                  - /url: https://www.dol.gov/ofccp
+                - text: .
+              - strong [ref=e312]: How do you know if you have a disability?
+              - paragraph [ref=e313]:
+                - text: A disability is a condition that substantially limits one or more of your “major life activities.” If you have or have ever had such a condition, you are a person with a disability.
+                - strong [ref=e314]: "Disabilities include, but are not limited to:"
+              - list [ref=e315]:
+                - listitem [ref=e316]: Alcohol or other substance use disorder (not currently using drugs illegally)
+                - listitem [ref=e317]: Autoimmune disorder, for example, lupus, fibromyalgia, rheumatoid arthritis, HIV/AIDS
+                - listitem [ref=e318]: Blind or low vision
+                - listitem [ref=e319]: Cancer (past or present)
+                - listitem [ref=e320]: Cardiovascular or heart disease
+                - listitem [ref=e321]: Celiac disease
+                - listitem [ref=e322]: Cerebral palsy
+                - listitem [ref=e323]: Deaf or serious difficulty hearing
+                - listitem [ref=e324]: Diabetes
+                - listitem [ref=e325]: Disfigurement, for example, disfigurement caused by burns, wounds, accidents, or congenital disorders
+                - listitem [ref=e326]: Epilepsy or other seizure disorder
+                - listitem [ref=e327]: Gastrointestinal disorders, for example, Crohn's Disease, irritable bowel syndrome
+                - listitem [ref=e328]: Intellectual or developmental disability
+                - listitem [ref=e329]: Mental health conditions, for example, depression, bipolar disorder, anxiety disorder, schizophrenia, PTSD
+                - listitem [ref=e330]: Missing limbs or partially missing limbs
+                - listitem [ref=e331]: Mobility impairment, benefiting from the use of a wheelchair, scooter, walker, leg brace(s) and/or other supports
+                - listitem [ref=e332]: Nervous system condition, for example, migraine headaches, Parkinson’s disease, multiple sclerosis (MS)
+                - listitem [ref=e333]: Neurodivergence, for example, attention-deficit/hyperactivity disorder (ADHD), autism spectrum disorder, dyslexia, dyspraxia, other learning disabilities
+                - listitem [ref=e334]: Partial or complete paralysis (any cause)
+                - listitem [ref=e335]: Pulmonary or respiratory conditions, for example, tuberculosis, asthma, emphysema
+                - listitem [ref=e336]: Short stature (dwarfism)
+                - listitem [ref=e337]: Traumatic brain injury
+            - generic [ref=e340]:
+              - generic [ref=e341]: Disability Status
+              - generic [ref=e342]:
+                - log [ref=e344]
+                - generic [ref=e346]:
+                  - generic [ref=e347]:
+                    - generic [ref=e348]: Select...
+                    - combobox "Disability Status" [ref=e350]
+                  - button "Toggle flyout" [ref=e352] [cursor=pointer]:
+                    - img [ref=e353]
+            - paragraph [ref=e356]: "PUBLIC BURDEN STATEMENT: According to the Paperwork Reduction Act of 1995 no persons are required to respond to a collection of information unless such collection displays a valid OMB control number. This survey should take about 5 minutes to complete."
+          - button "Submit application" [ref=e358] [cursor=pointer]
+  - iframe [ref=e361]:
+    - generic [ref=f76e6]:
+      - text: protected by
+      - strong [ref=f76e7]: reCAPTCHA

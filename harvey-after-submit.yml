@@ -1,0 +1,47 @@
+- generic [ref=e2]:
+  - list [ref=e4]:
+    - listitem [ref=e5]:
+      - link "Harvey" [ref=e248] [cursor=pointer]:
+        - /url: https://www.harvey.ai/
+        - img "Harvey" [ref=e249]
+    - listitem [ref=e8]:
+      - link "Back to Harvey’s Job Listings" [ref=e250] [cursor=pointer]:
+        - /url: /harvey
+        - img [ref=e10]
+    - listitem
+  - generic [ref=e12]:
+    - heading "Senior Software Engineer, Backend" [level=1] [ref=e251]
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - heading "Location" [level=2] [ref=e252]
+          - paragraph [ref=e19]: Bengaluru
+        - generic [ref=e20]:
+          - heading "Employment Type" [level=2] [ref=e253]
+          - paragraph [ref=e22]: Full time
+        - generic [ref=e23]:
+          - heading "Location Type" [level=2] [ref=e254]
+          - paragraph [ref=e25]: Hybrid
+        - generic [ref=e26]:
+          - heading "Department" [level=2] [ref=e255]
+          - paragraph [ref=e28]: Engineering
+      - generic [ref=e29]:
+        - tablist [ref=e30]:
+          - tab "Overview" [ref=e256] [cursor=pointer]
+          - tab "Application" [selected] [ref=e257] [cursor=pointer]
+        - tabpanel "Application" [ref=e34]:
+          - status [active] [ref=e292]:
+            - heading "Success" [level=2] [ref=e293]
+            - paragraph [ref=e294]: Your application was successfully submitted. We'll contact you if there are next steps.
+  - contentinfo [ref=e43]:
+    - link "Learn more about Ashby" [ref=e287] [cursor=pointer]:
+      - /url: https://www.ashbyhq.com
+      - generic [ref=e45]: Powered by
+      - img "Ashby" [ref=e288]
+    - paragraph [ref=e52]:
+      - link "Privacy Policy" [ref=e289] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/privacy
+      - link "Security" [ref=e290] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/security
+      - link "Vulnerability Disclosure" [ref=e291] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/disclosure

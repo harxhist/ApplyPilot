@@ -1,0 +1,204 @@
+- generic [ref=e2]:
+  - list [ref=e7]:
+    - listitem [ref=e8]:
+      - link "OpenAI" [ref=e9] [cursor=pointer]:
+        - /url: https://openai.com/
+        - img "OpenAI" [ref=e10]
+    - link "Back to OpenAI’s Job Listings" [ref=e11] [cursor=pointer]:
+      - /url: https://openai.com/careers/search/
+      - img [ref=e12]
+    - listitem
+  - generic [ref=e14]:
+    - heading "Backend Software Engineer, Applied Foundations" [level=1] [ref=e16]
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - heading "Location" [level=2] [ref=e20]
+          - paragraph [ref=e21]: San Francisco; Mountain View
+        - generic [ref=e22]:
+          - heading "Employment Type" [level=2] [ref=e23]
+          - paragraph [ref=e24]: Full time
+        - generic [ref=e25]:
+          - heading "Location Type" [level=2] [ref=e26]
+          - paragraph [ref=e27]: Hybrid
+        - generic [ref=e28]:
+          - heading "Department" [level=2] [ref=e29]
+          - paragraph [ref=e30]: Applied AI
+        - generic [ref=e31]:
+          - heading "Compensation" [level=2] [ref=e32]
+          - list [ref=e33]:
+            - listitem [ref=e34]:
+              - generic [ref=e35]: $185K – $385K • Offers Equity
+          - generic [ref=e36]:
+            - paragraph [ref=e37]: The base pay offered may vary depending on multiple individualized factors, including market location, job-related knowledge, skills, and experience. If the role is non-exempt, overtime pay will be provided consistent with applicable laws. In addition to the salary range listed above, total compensation also includes generous equity, performance-related bonus(es) for eligible employees, and the following benefits.
+            - list [ref=e38]:
+              - listitem [ref=e39]:
+                - paragraph [ref=e40]: Medical, dental, and vision insurance for you and your family, with employer contributions to Health Savings Accounts
+              - listitem [ref=e41]:
+                - paragraph [ref=e42]: Pre-tax accounts for Health FSA, Dependent Care FSA, and commuter expenses (parking and transit)
+              - listitem [ref=e43]:
+                - paragraph [ref=e44]: 401(k) retirement plan with employer match
+              - listitem [ref=e45]:
+                - paragraph [ref=e46]: Paid parental leave (up to 24 weeks for birth parents and 20 weeks for non-birthing parents), plus paid medical and caregiver leave (up to 8 weeks)
+              - listitem [ref=e47]:
+                - paragraph [ref=e48]: "Paid time off: flexible PTO for exempt employees and up to 15 days annually for non-exempt employees"
+              - listitem [ref=e49]:
+                - paragraph [ref=e50]: 13+ paid company holidays, and multiple paid coordinated company office closures throughout the year for focus and recharge, plus paid sick or safe time (1 hour per 30 hours worked, or more, as required by applicable state or local law)
+              - listitem [ref=e51]:
+                - paragraph [ref=e52]: Mental health and wellness support
+              - listitem [ref=e53]:
+                - paragraph [ref=e54]: Employer-paid basic life and disability coverage
+              - listitem [ref=e55]:
+                - paragraph [ref=e56]: Annual learning and development stipend to fuel your professional growth
+              - listitem [ref=e57]:
+                - paragraph [ref=e58]: Daily meals in our offices, and meal delivery credits as eligible
+              - listitem [ref=e59]:
+                - paragraph [ref=e60]: Relocation support for eligible employees
+              - listitem [ref=e61]:
+                - paragraph [ref=e62]: Additional taxable fringe benefits, such as charitable donation matching and wellness stipends, may also be provided.
+            - paragraph [ref=e63]: More details about our benefits are available to candidates during the hiring process.
+            - paragraph [ref=e64]: This role is at-will and OpenAI reserves the right to modify base pay and other compensation components at any time based on individual performance, team or company results, or market conditions.
+      - generic [ref=e65]:
+        - tablist [ref=e66]:
+          - tab "Overview" [ref=e67] [cursor=pointer]
+          - tab "Application" [selected] [ref=e68] [cursor=pointer]
+        - tabpanel "Application" [ref=e70]:
+          - generic [ref=e71]:
+            - button "Choose File" [ref=e72]
+            - generic [ref=e74]:
+              - generic [ref=e75]:
+                - img [ref=e77]
+                - heading "Autofill from resume" [level=3] [ref=e79]
+              - paragraph [ref=e80]: Upload your resume here to autofill key application fields.
+              - button "Upload file" [ref=e82] [cursor=pointer]
+          - generic [ref=e84]:
+            - generic [ref=e85] [cursor=pointer]:
+              - img [ref=e86]
+              - generic [ref=e88]: This job has application limits
+              - img [ref=e89]
+            - paragraph [ref=e93]: "Please Note: we have set up limits for applications across roles. Candidates may not apply more than 5 times in any 180 day span."
+          - generic [ref=e94]:
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - generic [ref=e97]: Legal Name*
+                - paragraph [ref=e99]: Please enter your legal name exactly as shown on your government-issued ID. This helps keep records accurate for later hiring steps.
+                - textbox "Legal Name*" [ref=e101] [cursor=pointer]:
+                  - /placeholder: Type here...
+              - generic [ref=e102]:
+                - generic [ref=e103]: Preferred Name (if applicable)
+                - textbox "Preferred Name (if applicable)" [ref=e105] [cursor=pointer]:
+                  - /placeholder: Type here...
+              - generic [ref=e106]:
+                - generic [ref=e107]: Email*
+                - textbox "Email*" [ref=e109] [cursor=pointer]:
+                  - /placeholder: hello@example.com...
+              - generic [ref=e110]:
+                - generic [ref=e111]: Resume*
+                - button "Resume*" [ref=e112]
+                - generic [ref=e113]
+              - generic [ref=e119]:
+                - generic [ref=e120]: Phone Number*
+                - textbox "Phone Number*" [ref=e121] [cursor=pointer]:
+                  - /placeholder: 1-415-555-1234...
+              - generic [ref=e122]:
+                - generic [ref=e123]: Where are you currently located?*
+                - generic [ref=e124]
+              - generic [ref=e129]:
+                - generic [ref=e130]: When can you start a new role?*
+                - textbox "Pick date..." [ref=e133] [cursor=pointer]
+              - generic [ref=e134]:
+                - generic [ref=e135]: Are you authorized to work in the country where the job is located?*
+                - generic [ref=e136]
+              - generic [ref=e139]:
+                - generic [ref=e140]: Will you now or in the future require sponsorship for employment visa status in this country?*
+                - paragraph [ref=e142]: We may provide immigration and sponsorship support to new employees based on their unique circumstances.
+                - generic [ref=e143]
+              - generic [ref=e146]:
+                - generic [ref=e147]: Are you able to work from our US office three days per week?*
+                - generic [ref=e148]
+              - generic [ref=e151]:
+                - generic [ref=e152]: Additional Information
+                - paragraph [ref=e154]: Please share anything else you want us to know, such as your motivation to apply or additional context for your application.
+                - textbox "Additional Information" [ref=e155] [cursor=pointer]:
+                  - /placeholder: Type here...
+            - generic [ref=e156]:
+              - group [ref=e158]:
+                - generic [ref=e159]: Applicant Arbitration Agreement Acknowledgement*
+                - paragraph [ref=e161]
+                - generic [ref=e163]
+              - group [ref=e170]:
+                - generic [ref=e171]: I hereby certify that I have not knowingly withheld any information that might adversely affect my chances for employment and that the answers given by me are true and correct to the best of my knowledge. I further certify that I, the undersigned applicant, have personally completed this application. I understand that, to the extent permitted by applicable law, any omission or misstatement of material fact on this application or on any document used to secure employment shall be grounds for rejection of this application or for immediate discharge if I am employed, regardless of the time elapsed before discovery. *
+                - paragraph [ref=e173]
+                - generic [ref=e175]
+          - generic [ref=e182]:
+            - generic [ref=e183]:
+              - generic [ref=e185]:
+                - paragraph [ref=e186]
+                - paragraph [ref=e188]
+                - paragraph [ref=e189]: OpenAI provides equal employment opportunities to applicants and employees without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, protected veteran status, disability, or any other classification protected by applicable law.
+                - paragraph [ref=e190]
+                - paragraph [ref=e191]: OpenAI is a federal contractor or subcontractor subject to certain governmental recordkeeping and reporting requirements for the administration of civil rights laws and regulations. Employment decisions are made on the basis of job-related criteria without regard to race, ethnicity, color, religion, sex, sexual orientation, gender identity, marital status, age, genetic information, national origin, disability, protected veteran status, or any other classification protected by applicable law.
+                - paragraph [ref=e192]
+                - paragraph [ref=e193]: We invite all applicants to voluntarily self-identify their race, ethnicity, and gender. Submission of the information on this form is strictly voluntary and refusal to provide it will not subject you to any adverse treatment. Information obtained will be retained in a confidential file and separate from personnel records. This information may only be used in accordance with the provision of applicable federal laws, executive orders, and regulations. If you want more information about any of the sections, please check with a company representative.
+              - group [ref=e195]:
+                - generic [ref=e196]: Gender
+                - paragraph [ref=e198]: Input gender
+                - generic [ref=e199]
+                - generic [ref=e204]
+                - generic [ref=e209]
+              - group [ref=e215]:
+                - generic [ref=e216]: Race
+                - generic [ref=e217]
+                - generic [ref=e241]
+                - generic [ref=e246]
+                - generic [ref=e251]
+                - generic [ref=e256]
+                - generic [ref=e261]
+                - generic [ref=e266]
+                - generic [ref=e271]
+                - generic [ref=e276]
+            - generic [ref=e281]:
+              - generic [ref=e283]:
+                - paragraph [ref=e284]
+                - paragraph [ref=e286]: OpenAI is a Government contractor subject to Section 4212 of the Vietnam Era Veterans’ Readjustment Assistance Act of 1974, as amended by the Jobs for Veterans Act of 2002, which requires Government contractors to take affirmative action to employ and advance in employment protected veterans. If you believe that you belong to any of the following categories of protected veterans, please indicate by making the appropriate selection.
+                - list [ref=e287]
+              - group [ref=e301]:
+                - generic [ref=e302]: Veteran Status
+                - generic [ref=e303]
+                - generic [ref=e308]
+                - generic [ref=e313]
+            - generic [ref=e318]:
+              - generic [ref=e320]:
+                - paragraph [ref=e321]
+                - paragraph [ref=e323]
+                - paragraph [ref=e325]
+                - paragraph [ref=e327]: We are a federal contractor or subcontractor. The law requires us to provide equal employment opportunity to qualified people with disabilities. We have a goal of having at least 7% of our workers as people with disabilities. The law says we must measure our progress towards this goal. To do this, we must ask applicants and employees if they have a disability or have ever had one. People can become disabled, so we need to ask this question at least every five years.
+                - paragraph [ref=e328]
+                - paragraph [ref=e330]
+                - paragraph [ref=e332]
+                - list [ref=e334]
+                - paragraph [ref=e379]: "PUBLIC BURDEN STATEMENT: According to the Paperwork Reduction Act of 1995 no persons are required to respond to a collection of information unless such collection displays a valid OMB control number. This survey should take about 5 minutes to complete."
+              - group [ref=e381]:
+                - generic [ref=e382]: Disability Status
+                - generic [ref=e383]
+                - generic [ref=e388]
+                - generic [ref=e393]
+          - button "Submit Application" [ref=e398] [cursor=pointer]:
+            - text: Submit Application
+            - img [ref=e399]
+          - paragraph [ref=e401]:
+            - text: OpenAI may use Artificial Intelligence with this application.
+            - link "Learn more." [ref=e402] [cursor=pointer]:
+              - /url: /openai/automation-notice
+  - contentinfo [ref=e403]:
+    - link "Learn more about Ashby" [ref=e404] [cursor=pointer]:
+      - /url: https://www.ashbyhq.com
+      - generic [ref=e405]: Powered by
+      - img "Ashby" [ref=e406]
+    - paragraph [ref=e412]:
+      - link "Privacy Policy" [ref=e413] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/privacy
+      - link "Security" [ref=e414] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/security
+      - link "Vulnerability Disclosure" [ref=e415] [cursor=pointer]:
+        - /url: https://www.ashbyhq.com/disclosure

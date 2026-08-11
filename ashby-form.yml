@@ -1,0 +1,168 @@
+- generic [ref=e2] [box=0,0,960,2981]:
+  - list [ref=e4] [box=0,0,960,100]:
+    - listitem [ref=e5] [box=318,17,325,67]:
+      - link "Perplexity" [ref=e6] [cursor=pointer] [box=339,39,282,19]:
+        - /url: https://www.perplexity.ai/
+        - img "Perplexity" [ref=e7] [box=339,17,282,67]
+    - listitem [ref=e8] [box=12,30,294,40]:
+      - link "Back to Perplexity’s Job Listings" [ref=e9] [cursor=pointer] [box=12,30,38,40]:
+        - /url: /Perplexity
+        - img [ref=e10] [box=24,42,14,16]
+    - listitem [box=655,50,294,0]
+  - generic [ref=e12] [box=0,120,960,2746]:
+    - heading "Member of Technical Staff (Software Engineer, Applied AI)" [level=1] [ref=e14] [box=24,120,912,34]
+    - generic [ref=e15] [box=0,154,960,2712]:
+      - generic [ref=e16] [box=12,214,281,2640]:
+        - generic [ref=e17] [box=28,236,249,89]:
+          - heading "Location" [level=2] [ref=e18] [box=28,236,249,18]
+          - paragraph [ref=e19] [box=28,260,249,48]: San Francisco; New York City; Palo Alto
+        - generic [ref=e20] [box=28,325,249,79]:
+          - heading "Employment Type" [level=2] [ref=e21] [box=28,339,249,18]
+          - paragraph [ref=e22] [box=28,363,249,24]: Full time
+        - generic [ref=e23] [box=28,404,249,79]:
+          - heading "Department" [level=2] [ref=e24] [box=28,418,249,18]
+          - paragraph [ref=e25] [box=28,441,249,24]: AI Research & Systems
+        - generic [ref=e26] [box=28,482,249,526]:
+          - heading "Compensation" [level=2] [ref=e27] [box=28,497,249,18]
+          - list [ref=e28] [box=28,523,249,38]:
+            - listitem [ref=e29] [box=28,523,249,38]:
+              - generic [ref=e30] [box=28,523,249,26]: $220K – $405K • Offers Equity
+          - generic [ref=e31] [box=28,559,249,449]:
+            - paragraph [ref=e32] [box=28,559,249,21]:
+              - strong [ref=e33] [box=28,561,88,16]: U.S. Benefits
+            - paragraph [ref=e34] [box=28,578,249,126]: Full-time U.S. employees enjoy a comprehensive benefits program including equity, health, dental, vision, retirement, fitness, commuter and dependent care accounts, and more.
+            - paragraph [ref=e35] [box=28,702,249,21]
+            - paragraph [ref=e36] [box=28,721,249,21]:
+              - strong [ref=e37] [box=28,723,151,16]: International Benefits
+            - paragraph [ref=e38] [box=28,740,249,84]: Full-time employees outside the U.S. enjoy a comprehensive benefits program tailored to their region of residence.
+            - paragraph [ref=e39] [box=28,821,249,21]
+            - paragraph [ref=e40] [box=28,840,249,168]: USD salary ranges apply only to U.S.-based positions. International salaries are set based on the local market. Final offer amounts are determined by multiple factors, including experience and expertise, and may vary from the amounts listed above.
+      - generic [ref=e41] [box=293,154,655,2700]:
+        - tablist [ref=e42] [box=293,178,655,38]:
+          - tab "Overview" [ref=e43] [cursor=pointer] [box=309,178,200,38]
+          - tab "Application" [selected] [ref=e44] [cursor=pointer] [box=525,178,200,38]
+        - tabpanel "Application" [ref=e46] [box=293,216,655,2638]:
+          - generic [ref=e68] [box=293,216,655,110]:
+            - button "Choose File" [ref=e69] [box=326,257,1,1]
+            - generic [ref=e71] [box=326,257,589,52]:
+              - generic [ref=e72] [box=326,257,455,24]:
+                - img [ref=e74] [box=326,257,20,20]
+                - heading "Autofill from resume" [level=3] [ref=e76] [box=362,257,163,24]
+              - paragraph [ref=e77] [box=326,285,455,24]: Upload your resume here to autofill key application fields.
+              - button "Upload file" [ref=e79] [cursor=pointer] [box=801,265,110,36]
+          - generic [ref=e80] [box=293,326,655,2260]:
+            - generic [ref=e81] [box=309,348,623,825]:
+              - generic [ref=e82] [box=309,348,623,86]:
+                - generic [ref=e83] [box=309,348,623,24]: Name*
+                - textbox "Name*" [ref=e85] [cursor=pointer] [box=309,380,623,54]:
+                  - /placeholder: Type here...
+              - generic [ref=e86] [box=309,456,623,86]:
+                - generic [ref=e87] [box=309,456,623,24]: Email*
+                - textbox "Email*" [ref=e89] [cursor=pointer] [box=309,488,623,54]:
+                  - /placeholder: hello@example.com...
+              - generic [ref=e90] [box=309,564,623,86]:
+                - generic [ref=e91] [box=309,564,623,24]: Phone Number*
+                - textbox "Phone Number*" [ref=e92] [cursor=pointer] [box=309,596,623,54]:
+                  - /placeholder: 1-415-555-1234...
+              - generic [ref=e93] [box=309,672,623,152]:
+                - generic [ref=e94] [box=309,672,623,24]: Resume*
+                - button "Resume*" [ref=e95] [box=343,738,1,1]
+                - generic [ref=e96] [box=343,738,555,52]:
+                  - button "Upload File" [ref=e97] [cursor=pointer] [box=445,738,158,52]:
+                    - img [ref=e98] [box=463,755,14,16]
+                    - generic [ref=e100] [box=489,756,96,16]: Upload File
+                  - paragraph [ref=e101] [box=626,753,170,22]: or drag and drop here
+              - generic [ref=e102] [box=309,845,623,86]:
+                - generic [ref=e103] [box=309,845,623,24]: Location*
+                - generic [ref=e104] [box=309,877,623,54]:
+                  - combobox "Start typing..." [ref=e105] [cursor=pointer] [box=309,877,623,54]
+                  - button [ref=e106] [cursor=pointer] [box=884,877,48,54]:
+                    - img [ref=e107] [box=900,896,16,16]
+              - generic [ref=e109] [box=309,953,623,111]:
+                - generic [ref=e110] [box=309,953,623,48]: Will you now or in the future require sponsorship for employment visa status in the United States?*
+                - generic [ref=e111] [box=309,1009,158,55]:
+                  - button "Yes" [ref=e112] [cursor=pointer] [box=309,1009,80,55]
+                  - button "No" [ref=e113] [cursor=pointer] [box=387,1009,80,55]
+              - generic [ref=e114] [box=309,1086,623,87]:
+                - generic [ref=e115] [box=309,1086,623,24]: Are you able to come into the office four days per week?*
+                - generic [ref=e116] [box=309,1118,158,55]:
+                  - button "Yes" [ref=e117] [cursor=pointer] [box=309,1118,80,55]
+                  - button "No" [ref=e118] [cursor=pointer] [box=387,1118,80,55]
+            - generic [ref=e119] [box=309,1218,623,528]:
+              - generic [ref=e120] [box=309,1218,623,117]:
+                - heading "[Optional] More about yourself" [level=2] [ref=e121] [box=309,1218,623,30]
+                - paragraph [ref=e123] [box=309,1254,623,72]:
+                  - text: The questions below are meant to help us get to know you a bit better. They are
+                  - strong [ref=e124] [box=309,1280,115,19]: 100% optional
+                  - text: . If you do choose to respond, please do so in
+                  - strong [ref=e125] [box=309,1280,606,43]: your own original writing
+                  - text: .
+              - generic [ref=e126] [box=309,1348,623,188]:
+                - generic [ref=e127] [box=309,1348,623,48]: What are the most interesting aspects of Perplexity that you're excited to work on?
+                - textbox "What are the most interesting aspects of Perplexity that you're excited to work on?" [ref=e128] [cursor=pointer] [box=309,1404,623,132]:
+                  - /placeholder: Type here...
+              - generic [ref=e129] [box=309,1558,623,188]:
+                - generic [ref=e130] [box=309,1558,623,48]: How do you use AI in your day-to-day work? What are some of the underappreciated benefits and/or pain points of your favorite AI tools?
+                - textbox "How do you use AI in your day-to-day work? What are some of the underappreciated benefits and/or pain points of your favorite AI tools?" [ref=e131] [cursor=pointer] [box=309,1614,623,132]:
+                  - /placeholder: Type here...
+            - generic [ref=e132] [box=309,1791,623,747]:
+              - generic [ref=e133] [box=309,1791,623,647]:
+                - heading "Perplexity Exercise" [level=2] [ref=e134] [box=309,1791,623,30]
+                - generic [ref=e135] [box=309,1826,623,602]:
+                  - paragraph [ref=e136] [box=309,1826,623,72]: Before the interview process, we ask candidates to familiarize themselves with Perplexity's products. This exercise helps you get a head start, while also helping us learn a bit more about you.
+                  - paragraph [ref=e137] [box=309,1904,623,96]: Please choose either Option 1 or Option 2 below. We expect this exercise to take 2 minutes or less, although you're welcome to spend longer if you so desire. You may use any Perplexity product features you'd like, including but not limited to file uploads, model selection, Research, Comet Assistant, Computer, and more.
+                  - paragraph [ref=e138] [box=309,2006,623,24]
+                  - paragraph [ref=e139] [box=309,2035,623,24]:
+                    - strong [ref=e140] [box=309,2037,348,19]: "Option 1: teach us about your favorite topic!"
+                  - paragraph [ref=e141] [box=309,2065,623,96]:
+                    - text: Perplexity feeds the world's curiosity, and we're curious to learn more about your passions. Please choose a topic that you're particularly excited to share with us (it need not be technical or AI-related). Then, create a
+                    - link "Perplexity" [ref=e142] [cursor=pointer] [box=792,2115,77,19]:
+                      - /url: https://www.perplexity.ai/
+                    - text: thread that teaches us about your chosen topic.
+                  - paragraph [ref=e143] [box=309,2166,623,48]: Once you're happy with the thread, click the "Share" button and paste the URL below.
+                  - paragraph [ref=e144] [box=309,2220,623,24]
+                  - paragraph [ref=e145] [box=309,2250,623,24]:
+                    - strong [ref=e146] [box=309,2252,356,19]: "Option 2: enlist Perplexity as your champion!"
+                  - paragraph [ref=e147] [box=309,2279,623,96]:
+                    - text: We invite you to enlist Perplexity to advocate for your Perplexity job application! Please create a
+                    - link "Perplexity" [ref=e148] [cursor=pointer] [box=430,2305,77,19]:
+                      - /url: https://www.perplexity.ai/
+                    - text: thread that explains why you're a strong candidate for this role.
+                    - link "Here" [ref=e149] [cursor=pointer] [box=380,2329,37,19]:
+                      - /url: https://www.perplexity.ai/search/explain-why-grace-hopper-would-vBVSJMaRSxacql0MB11BWg#0
+                    - text: "'s a very basic example; feel free to keep it simple, or to have some more fun with your queries."
+                  - paragraph [ref=e150] [box=309,2381,623,48]: Once you're happy with the thread, click the "Share" button and paste the URL below.
+              - generic [ref=e151] [box=309,2451,623,86]:
+                - generic [ref=e152] [box=309,2451,623,24]: Exercise Submission (Shared URL)*
+                - textbox "Exercise Submission (Shared URL)*" [ref=e154] [cursor=pointer] [box=309,2483,623,54]:
+                  - /placeholder: https://example.com...
+          - group [ref=e159] [box=309,2610,623,95]:
+            - generic [ref=e160] [box=309,2615,623,48]:
+              - paragraph [ref=e161] [box=309,2615,623,21]: Do you agree to allow Perplexity to contact you about job opportunities for up to 2 years?
+              - paragraph [ref=e162] [box=309,2642,623,21]:
+                - link "Recruiting Privacy Policy" [ref=e163] [cursor=pointer] [box=309,2644,165,16]:
+                  - /url: https://www.perplexity.ai/hub/legal/privacy-policy
+            - generic [ref=e164] [box=309,2679,623,26]:
+              - generic [ref=e165] [cursor=pointer] [box=309,2679,24,24]:
+                - img [ref=e166] [box=315,2685,12,12]
+                - checkbox "I agree" [ref=e168] [box=309,2679,24,24]
+              - generic [ref=e169] [box=341,2683,52,22]: I agree
+          - generic [ref=e170] [box=293,2753,655,49]:
+            - generic [box=309,2778,623,0]:
+              - link "Recruiting Privacy Policy" [box=550,2778,142,0]:
+                - /url: https://www.perplexity.ai/hub/legal/privacy-policy
+          - button "Submit Application" [ref=e171] [cursor=pointer] [box=293,2802,655,52]:
+            - text: Submit Application
+            - img [ref=e172] [box=701,2820,16,16]
+  - contentinfo [ref=e55] [box=0,2914,960,67]:
+    - link "Learn more about Ashby" [ref=e56] [cursor=pointer] [box=24,2939,113,18]:
+      - /url: https://www.ashbyhq.com
+      - generic [ref=e57] [box=24,2939,70,18]: Powered by
+      - img "Ashby" [ref=e58] [box=94,2941,43,14]
+    - paragraph [ref=e64] [box=639,2940,297,16]:
+      - link "Privacy Policy" [ref=e65] [cursor=pointer] [box=639,2939,79,15]:
+        - /url: https://www.ashbyhq.com/privacy
+      - link "Security" [ref=e66] [cursor=pointer] [box=734,2939,47,15]:
+        - /url: https://www.ashbyhq.com/security
+      - link "Vulnerability Disclosure" [ref=e67] [cursor=pointer] [box=798,2939,138,15]:
+        - /url: https://www.ashbyhq.com/disclosure

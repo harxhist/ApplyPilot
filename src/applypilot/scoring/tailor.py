@@ -448,14 +448,35 @@ def tailor_resume(
         # Assemble text (header injected by code, em dashes auto-fixed)
         tailored = assemble_resume_text(data, profile)
 
-        # Layer 2: LLM judge — skip on first clean pass to save an LLM call
+        # Layer 2: LLM judge — skip when programmatic validation passes and
+        # remaining issues are style/omit warnings only (saves a call per job;
+        # critical for 50+/hour throughput under free-tier Gemini).
         is_clean = not validation.get("warnings")
         is_last = attempt >= max_retries
+        warnings = validation.get("warnings") or []
+        soft_warnings_only = bool(warnings) and all(
+            any(tok in w.lower() for tok in (
+                "banned words",
+                "not in resume",
+                "not found",
+                "may be omitted",
+                "may have been renamed",
+                "injected",
+            ))
+            for w in warnings
+        )
 
-        if attempt == 0 and is_clean:
-            # First attempt with zero warnings — trust programmatic validation
-            log.debug("Skipping judge on clean first attempt for %s", job.get("title", "")[:40])
-            report["judge"] = {"passed": True, "verdict": "SKIP", "issues": "none", "raw": "skipped (clean first pass)"}
+        if attempt == 0 and (is_clean or soft_warnings_only):
+            log.debug(
+                "Skipping judge on first pass for %s (clean=%s soft_warn=%s)",
+                job.get("title", "")[:40], is_clean, soft_warnings_only,
+            )
+            report["judge"] = {
+                "passed": True,
+                "verdict": "SKIP",
+                "issues": "none",
+                "raw": "skipped (clean/soft-warn first pass)",
+            }
             report["status"] = "approved"
             return tailored, report
 
